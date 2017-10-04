@@ -1,2 +1,2 @@
 # TableOcr
-Software provides percell OCR on a table image.
+Saoftware provides data extraction from images with tables using OCR.
