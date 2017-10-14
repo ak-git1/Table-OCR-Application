@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TableOcrExtractor")]
 [assembly: AssemblyDescription("Program for extracting data from images with tables using OCR.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("AK")]
 [assembly: AssemblyProduct("TableOcrExtractor")]
 [assembly: AssemblyCopyright("Copyright © AK 2017")]
 [assembly: AssemblyTrademark("")]

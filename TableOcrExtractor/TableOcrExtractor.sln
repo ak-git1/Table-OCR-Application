@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOcrExtractor", "TableOcrExtractor\TableOcrExtractor.csproj", "{74340EA0-BE48-4B6A-B96B-69D854D1A7B3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibraries", "ExternalLibraries", "{06BB8B52-999B-4048-83C9-6C1D8294E8E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GdPicture.Net", "GdPicture.Net", "{7C0B33E4-7B41-4BDB-A532-E876E7BEFC85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +22,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C0B33E4-7B41-4BDB-A532-E876E7BEFC85} = {06BB8B52-999B-4048-83C9-6C1D8294E8E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35EF4B95-7A0F-4BA4-8DFF-635E71F9FEA2}

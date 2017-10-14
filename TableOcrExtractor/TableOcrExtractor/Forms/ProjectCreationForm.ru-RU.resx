@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,74 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>780, 451</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Экстрактор табличный данных</value>
+    <value>Создание проекта</value>
   </data>
-  <data name="FileMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Отмена</value>
   </data>
-  <data name="ExitMenuItem.Text" xml:space="preserve">
-    <value>Выход</value>
+  <data name="CreateBtn.Text" xml:space="preserve">
+    <value>Создать</value>
   </data>
-  <data name="AboutMenuItem.Text" xml:space="preserve">
-    <value>О программе</value>
+  <data name="ProjectFileLabel.Text" xml:space="preserve">
+    <value>Файл проекта:</value>
   </data>
-  <data name="NewProjectMenuItem.Text" xml:space="preserve">
-    <value>Новый проект</value>
+  <data name="ProjectNameLabel.Text" xml:space="preserve">
+    <value>Имя проекта:</value>
   </data>
-  <data name="OpenProjectMenuItem.Text" xml:space="preserve">
-    <value>Открыть проект</value>
-  </data>
-  <data name="SeparatorItem1.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="EnglishLanguageMenuItem.Text" xml:space="preserve">
-    <value>Английский</value>
-  </data>
-  <data name="RussianLanguageMenuItem.Text" xml:space="preserve">
-    <value>Русский</value>
-  </data>
-  <data name="LanguageMenuItem.Text" xml:space="preserve">
-    <value>Язык</value>
-  </data>
-  <data name="SettingsMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
-  </data>
-  <data name="MainSplitContainer.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="GallerySplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="DataGridSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageSplitContainer.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageAndDataGridSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="SaveMenuItem.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="SaveAsMenuItem.Text" xml:space="preserve">
-    <value>Сохранить как...</value>
-  </data>
-  <data name="SeparatorItem2.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ProjectMenuItem.Text" xml:space="preserve">
-    <value>Проект</value>
-  </data>
-  <data name="ProjectNameLabelElement.Text" xml:space="preserve">
-    <value>Проект</value>
+  <data name="SelectFileBtn.Text" xml:space="preserve">
+    <value>...</value>
   </data>
 </root>

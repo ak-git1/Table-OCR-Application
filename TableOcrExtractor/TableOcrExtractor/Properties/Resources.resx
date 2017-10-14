@@ -114,4 +114,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ProjectValidationMessageCaption" xml:space="preserve">
+    <value>Project creation</value>
+  </data>
+  <data name="ProjectValidationMessageText" xml:space="preserve">
+    <value>Not all textboxes are filled.</value>
+  </data>
+  <data name="ProjectNameCaption" xml:space="preserve">
+    <value>Project: {0}</value>
+  </data>
 </root>
