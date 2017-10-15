@@ -117,13 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ProjectValidationMessageCaption" xml:space="preserve">
+  <data name="ProjectValidationMessage_Caption" xml:space="preserve">
     <value>Создание проекта</value>
   </data>
-  <data name="ProjectValidationMessageText" xml:space="preserve">
+  <data name="ProjectValidationMessage_Text" xml:space="preserve">
     <value>Заполнены не все текстовые поля.</value>
   </data>
-  <data name="ProjectNameCaption" xml:space="preserve">
+  <data name="ProjectName_Caption" xml:space="preserve">
     <value>Проект: {0}</value>
+  </data>
+  <data name="UnexpectedError_Caption" xml:space="preserve">
+    <value>Непредвиденная ошибка</value>
+  </data>
+  <data name="UnexpectedError_Text" xml:space="preserve">
+    <value>Произошла непредвиденная ошибка. Пожалуйста, посмотрите описание в журнале ошибок.</value>
+  </data>
+  <data name="ProjectName_NoProjectLoaded" xml:space="preserve">
+    <value>Проект на загружен</value>
   </data>
 </root>

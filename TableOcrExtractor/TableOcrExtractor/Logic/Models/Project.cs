@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
-using Elar.Framework.Core.Helpers;
 using TableOcrExtractor.Logic.Helpers;
 
 namespace TableOcrExtractor.Logic.Models
@@ -46,10 +45,11 @@ namespace TableOcrExtractor.Logic.Models
         [XmlElement]
         public string ProjectDataFolderPath { get; set; }
 
-        #endregion
-
-        #region Сonstructors
-
+        /// <summary>
+        /// Gallery
+        /// </summary>
+        [XmlElement]
+        public Gallery Gallery { get; set; }
 
         #endregion
 
@@ -67,6 +67,7 @@ namespace TableOcrExtractor.Logic.Models
                 Name = name,
                 ProjectDataFolderPath = Path.Combine(Path.GetDirectoryName(projectPath), $@"{DataFolderPrefix}")
             };
+            project.Gallery = new Gallery(project.ProjectDataFolderPath);
             project.Save();
             return project;
         }
@@ -107,7 +108,7 @@ namespace TableOcrExtractor.Logic.Models
         /// </summary>
         private void Validate()
         {
-            
+            // TODO
         }
 
         #endregion

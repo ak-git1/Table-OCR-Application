@@ -46,11 +46,11 @@ namespace TableOcrExtractor.Forms
         /// Validates data on the form
         /// </summary>
         /// <returns></returns>
-        private ActionResult ValidateData()
+        private ActionResultType ValidateData()
         {
             return ProjectFileTxt.Text.NotEmpty() && ProjectNameTxt.Text.NotEmpty()
-                ? ActionResult.Ok
-                : ActionResult.Error;
+                ? ActionResultType.Ok
+                : ActionResultType.Error;
         }
 
         #endregion
@@ -75,7 +75,7 @@ namespace TableOcrExtractor.Forms
         /// <param name="e">The <see cref="System.EventArgs" /> instance containing the event data.</param>
         private void CreateBtn_Click(object sender, System.EventArgs e)
         {
-            if (ValidateData() == ActionResult.Ok)
+            if (ValidateData() == ActionResultType.Ok)
             {
                 ProjectName = ProjectNameTxt.Text;
                 ProjectPath = ProjectFileTxt.Text;                
@@ -83,7 +83,7 @@ namespace TableOcrExtractor.Forms
                 DialogResult = DialogResult.OK;
             }
             else
-                FormsHelper.ShowWarning(Resources.ProjectValidationMessageText, Resources.ProjectValidationMessageCaption);
+                FormsHelper.ShowWarning(Resources.ProjectValidationMessage_Text, Resources.ProjectValidationMessage_Caption);
         }
 
         /// <summary>

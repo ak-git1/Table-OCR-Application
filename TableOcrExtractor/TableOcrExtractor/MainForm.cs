@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using TableOcrExtractor.Forms;
 using TableOcrExtractor.Logic.Enums;
+using TableOcrExtractor.Logic.Helpers;
 using TableOcrExtractor.Logic.Models;
 using TableOcrExtractor.Properties;
 
@@ -43,16 +44,18 @@ namespace TableOcrExtractor
         {
             SetLanguage((Language)TableOcrExtractor.Properties.Settings.Default.CurrentCultureInfo);
             OpenProjectFileDialog.Filter = Project.ProjectFileExtensionsFilter;
-            ProjectMenuItem.Enabled = false;
+            InitilalizeProjectDependentControls(false);
         }
 
         /// <summary>
         /// Initilalizes the controls on project load.
         /// </summary>
-        private void InitilalizeControlsOnProjectLoad()
+        /// <param name="projectLoaded">Project is loaded</param>
+        private void InitilalizeProjectDependentControls(bool projectLoaded)
         {
-            ProjectMenuItem.Enabled = true;
-            ProjectNameLabelElement.Text = string.Format(Resources.ProjectNameCaption, _project.Name);
+            ProjectMenuItem.Enabled = AddImagesBtn.Enabled = projectLoaded;
+            ProjectNameLabelElement.Text = projectLoaded ? string.Format(Resources.ProjectName_Caption, _project.Name) : Resources.ProjectName_NoProjectLoaded;
+            
         }
 
         /// <summary>
@@ -103,16 +106,23 @@ namespace TableOcrExtractor
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void NewProjectMenuItem_Click(object sender, EventArgs e)
         {
-            ProjectCreationForm projectCreationForm = new ProjectCreationForm
+            try
             {
-                StartPosition = FormStartPosition.CenterScreen
-            };
-            var s = projectCreationForm.ShowDialog();
-            if (s == DialogResult.OK)
-            {
-                _project = Project.Create(projectCreationForm.ProjectPath, projectCreationForm.ProjectName);
-                InitilalizeControlsOnProjectLoad();
+                ProjectCreationForm projectCreationForm = new ProjectCreationForm
+                {
+                    StartPosition = FormStartPosition.CenterScreen
+                };
+                if (projectCreationForm.ShowDialog() == DialogResult.OK)
+                {
+                    _project = Project.Create(projectCreationForm.ProjectPath, projectCreationForm.ProjectName);
+                    InitilalizeProjectDependentControls(true);
+                }
             }
+            catch (Exception ex)
+            {
+                LogHelper.Logger.Error(ex, "Unable to create project");
+                FormsHelper.ShowUnexpectedError();
+            }            
         }
 
         /// <summary>
@@ -122,11 +132,20 @@ namespace TableOcrExtractor
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void OpenProjectMenuItem_Click(object sender, EventArgs e)
         {
-            if (OpenProjectFileDialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                _project = Project.Load(OpenProjectFileDialog.FileName);
-                InitilalizeControlsOnProjectLoad();
+                if (OpenProjectFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    _project = Project.Load(OpenProjectFileDialog.FileName);
+                    InitilalizeProjectDependentControls(true);
+                }
             }
+            catch (Exception ex)
+            {
+                LogHelper.Logger.Error(ex, "Unable to create project");
+                FormsHelper.ShowUnexpectedError();
+            }
+            
         }
 
         /// <summary>
@@ -178,6 +197,25 @@ namespace TableOcrExtractor
         {
             Close();
         }
+
+        #endregion
+
+        #region Gallery actions
+
+        /// <summary>
+        /// Handles the Click event of the AddImagesBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void AddImagesBtn_Click(object sender, EventArgs e)
+        {
+            if (ImagesImportFileDialog.ShowDialog() == DialogResult.OK)
+                _project.Gallery.AddFiles(ImagesImportFileDialog.SafeFileNames);
+        }
+
+        #endregion
+
+        #region Image area actions
 
         #endregion
 

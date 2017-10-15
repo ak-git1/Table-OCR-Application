@@ -61,29 +61,66 @@ namespace TableOcrExtractor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Project: {0}.
         /// </summary>
-        internal static string ProjectNameCaption {
+        internal static string ProjectName_Caption {
             get {
-                return ResourceManager.GetString("ProjectNameCaption", resourceCulture);
+                return ResourceManager.GetString("ProjectName_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No project loaded.
+        /// </summary>
+        internal static string ProjectName_NoProjectLoaded {
+            get {
+                return ResourceManager.GetString("ProjectName_NoProjectLoaded", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Project creation.
         /// </summary>
-        internal static string ProjectValidationMessageCaption {
+        internal static string ProjectValidationMessage_Caption {
             get {
-                return ResourceManager.GetString("ProjectValidationMessageCaption", resourceCulture);
+                return ResourceManager.GetString("ProjectValidationMessage_Caption", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Not all textboxes are filled..
         /// </summary>
-        internal static string ProjectValidationMessageText {
+        internal static string ProjectValidationMessage_Text {
             get {
-                return ResourceManager.GetString("ProjectValidationMessageText", resourceCulture);
+                return ResourceManager.GetString("ProjectValidationMessage_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected error.
+        /// </summary>
+        internal static string UnexpectedError_Caption {
+            get {
+                return ResourceManager.GetString("UnexpectedError_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected error occurred. Please look to the error log..
+        /// </summary>
+        internal static string UnexpectedError_Text {
+            get {
+                return ResourceManager.GetString("UnexpectedError_Text", resourceCulture);
             }
         }
     }

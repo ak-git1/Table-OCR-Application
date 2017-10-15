@@ -187,4 +187,28 @@
   <data name="ProjectNameLabelElement.Text" xml:space="preserve">
     <value>Проект</value>
   </data>
+  <data name="commandBarStripElement1.DisplayName" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="ImageCommandBar.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="commandBarStripElement2.DisplayName" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="GalleryCommandBar.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="commandBarStripElement1.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="AddImagesBtn.DisplayName" xml:space="preserve">
+    <value>Импорт изображений</value>
+  </data>
+  <data name="AddImagesBtn.Text" xml:space="preserve">
+    <value>Импорт изображений</value>
+  </data>
+  <data name="commandBarRowElement1.Text" xml:space="preserve">
+    <value> </value>
+  </data>
 </root>

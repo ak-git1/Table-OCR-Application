@@ -3,7 +3,7 @@
     /// <summary>
     /// Action result
     /// </summary>
-    internal enum ActionResult
+    internal enum ActionResultType
     {
         /// <summary>
         /// Ok
@@ -13,6 +13,11 @@
         /// <summary>
         /// Error
         /// </summary>
-        Error = 1
+        Error = 1,
+
+        /// <summary>
+        /// Unsupported action
+        /// </summary>
+        UnsupportedAction = 2
     }
 }
