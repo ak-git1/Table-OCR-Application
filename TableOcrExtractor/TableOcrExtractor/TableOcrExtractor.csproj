@@ -72,10 +72,7 @@
       <DependentUpon>ProjectCreationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Enums\ActionResultType.cs" />
-    <Compile Include="Logic\Enums\FileFormat.cs" />
-    <Compile Include="Logic\Enums\FileType.cs" />
     <Compile Include="Logic\Enums\Language.cs" />
-    <Compile Include="Logic\Helpers\FilesHelper.cs" />
     <Compile Include="Logic\Helpers\FormsHelper.cs" />
     <Compile Include="Logic\Helpers\LogHelper.cs" />
     <Compile Include="Logic\Helpers\SerializationHelper.cs" />
@@ -144,4 +141,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /sy "$(SolutionDir)ExternalLibraries\GdPicture.NET" "$(ProjectDir)$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

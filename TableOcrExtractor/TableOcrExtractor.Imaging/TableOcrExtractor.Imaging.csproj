@@ -44,13 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\ImagesConverter.cs" />
+    <Compile Include="Engines\FileTypesEngineFactory.cs" />
+    <Compile Include="Engines\SinglePageImageEngine.cs" />
+    <Compile Include="Enums\FileFormat.cs" />
+    <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Helpers\FilesHelper.cs" />
+    <Compile Include="Engines\PdfEngine.cs" />
+    <Compile Include="Engines\TiffEngine.cs" />
+    <Compile Include="Interfaces\IFileTypeEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

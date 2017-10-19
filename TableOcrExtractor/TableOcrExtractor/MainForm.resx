@@ -528,45 +528,6 @@
   <data name="SettingsMenuItem.ImageKey" xml:space="preserve">
     <value />
   </data>
-  <data name="SettingsMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="SettingsMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 1, 8, 1</value>
-  </data>
-  <data name="SettingsMenuItem.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SettingsMenuItem.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="SettingsMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="SettingsMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>718, 20</value>
-  </data>
-  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="LanguageMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -587,24 +548,6 @@
   </data>
   <data name="LanguageMenuItem.ImageKey" xml:space="preserve">
     <value />
-  </data>
-  <data name="LanguageMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="LanguageMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="LanguageMenuItem.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="LanguageMenuItem.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="LanguageMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="LanguageMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="EnglishLanguageMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -684,6 +627,63 @@
   <data name="RussianLanguageMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="LanguageMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="LanguageMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="LanguageMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LanguageMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="LanguageMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="SettingsMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="SettingsMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 1, 8, 1</value>
+  </data>
+  <data name="SettingsMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SettingsMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="SettingsMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>718, 20</value>
+  </data>
+  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="GalleryListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -695,9 +695,6 @@
   </data>
   <data name="GalleryListView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="GalleryListView.Text" xml:space="preserve">
-    <value>radListView1</value>
   </data>
   <data name="&gt;&gt;GalleryListView.Name" xml:space="preserve">
     <value>GalleryListView</value>
@@ -852,58 +849,58 @@
   <data name="commandBarStripElement1.TextWrap" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.TextWrap" type="System.Boolean, mscorlib">
+  <data name="resource.TextWrap2" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="resource.TextOrientation2" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="resource.FlipText" type="System.Boolean, mscorlib">
+  <data name="resource.FlipText2" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="resource.Text2" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="resource.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="resource.Padding2" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="resource.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="resource.Margin2" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="resource.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="resource.Alignment2" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="resource.RightToLeft" type="System.Boolean, mscorlib">
+  <data name="resource.RightToLeft2" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.AngleTransform" type="System.Single, mscorlib">
+  <data name="resource.AngleTransform2" type="System.Single, mscorlib">
     <value>90</value>
   </data>
-  <data name="resource.TextWrap1" type="System.Boolean, mscorlib">
+  <data name="resource.TextWrap3" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="resource.TextOrientation3" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="resource.FlipText1" type="System.Boolean, mscorlib">
+  <data name="resource.FlipText3" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="resource.Text3" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="resource.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="resource.Padding3" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="resource.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="resource.Margin3" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="resource.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="resource.RightToLeft1" type="System.Boolean, mscorlib">
+  <data name="resource.RightToLeft3" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.AngleTransform1" type="System.Single, mscorlib">
+  <data name="resource.AngleTransform3" type="System.Single, mscorlib">
     <value>90</value>
   </data>
   <data name="commandBarRowElement1.Text" xml:space="preserve">
@@ -964,7 +961,7 @@
     <value>Right</value>
   </data>
   <data name="ImageCommandBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>493, 0</value>
+    <value>517, 0</value>
   </data>
   <data name="commandBarRowElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -982,6 +979,106 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="commandBarRowElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="commandBarStripElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="commandBarStripElement2.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="commandBarStripElement2.DisplayName" xml:space="preserve">
+    <value>commandBarStripElement2</value>
+  </data>
+  <data name="commandBarStripElement2.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Alignment4" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="resource.AngleTransform4" type="System.Single, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="resource.FlipText4" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Margin4" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="resource.Padding4" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="resource.RightToLeft4" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Text4" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.TextOrientation4" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="resource.TextWrap4" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="commandBarButton1.DisplayName" xml:space="preserve">
+    <value>commandBarButton1</value>
+  </data>
+  <data name="commandBarButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADaSURBVDhPrZE7CsMwEER9pBwjx8iRfASVKdXkU6qz
+        yy1dCtykVJlus2NiE7xrE3s98BAMzENCFTMfjll6MUsvZunFLGPKrCGOT+IQiR9Nz/emr26CtTdLSJYS
+        rolP5wukvFFKctipRZpaGsQiRaX2qgB45lLqEAfhiETtVQHCihSBeJRL1F4VAJ+xlPIWStkjTXIY+Qrz
+        a49UPsMKbglhzjuk+OF5xmdDSt0eqQzmEd90S+qyXzrdchAWTuSV/j4bUhGm1iHFucZmKQb/MN8CVRyB
+        WXoxSx9cfQCSrFXAhaG4yAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="commandBarButton1.Text" xml:space="preserve">
+    <value>commandBarButton1</value>
+  </data>
+  <data name="commandBarStripElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="resource.Alignment5" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="resource.AngleTransform5" type="System.Single, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="resource.FlipText5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Margin5" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="resource.Padding5" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="resource.RightToLeft5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resource.Text5" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.TextOrientation5" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="resource.TextWrap5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="commandBarStripElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="commandBarStripElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="commandBarStripElement2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="commandBarStripElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="commandBarStripElement2.TextWrap" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="resource.TextWrap6" type="System.Boolean, mscorlib">
@@ -1008,7 +1105,7 @@
   <data name="resource.RightToLeft6" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.AngleTransform8" type="System.Single, mscorlib">
+  <data name="resource.AngleTransform6" type="System.Single, mscorlib">
     <value>90</value>
   </data>
   <data name="resource.TextWrap7" type="System.Boolean, mscorlib">
@@ -1035,7 +1132,7 @@
   <data name="resource.RightToLeft7" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="resource.AngleTransform9" type="System.Single, mscorlib">
+  <data name="resource.AngleTransform7" type="System.Single, mscorlib">
     <value>90</value>
   </data>
   <data name="commandBarRowElement2.Text" xml:space="preserve">
@@ -1048,7 +1145,7 @@
     <value>False</value>
   </data>
   <data name="ImageCommandBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 252</value>
+    <value>30, 252</value>
   </data>
   <data name="ImageCommandBar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1196,160 +1293,6 @@
   </data>
   <data name="&gt;&gt;MainSplitContainer.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="commandBarStripElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="commandBarStripElement2.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="commandBarStripElement2.DisplayName" xml:space="preserve">
-    <value>commandBarStripElement2</value>
-  </data>
-  <data name="commandBarStripElement2.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Alignment4" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.AngleTransform6" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.FlipText4" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Margin4" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Padding4" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.RightToLeft4" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.TextOrientation4" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.TextWrap4" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarButton1.DisplayName" xml:space="preserve">
-    <value>commandBarButton1</value>
-  </data>
-  <data name="commandBarButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADaSURBVDhPrZE7CsMwEER9pBwjx8iRfASVKdXkU6qz
-        yy1dCtykVJlus2NiE7xrE3s98BAMzENCFTMfjll6MUsvZunFLGPKrCGOT+IQiR9Nz/emr26CtTdLSJYS
-        rolP5wukvFFKctipRZpaGsQiRaX2qgB45lLqEAfhiETtVQHCihSBeJRL1F4VAJ+xlPIWStkjTXIY+Qrz
-        a49UPsMKbglhzjuk+OF5xmdDSt0eqQzmEd90S+qyXzrdchAWTuSV/j4bUhGm1iHFucZmKQb/MN8CVRyB
-        WXoxSx9cfQCSrFXAhaG4yAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="commandBarButton1.Text" xml:space="preserve">
-    <value>commandBarButton1</value>
-  </data>
-  <data name="commandBarStripElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment5" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.AngleTransform7" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.FlipText5" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Margin5" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Padding5" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.RightToLeft5" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text5" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.TextOrientation5" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.TextWrap5" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="commandBarStripElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="commandBarStripElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="commandBarStripElement2.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextWrap2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextOrientation2" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.FlipText2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Padding2" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Margin2" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment2" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.RightToLeft2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.AngleTransform2" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.TextWrap3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextOrientation3" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.FlipText3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Padding3" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Margin3" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.RightToLeft3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.AngleTransform3" type="System.Single, mscorlib">
-    <value>90</value>
   </data>
   <data name="ProjectNameLabelElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -3311,6 +3254,12 @@
   <data name="&gt;&gt;AddImagesBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.CommandBarButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;commandBarRowElement3.Name" xml:space="preserve">
+    <value>commandBarRowElement3</value>
+  </data>
+  <data name="&gt;&gt;commandBarRowElement3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.CommandBarRowElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;commandBarRowElement2.Name" xml:space="preserve">
     <value>commandBarRowElement2</value>
   </data>
@@ -3346,12 +3295,6 @@
   </data>
   <data name="&gt;&gt;ImagesImportFileDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement3.Name" xml:space="preserve">
-    <value>commandBarRowElement3</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarRowElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

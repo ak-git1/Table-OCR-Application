@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using TableOcrExtractor.Forms;
 using TableOcrExtractor.Logic.Enums;
@@ -210,7 +211,11 @@ namespace TableOcrExtractor
         private void AddImagesBtn_Click(object sender, EventArgs e)
         {
             if (ImagesImportFileDialog.ShowDialog() == DialogResult.OK)
+            {
                 _project.Gallery.AddFiles(ImagesImportFileDialog.SafeFileNames);
+                GalleryListView.Items.Clear();
+                GalleryListView.Items.AddRange(_project.Gallery.Images.Select(x => x.ThumbnailPath).ToArray());
+            }
         }
 
         #endregion

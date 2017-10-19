@@ -6,6 +6,8 @@ using System.Xml.Serialization;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
 using TableOcrExtractor.Imaging.Converters;
+using TableOcrExtractor.Imaging.Engines;
+using TableOcrExtractor.Imaging.Interfaces;
 using TableOcrExtractor.Settings;
 
 namespace TableOcrExtractor.Logic.Models
@@ -50,6 +52,7 @@ namespace TableOcrExtractor.Logic.Models
         public Gallery(string galleryFolderPath)
         {
             GalleryFolderPath = galleryFolderPath;
+            Images = new List<GalleryImage>();            
         }
 
         #endregion
@@ -80,58 +83,42 @@ namespace TableOcrExtractor.Logic.Models
         /// <param name="filePath">File path</param>
         private ActionResult AddFile(string filePath)
         {
-            FileType fileType = FilesHelper.GetFileType(filePath);
-            if (fileType == FileType.Unsupported)
-                return new ActionResult(ActionResultType.UnsupportedAction, $"File {filePath} has unssuported format");
-            else
+            if (Images == null)
+                Images = new List<GalleryImage>();
+
+            try
             {
-                try
+                IFileTypeEngine engine = FileTypesEngineFactory.GetFileTypesEngine(filePath);
+                int totalPages = engine.GetTotalPages(filePath);
+                int orderNumber = Images.Any() ? Images.Max(x => x.OrderNumber) + 1 : 1;
+
+                for (int i = 1; i <= totalPages; i++)
                 {
-                    FileFormat fileFormat = FilesHelper.GetFileFormat(fileType);
-                    switch (fileFormat)
+                    Guid imageGuid = Guid.NewGuid();
+                    string imagePath = Path.Combine(GalleryFolderPath, $"{imageGuid}.jpg");
+                    string thumbnailPath = Path.Combine(GalleryFolderPath, $"{imageGuid}_thumb.jpg");
+
+                    engine.SavePageToJpeg(filePath, imagePath, i);
+                    new ImagesConverter(imagePath).CreateThumbnail(thumbnailPath, CommonSettings.ThumbnailWidth, CommonSettings.ThumbnailHeight);
+
+                    GalleryImage galleryImage = new GalleryImage
                     {
-                        case FileFormat.SingePage:
-                            AddImage(filePath);
-                            break;
+                        OrderNumber = orderNumber,
+                        DisplayedName = orderNumber.ToString(ImageNameMask),
+                        ImagePath = imagePath,
+                        ThumbnailPath = thumbnailPath
+                    };
 
-                        case FileFormat.MultiPage:
-
-                            break;
-                    }
-
-                    return new ActionResult();
+                    Images.Add(galleryImage);
                 }
-                catch (Exception e)
-                {
-                    LogHelper.Logger.Error(e, $"Unable to add {filePath} to gallery");
-                    return new ActionResult(ActionResultType.Error, $"Error while trying to add {filePath} to gallery");
-                }                
+
+                return new ActionResult();
             }
-        }
-
-        /// <summary>
-        /// Adds image to gallery
-        /// </summary>
-        /// <param name="path">Original image path</param>
-        private void AddImage(string path)
-        {            
-            int orderNumber = Images.Max(x => x.OrderNumber) + 1;
-            Guid imageGuid = Guid.NewGuid();
-            string imagePath = Path.Combine(GalleryFolderPath, $"{imageGuid}.jpg");
-            string thumbnailPath = Path.Combine(GalleryFolderPath, $"{imageGuid}_thumb.jpg");
-
-            new ImagesConverter(path).ConvertToJpeg(imagePath);
-            new ImagesConverter(path).CreateThumbnail(imagePath, CommonSettings.ThumbnailWidth, CommonSettings.ThumbnailHeight);
-
-            GalleryImage galleryImage = new GalleryImage
+            catch (Exception e)
             {
-                OrderNumber = orderNumber,
-                DisplayedName = orderNumber.ToString(ImageNameMask),
-                ImagePath = imagePath,
-                ThumbnailPath = thumbnailPath
-            };
-
-            Images.Add(galleryImage);
+                LogHelper.Logger.Error(e, $"Unable to add {filePath} to gallery");
+                return new ActionResult(ActionResultType.Error, $"Error while trying to add {filePath} to gallery");
+            }
         }
 
         #endregion
