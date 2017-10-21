@@ -36,6 +36,12 @@ namespace TableOcrExtractor.Logic.Models
         public string GalleryFolderPath { get; set; }
 
         /// <summary>
+        /// Gallery folder path
+        /// </summary>
+        //[XmlIgnore]
+        //public string GalleryAbsoluteFolderPath => 
+
+        /// <summary>
         /// Gallery
         /// </summary>
         [XmlElement]
@@ -73,6 +79,17 @@ namespace TableOcrExtractor.Logic.Models
             return results;
         }
 
+        /// <summary>
+        /// Updates gallery pathes.
+        /// </summary>
+        /// <param name="galleryFolderPath">The gallery path.</param>
+        public void UpdateGalleryPathes(string galleryFolderPath)
+        {            
+            GalleryFolderPath = galleryFolderPath;
+            foreach (GalleryImage image in Images)
+                image.ImageFolderPath = galleryFolderPath;
+        }
+
         #endregion
 
         #region Private methods
@@ -95,18 +112,22 @@ namespace TableOcrExtractor.Logic.Models
                 for (int i = 1; i <= totalPages; i++)
                 {
                     Guid imageGuid = Guid.NewGuid();
-                    string imagePath = Path.Combine(GalleryFolderPath, $"{imageGuid}.jpg");
-                    string thumbnailPath = Path.Combine(GalleryFolderPath, $"{imageGuid}_thumb.jpg");
+                    string imageFileName = $"{imageGuid}.jpg";
+                    string imagePath = Path.Combine(GalleryFolderPath, imageFileName);
+                    string thumbnailFileName = $"{imageGuid}_thumb.jpg";
+                    string thumbnailPath = Path.Combine(GalleryFolderPath, thumbnailFileName);
 
                     engine.SavePageToJpeg(filePath, imagePath, i);
                     new ImagesConverter(imagePath).CreateThumbnail(thumbnailPath, CommonSettings.ThumbnailWidth, CommonSettings.ThumbnailHeight);
 
                     GalleryImage galleryImage = new GalleryImage
                     {
+                        Uid = Guid.NewGuid(),
                         OrderNumber = orderNumber,
                         DisplayedName = orderNumber.ToString(ImageNameMask),
-                        ImagePath = imagePath,
-                        ThumbnailPath = thumbnailPath
+                        ImageFolderPath = GalleryFolderPath,
+                        ImageFileName = imageFileName,
+                        ThumbnailFileName = thumbnailFileName
                     };
 
                     Images.Add(galleryImage);

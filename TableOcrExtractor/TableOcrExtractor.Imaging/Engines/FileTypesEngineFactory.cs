@@ -6,7 +6,7 @@ using TableOcrExtractor.Imaging.Interfaces;
 namespace TableOcrExtractor.Imaging.Engines
 {
     /// <summary>
-    /// Фабрика обработчиков файлов
+    /// Factory for file types engine
     /// </summary>
     public static class FileTypesEngineFactory
     {

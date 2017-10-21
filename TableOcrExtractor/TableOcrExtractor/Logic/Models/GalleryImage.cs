@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Xml.Serialization;
 
 namespace TableOcrExtractor.Logic.Models
@@ -10,6 +11,12 @@ namespace TableOcrExtractor.Logic.Models
     internal class GalleryImage
     {
         #region Properties
+
+        /// <summary>
+        /// Uid
+        /// </summary>
+        [XmlElement]
+        public Guid Uid { get; set; }
 
         /// <summary>
         /// Order number of the image
@@ -24,16 +31,33 @@ namespace TableOcrExtractor.Logic.Models
         public string DisplayedName { get; set; }
 
         /// <summary>
-        /// Thumbnail file path
+        /// The image folder path.
+        /// </summary>
+        public string ImageFolderPath { get; set; }
+
+        /// <summary>
+        /// Thumbnail file name
         /// </summary>
         [XmlElement]
-        public string ThumbnailPath { get; set; }
+        public string ThumbnailFileName { get; set; }
+
+        /// <summary>
+        /// Thumbnail file path
+        /// </summary>
+        [XmlIgnore]
+        public string ThumbnailFilePath => Path.Combine(ImageFolderPath, ThumbnailFileName);
+
+        /// <summary>
+        /// Image file name
+        /// </summary>
+        [XmlElement]
+        public string ImageFileName { get; set; }
 
         /// <summary>
         /// Image file path
         /// </summary>
-        [XmlElement]
-        public string ImagePath { get; set; }
+        [XmlIgnore]
+        public string ImageFilePath => Path.Combine(ImageFolderPath, ImageFileName);
 
         #endregion
 

@@ -218,8 +218,20 @@
             // 
             // GalleryListView
             // 
+            this.GalleryListView.AllowArbitraryItemHeight = true;
+            this.GalleryListView.AllowArbitraryItemWidth = true;
+            this.GalleryListView.AllowColumnReorder = false;
+            this.GalleryListView.AllowColumnResize = false;
+            this.GalleryListView.AllowEdit = false;
+            this.GalleryListView.DisplayMember = "OrderNumber";
             resources.ApplyResources(this.GalleryListView, "GalleryListView");
+            this.GalleryListView.EnableAnalytics = false;
+            this.GalleryListView.EnableGestures = false;
+            this.GalleryListView.ItemSize = new System.Drawing.Size(150, 20);
             this.GalleryListView.Name = "GalleryListView";
+            this.GalleryListView.ShowColumnHeaders = false;
+            this.GalleryListView.ValueMember = "Uid";
+            this.GalleryListView.ItemDataBound += new Telerik.WinControls.UI.ListViewItemEventHandler(this.GalleryListView_ItemDataBound);
             // 
             // GalleryCommandBar
             // 
@@ -246,7 +258,7 @@
             resources.ApplyResources(this.commandBarStripElement1, "commandBarStripElement1");
             this.commandBarStripElement1.AutoSize = true;
             this.commandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement1.GradientAngle = 450F;
+            this.commandBarStripElement1.GradientAngle = 630F;
             // 
             // 
             // 
@@ -276,6 +288,7 @@
             this.commandBarStripElement1.OverflowButton.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation1")));
             this.commandBarStripElement1.OverflowButton.TextWrap = ((bool)(resources.GetObject("resource.TextWrap1")));
             this.commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Hidden;
+            this.commandBarStripElement1.StretchHorizontally = false;
             this.commandBarStripElement1.StretchVertically = false;
             this.commandBarStripElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.commandBarStripElement1.UseCompatibleTextRendering = false;
@@ -377,7 +390,7 @@
             // 
             resources.ApplyResources(this.commandBarStripElement2, "commandBarStripElement2");
             this.commandBarStripElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement2.GradientAngle = 450F;
+            this.commandBarStripElement2.GradientAngle = 630F;
             // 
             // 
             // 

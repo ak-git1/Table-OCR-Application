@@ -17,7 +17,6 @@ namespace TableOcrExtractor.Imaging.Engines
         /// </summary>
         /// <param name="filePath">The file path.</param>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         public int GetTotalPages(string filePath)
         {
             int totalPages = 0;
@@ -38,7 +37,6 @@ namespace TableOcrExtractor.Imaging.Engines
         /// <param name="sourceFilePath">The source file path.</param>
         /// <param name="outputPath">The output path.</param>
         /// <param name="pageNumber">Page number</param>
-        /// <exception cref="NotImplementedException"></exception>
         public void SavePageToJpeg(string sourceFilePath, string outputPath, int pageNumber)
         {
             using (GdPictureImaging image = new GdPictureImaging())

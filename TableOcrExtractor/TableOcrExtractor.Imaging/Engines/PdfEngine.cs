@@ -1,5 +1,4 @@
-﻿using System;
-using GdPicture14;
+﻿using GdPicture14;
 using TableOcrExtractor.Imaging.Interfaces;
 
 namespace TableOcrExtractor.Imaging.Engines

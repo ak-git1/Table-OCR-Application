@@ -667,7 +667,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>718, 20</value>
+    <value>992, 20</value>
   </data>
   <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -690,8 +690,11 @@
   <data name="GalleryListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 0</value>
   </data>
+  <data name="GalleryListView.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
   <data name="GalleryListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 393</value>
+    <value>201, 519</value>
   </data>
   <data name="GalleryListView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -913,7 +916,7 @@
     <value>False</value>
   </data>
   <data name="GalleryCommandBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 393</value>
+    <value>30, 519</value>
   </data>
   <data name="GalleryCommandBar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -937,7 +940,7 @@
     <value>0, 0</value>
   </data>
   <data name="GallerySplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 393</value>
+    <value>231, 519</value>
   </data>
   <data name="GallerySplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -961,7 +964,7 @@
     <value>Right</value>
   </data>
   <data name="ImageCommandBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 0</value>
+    <value>727, 0</value>
   </data>
   <data name="commandBarRowElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1145,7 +1148,7 @@
     <value>False</value>
   </data>
   <data name="ImageCommandBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 252</value>
+    <value>30, 333</value>
   </data>
   <data name="ImageCommandBar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1169,7 +1172,7 @@
     <value>0, 0</value>
   </data>
   <data name="ImageSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>547, 252</value>
+    <value>757, 333</value>
   </data>
   <data name="ImageSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1190,10 +1193,10 @@
     <value>0</value>
   </data>
   <data name="DataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 256</value>
+    <value>0, 337</value>
   </data>
   <data name="DataGridSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>547, 137</value>
+    <value>757, 182</value>
   </data>
   <data name="DataGridSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1223,7 +1226,7 @@
     <value>Horizontal</value>
   </data>
   <data name="ImageSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>547, 393</value>
+    <value>757, 519</value>
   </data>
   <data name="ImageSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1244,10 +1247,10 @@
     <value>0</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 0</value>
+    <value>235, 0</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>547, 393</value>
+    <value>757, 519</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1274,7 +1277,7 @@
     <value>0, 20</value>
   </data>
   <data name="MainSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>718, 393</value>
+    <value>992, 519</value>
   </data>
   <data name="MainSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1331,10 +1334,10 @@
     <value>Horizontal</value>
   </data>
   <data name="StatusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 413</value>
+    <value>0, 539</value>
   </data>
   <data name="StatusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>718, 26</value>
+    <value>992, 26</value>
   </data>
   <data name="StatusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1364,7 +1367,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>718, 439</value>
+    <value>992, 565</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

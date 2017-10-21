@@ -79,7 +79,9 @@ namespace TableOcrExtractor.Logic.Models
         /// <returns></returns>
         public static Project Load(string projectPath)
         {
-            return SerializationHelper.DeserializeFromXml<Project>(File.ReadAllText(projectPath));
+            Project project = SerializationHelper.DeserializeFromXml<Project>(File.ReadAllText(projectPath));
+            project.UpdateProjectPathes(projectPath);
+            return project;
         }
 
         /// <summary>
@@ -102,6 +104,17 @@ namespace TableOcrExtractor.Logic.Models
         #endregion
 
         #region Private methods
+
+        /// <summary>
+        /// Updates project pathes.
+        /// </summary>
+        /// <param name="projectPath">The project path.</param>
+        private void UpdateProjectPathes(string projectPath)
+        {
+            ProjectPath = projectPath;
+            ProjectDataFolderPath = Path.Combine(Path.GetDirectoryName(projectPath), Path.GetDirectoryName(ProjectDataFolderPath + @"\"));
+            Gallery.UpdateGalleryPathes(ProjectDataFolderPath);
+        }
 
         /// <summary>
         /// Validates saving possibility

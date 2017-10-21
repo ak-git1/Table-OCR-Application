@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TableOcrExtractor.Imaging.Converters;
+﻿using TableOcrExtractor.Imaging.Converters;
 using TableOcrExtractor.Imaging.Interfaces;
 
 namespace TableOcrExtractor.Imaging.Engines
@@ -32,7 +27,6 @@ namespace TableOcrExtractor.Imaging.Engines
         /// <param name="sourceFilePath">The source file path.</param>
         /// <param name="outputPath">The output path.</param>
         /// <param name="pageNumber">Page number</param>
-        /// <exception cref="NotImplementedException"></exception>
         public void SavePageToJpeg(string sourceFilePath, string outputPath, int pageNumber)
         {
             new ImagesConverter(sourceFilePath).ConvertToJpeg(outputPath);

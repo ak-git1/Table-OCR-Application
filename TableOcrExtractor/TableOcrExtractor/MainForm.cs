@@ -1,11 +1,13 @@
 ﻿using System;
-using System.Linq;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using TableOcrExtractor.Forms;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
 using TableOcrExtractor.Logic.Models;
 using TableOcrExtractor.Properties;
+using Telerik.WinControls.UI;
 
 namespace TableOcrExtractor
 {
@@ -84,6 +86,28 @@ namespace TableOcrExtractor
             CurrentLanguage = language;
         }
 
+        /// <summary>
+        /// Loads the project.
+        /// </summary>
+        /// <param name="projectFileName">Name of the project file.</param>
+        private void LoadProject(string projectFileName)
+        {
+            _project = Project.Load(projectFileName);
+            InitilalizeProjectDependentControls(true);
+            FillGallery();
+        }
+
+        /// <summary>
+        /// Fills the gallery.
+        /// </summary>
+        private void FillGallery()
+        {
+            BindingList<GalleryImage> dataSource = new BindingList<GalleryImage>();
+            foreach (GalleryImage galleryImage in _project.Gallery.Images)
+                dataSource.Add(galleryImage);
+            GalleryListView.DataSource = dataSource;
+        }
+
         #endregion
 
         #region Event handlers
@@ -136,10 +160,7 @@ namespace TableOcrExtractor
             try
             {
                 if (OpenProjectFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    _project = Project.Load(OpenProjectFileDialog.FileName);
-                    InitilalizeProjectDependentControls(true);
-                }
+                    LoadProject(OpenProjectFileDialog.FileName);
             }
             catch (Exception ex)
             {
@@ -212,10 +233,22 @@ namespace TableOcrExtractor
         {
             if (ImagesImportFileDialog.ShowDialog() == DialogResult.OK)
             {
-                _project.Gallery.AddFiles(ImagesImportFileDialog.SafeFileNames);
-                GalleryListView.Items.Clear();
-                GalleryListView.Items.AddRange(_project.Gallery.Images.Select(x => x.ThumbnailPath).ToArray());
+                _project.Gallery.AddFiles(ImagesImportFileDialog.FileNames);
+                FillGallery();
             }
+        }
+
+        /// <summary>
+        /// Handles the ItemDataBound event of the GalleryListView control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="ListViewItemEventArgs"/> instance containing the event data.</param>
+        private void GalleryListView_ItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+            e.Item.Image = Image.FromFile(((GalleryImage) e.Item.DataBoundItem).ThumbnailFilePath);
+            e.Item.TextImageRelation = TextImageRelation.ImageAboveText;
+            e.Item.ImageAlignment = ContentAlignment.MiddleCenter;
+            e.Item.TextAlignment = ContentAlignment.MiddleCenter;
         }
 
         #endregion

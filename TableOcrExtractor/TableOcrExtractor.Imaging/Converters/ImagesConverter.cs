@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using GdPicture14;
 
 namespace TableOcrExtractor.Imaging.Converters
@@ -55,8 +56,8 @@ namespace TableOcrExtractor.Imaging.Converters
         {
             GdPictureImaging image = new GdPictureImaging();
             int imageId = image.CreateGdPictureImageFromFile(ImagePath);
-            image.CreateThumbnail(imageId, width, height);
-            image.SaveAsJPEG(imageId, outputPath);
+            int thumbnailId = image.CreateThumbnailHQ(imageId, width, height, Color.Black);
+            image.SaveAsJPEG(thumbnailId, outputPath);
             image.ReleaseGdPictureImage(imageId);
             GC.Collect();
         }
