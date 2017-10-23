@@ -55,7 +55,7 @@
             this.commandBarRowElement3 = new Telerik.WinControls.UI.CommandBarRowElement();
             this.ImageAndDataGridSplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.ImageSplitContainer = new Telerik.WinControls.UI.RadSplitContainer();
-            this.ImageSplitPanel = new Telerik.WinControls.UI.SplitPanel();
+            this.GalleryImageSplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.ImageCommandBar = new Telerik.WinControls.UI.RadCommandBar();
             this.commandBarRowElement2 = new Telerik.WinControls.UI.CommandBarRowElement();
             this.commandBarStripElement2 = new Telerik.WinControls.UI.CommandBarStripElement();
@@ -76,8 +76,8 @@
             this.ImageAndDataGridSplitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageSplitContainer)).BeginInit();
             this.ImageSplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageSplitPanel)).BeginInit();
-            this.ImageSplitPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GalleryImageSplitPanel)).BeginInit();
+            this.GalleryImageSplitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageCommandBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSplitPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).BeginInit();
@@ -231,6 +231,7 @@
             this.GalleryListView.Name = "GalleryListView";
             this.GalleryListView.ShowColumnHeaders = false;
             this.GalleryListView.ValueMember = "Uid";
+            this.GalleryListView.SelectedItemChanged += new System.EventHandler(this.GalleryListView_SelectedItemChanged);
             this.GalleryListView.ItemDataBound += new Telerik.WinControls.UI.ListViewItemEventHandler(this.GalleryListView_ItemDataBound);
             // 
             // GalleryCommandBar
@@ -258,7 +259,7 @@
             resources.ApplyResources(this.commandBarStripElement1, "commandBarStripElement1");
             this.commandBarStripElement1.AutoSize = true;
             this.commandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement1.GradientAngle = 630F;
+            this.commandBarStripElement1.GradientAngle = 990F;
             // 
             // 
             // 
@@ -345,7 +346,7 @@
             // 
             // ImageSplitContainer
             // 
-            this.ImageSplitContainer.Controls.Add(this.ImageSplitPanel);
+            this.ImageSplitContainer.Controls.Add(this.GalleryImageSplitPanel);
             this.ImageSplitContainer.Controls.Add(this.DataGridSplitPanel);
             resources.ApplyResources(this.ImageSplitContainer, "ImageSplitContainer");
             this.ImageSplitContainer.Name = "ImageSplitContainer";
@@ -355,18 +356,18 @@
             this.ImageSplitContainer.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.ImageSplitContainer.TabStop = false;
             // 
-            // ImageSplitPanel
+            // GalleryImageSplitPanel
             // 
-            this.ImageSplitPanel.Controls.Add(this.ImageCommandBar);
-            resources.ApplyResources(this.ImageSplitPanel, "ImageSplitPanel");
-            this.ImageSplitPanel.Name = "ImageSplitPanel";
+            this.GalleryImageSplitPanel.Controls.Add(this.ImageCommandBar);
+            resources.ApplyResources(this.GalleryImageSplitPanel, "GalleryImageSplitPanel");
+            this.GalleryImageSplitPanel.Name = "GalleryImageSplitPanel";
             // 
             // 
             // 
-            this.ImageSplitPanel.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.ImageSplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.1467533F);
-            this.ImageSplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 57);
-            this.ImageSplitPanel.TabStop = false;
+            this.GalleryImageSplitPanel.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.GalleryImageSplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.1467533F);
+            this.GalleryImageSplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 57);
+            this.GalleryImageSplitPanel.TabStop = false;
             // 
             // ImageCommandBar
             // 
@@ -390,7 +391,7 @@
             // 
             resources.ApplyResources(this.commandBarStripElement2, "commandBarStripElement2");
             this.commandBarStripElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement2.GradientAngle = 630F;
+            this.commandBarStripElement2.GradientAngle = 990F;
             // 
             // 
             // 
@@ -506,9 +507,9 @@
             this.ImageAndDataGridSplitPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageSplitContainer)).EndInit();
             this.ImageSplitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImageSplitPanel)).EndInit();
-            this.ImageSplitPanel.ResumeLayout(false);
-            this.ImageSplitPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GalleryImageSplitPanel)).EndInit();
+            this.GalleryImageSplitPanel.ResumeLayout(false);
+            this.GalleryImageSplitPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageCommandBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSplitPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).EndInit();
@@ -535,7 +536,7 @@
         private Telerik.WinControls.UI.SplitPanel GallerySplitPanel;
         private Telerik.WinControls.UI.SplitPanel ImageAndDataGridSplitPanel;
         private Telerik.WinControls.UI.RadSplitContainer ImageSplitContainer;
-        private Telerik.WinControls.UI.SplitPanel ImageSplitPanel;
+        private Telerik.WinControls.UI.SplitPanel GalleryImageSplitPanel;
         private Telerik.WinControls.UI.SplitPanel DataGridSplitPanel;
         private Telerik.WinControls.UI.RadStatusStrip StatusStrip;
         private Telerik.WinControls.UI.RadMenuSeparatorItem SeparatorItem2;

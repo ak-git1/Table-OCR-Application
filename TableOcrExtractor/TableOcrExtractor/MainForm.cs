@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using Elar.Framework.Core.Extensions;
 using TableOcrExtractor.Forms;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
@@ -23,6 +25,11 @@ namespace TableOcrExtractor
         /// Current project
         /// </summary>
         private Project _project = null;
+
+        /// <summary>
+        /// Selected gallery image Uid
+        /// </summary>
+        private Guid? _selectedGalleryImageUid = null;
 
         #endregion
 
@@ -106,6 +113,21 @@ namespace TableOcrExtractor
             foreach (GalleryImage galleryImage in _project.Gallery.Images)
                 dataSource.Add(galleryImage);
             GalleryListView.DataSource = dataSource;
+        }
+
+        /// <summary>
+        /// Fills the gallery image.
+        /// </summary>
+        private void FillGalleryImage()
+        {
+            if (_selectedGalleryImageUid.HasValue)
+            {
+                GalleryImage image = _project.Gallery.Images.WhereEx(i => i.Uid == _selectedGalleryImageUid.Value).FirstOrDefault();
+                if (image != null)
+                {
+                   
+                }
+            }
         }
 
         #endregion
@@ -251,12 +273,28 @@ namespace TableOcrExtractor
             e.Item.TextAlignment = ContentAlignment.MiddleCenter;
         }
 
+        /// <summary>
+        /// Handles the SelectedItemChanged event of the GalleryListView control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void GalleryListView_SelectedItemChanged(object sender, EventArgs e)
+        {
+            ListViewItemEventArgs eventArgs = e as ListViewItemEventArgs;
+            if (eventArgs?.Item != null)
+            {
+                GalleryImage image = (GalleryImage)eventArgs.Item.DataBoundItem;
+                _selectedGalleryImageUid = image.Uid;
+                FillGalleryImage();
+            }
+        }
+
         #endregion
 
         #region Image area actions
 
         #endregion
 
-        #endregion
+        #endregion        
     }
 }

@@ -964,7 +964,7 @@
     <value>Right</value>
   </data>
   <data name="ImageCommandBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>727, 0</value>
+    <value>703, 0</value>
   </data>
   <data name="commandBarRowElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1148,7 +1148,7 @@
     <value>False</value>
   </data>
   <data name="ImageCommandBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 333</value>
+    <value>54, 333</value>
   </data>
   <data name="ImageCommandBar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1163,33 +1163,33 @@
     <value>Telerik.WinControls.UI.RadCommandBar, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ImageCommandBar.Parent" xml:space="preserve">
-    <value>ImageSplitPanel</value>
+    <value>GalleryImageSplitPanel</value>
   </data>
   <data name="&gt;&gt;ImageCommandBar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ImageSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GalleryImageSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="ImageSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GalleryImageSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>757, 333</value>
   </data>
-  <data name="ImageSplitPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="GalleryImageSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="ImageSplitPanel.Text" xml:space="preserve">
+  <data name="GalleryImageSplitPanel.Text" xml:space="preserve">
     <value>splitPanel3</value>
   </data>
-  <data name="&gt;&gt;ImageSplitPanel.Name" xml:space="preserve">
-    <value>ImageSplitPanel</value>
+  <data name="&gt;&gt;GalleryImageSplitPanel.Name" xml:space="preserve">
+    <value>GalleryImageSplitPanel</value>
   </data>
-  <data name="&gt;&gt;ImageSplitPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;GalleryImageSplitPanel.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;ImageSplitPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GalleryImageSplitPanel.Parent" xml:space="preserve">
     <value>ImageSplitContainer</value>
   </data>
-  <data name="&gt;&gt;ImageSplitPanel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GalleryImageSplitPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="DataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
