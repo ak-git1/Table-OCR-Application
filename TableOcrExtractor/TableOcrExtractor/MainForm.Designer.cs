@@ -48,18 +48,22 @@
             this.MainSplitContainer = new Telerik.WinControls.UI.RadSplitContainer();
             this.GallerySplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.GalleryListView = new Telerik.WinControls.UI.RadListView();
-            this.GalleryCommandBar = new Telerik.WinControls.UI.RadCommandBar();
-            this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
-            this.commandBarStripElement1 = new Telerik.WinControls.UI.CommandBarStripElement();
-            this.AddImagesBtn = new Telerik.WinControls.UI.CommandBarButton();
-            this.commandBarRowElement3 = new Telerik.WinControls.UI.CommandBarRowElement();
+            this.GalleryCommandsPanel = new Telerik.WinControls.UI.RadPanel();
+            this.RemoveImagesBtn = new Telerik.WinControls.UI.RadButton();
+            this.AddImagesBtn = new Telerik.WinControls.UI.RadButton();
             this.ImageAndDataGridSplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.ImageSplitContainer = new Telerik.WinControls.UI.RadSplitContainer();
             this.GalleryImageSplitPanel = new Telerik.WinControls.UI.SplitPanel();
-            this.ImageCommandBar = new Telerik.WinControls.UI.RadCommandBar();
-            this.commandBarRowElement2 = new Telerik.WinControls.UI.CommandBarRowElement();
-            this.commandBarStripElement2 = new Telerik.WinControls.UI.CommandBarStripElement();
-            this.commandBarButton1 = new Telerik.WinControls.UI.CommandBarButton();
+            this.ImageViewer = new TableOcrExtractor.Controls.ImageViewer();
+            this.ImageCommandsPanel = new Telerik.WinControls.UI.RadPanel();
+            this.radButton7 = new Telerik.WinControls.UI.RadButton();
+            this.radButton6 = new Telerik.WinControls.UI.RadButton();
+            this.radButton5 = new Telerik.WinControls.UI.RadButton();
+            this.radButton4 = new Telerik.WinControls.UI.RadButton();
+            this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.radButton3 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.DataGridSplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.StatusStrip = new Telerik.WinControls.UI.RadStatusStrip();
             this.ProjectNameLabelElement = new Telerik.WinControls.UI.RadLabelElement();
@@ -71,14 +75,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.GallerySplitPanel)).BeginInit();
             this.GallerySplitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GalleryListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GalleryCommandBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GalleryCommandsPanel)).BeginInit();
+            this.GalleryCommandsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveImagesBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddImagesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageAndDataGridSplitPanel)).BeginInit();
             this.ImageAndDataGridSplitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageSplitContainer)).BeginInit();
             this.ImageSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GalleryImageSplitPanel)).BeginInit();
             this.GalleryImageSplitPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageCommandBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageCommandsPanel)).BeginInit();
+            this.ImageCommandsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSplitPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -205,15 +221,15 @@
             // GallerySplitPanel
             // 
             this.GallerySplitPanel.Controls.Add(this.GalleryListView);
-            this.GallerySplitPanel.Controls.Add(this.GalleryCommandBar);
+            this.GallerySplitPanel.Controls.Add(this.GalleryCommandsPanel);
             resources.ApplyResources(this.GallerySplitPanel, "GallerySplitPanel");
             this.GallerySplitPanel.Name = "GallerySplitPanel";
             // 
             // 
             // 
             this.GallerySplitPanel.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.GallerySplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.2661064F, 0F);
-            this.GallerySplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(-190, 0);
+            this.GallerySplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.319838F, 0F);
+            this.GallerySplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(-243, 0);
             this.GallerySplitPanel.TabStop = false;
             // 
             // GalleryListView
@@ -234,102 +250,27 @@
             this.GalleryListView.SelectedItemChanged += new System.EventHandler(this.GalleryListView_SelectedItemChanged);
             this.GalleryListView.ItemDataBound += new Telerik.WinControls.UI.ListViewItemEventHandler(this.GalleryListView_ItemDataBound);
             // 
-            // GalleryCommandBar
+            // GalleryCommandsPanel
             // 
-            resources.ApplyResources(this.GalleryCommandBar, "GalleryCommandBar");
-            this.GalleryCommandBar.Name = "GalleryCommandBar";
-            this.GalleryCommandBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.GalleryCommandBar.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
-            this.commandBarRowElement1,
-            this.commandBarRowElement3});
+            this.GalleryCommandsPanel.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.GalleryCommandsPanel.Controls.Add(this.RemoveImagesBtn);
+            this.GalleryCommandsPanel.Controls.Add(this.AddImagesBtn);
+            resources.ApplyResources(this.GalleryCommandsPanel, "GalleryCommandsPanel");
+            this.GalleryCommandsPanel.Name = "GalleryCommandsPanel";
             // 
-            // commandBarRowElement1
+            // RemoveImagesBtn
             // 
-            resources.ApplyResources(this.commandBarRowElement1, "commandBarRowElement1");
-            this.commandBarRowElement1.AutoSize = true;
-            this.commandBarRowElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarRowElement1.MinSize = new System.Drawing.Size(25, 25);
-            this.commandBarRowElement1.Strips.AddRange(new Telerik.WinControls.UI.CommandBarStripElement[] {
-            this.commandBarStripElement1});
-            this.commandBarRowElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarRowElement1.UseCompatibleTextRendering = false;
-            // 
-            // commandBarStripElement1
-            // 
-            resources.ApplyResources(this.commandBarStripElement1, "commandBarStripElement1");
-            this.commandBarStripElement1.AutoSize = true;
-            this.commandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement1.GradientAngle = 990F;
-            // 
-            // 
-            // 
-            this.commandBarStripElement1.Grip.Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment")));
-            this.commandBarStripElement1.Grip.AngleTransform = ((float)(resources.GetObject("resource.AngleTransform")));
-            this.commandBarStripElement1.Grip.FlipText = ((bool)(resources.GetObject("resource.FlipText")));
-            this.commandBarStripElement1.Grip.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin")));
-            this.commandBarStripElement1.Grip.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding")));
-            this.commandBarStripElement1.Grip.RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft")));
-            this.commandBarStripElement1.Grip.Text = resources.GetString("resource.Text");
-            this.commandBarStripElement1.Grip.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation")));
-            this.commandBarStripElement1.Grip.TextWrap = ((bool)(resources.GetObject("resource.TextWrap")));
-            this.commandBarStripElement1.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
-            this.AddImagesBtn});
-            this.commandBarStripElement1.Name = "commandBarStripElement1";
-            // 
-            // 
-            // 
-            this.commandBarStripElement1.OverflowButton.Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment1")));
-            this.commandBarStripElement1.OverflowButton.AngleTransform = ((float)(resources.GetObject("resource.AngleTransform1")));
-            this.commandBarStripElement1.OverflowButton.Enabled = false;
-            this.commandBarStripElement1.OverflowButton.FlipText = ((bool)(resources.GetObject("resource.FlipText1")));
-            this.commandBarStripElement1.OverflowButton.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin1")));
-            this.commandBarStripElement1.OverflowButton.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding1")));
-            this.commandBarStripElement1.OverflowButton.RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft1")));
-            this.commandBarStripElement1.OverflowButton.Text = resources.GetString("resource.Text1");
-            this.commandBarStripElement1.OverflowButton.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation1")));
-            this.commandBarStripElement1.OverflowButton.TextWrap = ((bool)(resources.GetObject("resource.TextWrap1")));
-            this.commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Hidden;
-            this.commandBarStripElement1.StretchHorizontally = false;
-            this.commandBarStripElement1.StretchVertically = false;
-            this.commandBarStripElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement1.UseCompatibleTextRendering = false;
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).TextWrap = ((bool)(resources.GetObject("resource.TextWrap2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).FlipText = ((bool)(resources.GetObject("resource.FlipText2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).Text = resources.GetString("resource.Text2");
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft2")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement1.GetChildAt(0))).AngleTransform = ((float)(resources.GetObject("resource.AngleTransform2")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).TextWrap = ((bool)(resources.GetObject("resource.TextWrap3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("resource.FlipText3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Text = resources.GetString("resource.Text3");
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Enabled = false;
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Hidden;
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft3")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement1.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("resource.AngleTransform3")));
+            resources.ApplyResources(this.RemoveImagesBtn, "RemoveImagesBtn");
+            this.RemoveImagesBtn.Image = global::TableOcrExtractor.Properties.Resources.remove;
+            this.RemoveImagesBtn.Name = "RemoveImagesBtn";
+            this.RemoveImagesBtn.Click += new System.EventHandler(this.RemoveImagesBtn_Click);
             // 
             // AddImagesBtn
             // 
             resources.ApplyResources(this.AddImagesBtn, "AddImagesBtn");
-            this.AddImagesBtn.AutoSize = false;
-            this.AddImagesBtn.Bounds = new System.Drawing.Rectangle(0, 0, 24, 24);
-            this.AddImagesBtn.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.AddImagesBtn.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.AddImagesBtn.ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddImagesBtn.Name = "AddImagesBtn";
-            this.AddImagesBtn.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.AddImagesBtn.UseCompatibleTextRendering = false;
             this.AddImagesBtn.Click += new System.EventHandler(this.AddImagesBtn_Click);
-            // 
-            // commandBarRowElement3
-            // 
-            this.commandBarRowElement3.MinSize = new System.Drawing.Size(25, 25);
             // 
             // ImageAndDataGridSplitPanel
             // 
@@ -340,8 +281,8 @@
             // 
             // 
             this.ImageAndDataGridSplitPanel.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.ImageAndDataGridSplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.2661064F, 0F);
-            this.ImageAndDataGridSplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(190, 0);
+            this.ImageAndDataGridSplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.319838F, 0F);
+            this.ImageAndDataGridSplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(243, 0);
             this.ImageAndDataGridSplitPanel.TabStop = false;
             // 
             // ImageSplitContainer
@@ -358,7 +299,8 @@
             // 
             // GalleryImageSplitPanel
             // 
-            this.GalleryImageSplitPanel.Controls.Add(this.ImageCommandBar);
+            this.GalleryImageSplitPanel.Controls.Add(this.ImageViewer);
+            this.GalleryImageSplitPanel.Controls.Add(this.ImageCommandsPanel);
             resources.ApplyResources(this.GalleryImageSplitPanel, "GalleryImageSplitPanel");
             this.GalleryImageSplitPanel.Name = "GalleryImageSplitPanel";
             // 
@@ -369,88 +311,76 @@
             this.GalleryImageSplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 57);
             this.GalleryImageSplitPanel.TabStop = false;
             // 
-            // ImageCommandBar
+            // ImageViewer
             // 
-            resources.ApplyResources(this.ImageCommandBar, "ImageCommandBar");
-            this.ImageCommandBar.Name = "ImageCommandBar";
-            this.ImageCommandBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ImageCommandBar.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
-            this.commandBarRowElement2});
+            resources.ApplyResources(this.ImageViewer, "ImageViewer");
+            this.ImageViewer.CurrentDrawingMode = TableOcrExtractor.Controls.Enums.DrawingMode.None;
+            this.ImageViewer.DrawingObjects = ((TableOcrExtractor.Controls.Model.DrawingObjects)(resources.GetObject("ImageViewer.DrawingObjects")));
+            this.ImageViewer.Image = null;
+            this.ImageViewer.Name = "ImageViewer";
+            this.ImageViewer.ZoomStep = 2.5D;
             // 
-            // commandBarRowElement2
+            // ImageCommandsPanel
             // 
-            resources.ApplyResources(this.commandBarRowElement2, "commandBarRowElement2");
-            this.commandBarRowElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarRowElement2.MinSize = new System.Drawing.Size(25, 25);
-            this.commandBarRowElement2.Strips.AddRange(new Telerik.WinControls.UI.CommandBarStripElement[] {
-            this.commandBarStripElement2});
-            this.commandBarRowElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarRowElement2.UseCompatibleTextRendering = false;
+            this.ImageCommandsPanel.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.ImageCommandsPanel.Controls.Add(this.radButton7);
+            this.ImageCommandsPanel.Controls.Add(this.radButton6);
+            this.ImageCommandsPanel.Controls.Add(this.radButton5);
+            this.ImageCommandsPanel.Controls.Add(this.radButton4);
+            this.ImageCommandsPanel.Controls.Add(this.radPanel1);
+            this.ImageCommandsPanel.Controls.Add(this.radButton3);
+            this.ImageCommandsPanel.Controls.Add(this.radButton2);
+            this.ImageCommandsPanel.Controls.Add(this.radButton1);
+            resources.ApplyResources(this.ImageCommandsPanel, "ImageCommandsPanel");
+            this.ImageCommandsPanel.Name = "ImageCommandsPanel";
             // 
-            // commandBarStripElement2
+            // radButton7
             // 
-            resources.ApplyResources(this.commandBarStripElement2, "commandBarStripElement2");
-            this.commandBarStripElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement2.GradientAngle = 990F;
+            resources.ApplyResources(this.radButton7, "radButton7");
+            this.radButton7.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton7.Name = "radButton7";
             // 
+            // radButton6
             // 
+            resources.ApplyResources(this.radButton6, "radButton6");
+            this.radButton6.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton6.Name = "radButton6";
             // 
-            this.commandBarStripElement2.Grip.Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment4")));
-            this.commandBarStripElement2.Grip.AngleTransform = ((float)(resources.GetObject("resource.AngleTransform4")));
-            this.commandBarStripElement2.Grip.FlipText = ((bool)(resources.GetObject("resource.FlipText4")));
-            this.commandBarStripElement2.Grip.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin4")));
-            this.commandBarStripElement2.Grip.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding4")));
-            this.commandBarStripElement2.Grip.RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft4")));
-            this.commandBarStripElement2.Grip.Text = resources.GetString("resource.Text4");
-            this.commandBarStripElement2.Grip.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation4")));
-            this.commandBarStripElement2.Grip.TextWrap = ((bool)(resources.GetObject("resource.TextWrap4")));
-            this.commandBarStripElement2.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
-            this.commandBarButton1});
-            this.commandBarStripElement2.Name = "commandBarStripElement2";
+            // radButton5
             // 
+            resources.ApplyResources(this.radButton5, "radButton5");
+            this.radButton5.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton5.Name = "radButton5";
             // 
+            // radButton4
             // 
-            this.commandBarStripElement2.OverflowButton.Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment5")));
-            this.commandBarStripElement2.OverflowButton.AngleTransform = ((float)(resources.GetObject("resource.AngleTransform5")));
-            this.commandBarStripElement2.OverflowButton.FlipText = ((bool)(resources.GetObject("resource.FlipText5")));
-            this.commandBarStripElement2.OverflowButton.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin5")));
-            this.commandBarStripElement2.OverflowButton.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding5")));
-            this.commandBarStripElement2.OverflowButton.RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft5")));
-            this.commandBarStripElement2.OverflowButton.Text = resources.GetString("resource.Text5");
-            this.commandBarStripElement2.OverflowButton.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation5")));
-            this.commandBarStripElement2.OverflowButton.TextWrap = ((bool)(resources.GetObject("resource.TextWrap5")));
-            this.commandBarStripElement2.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Hidden;
-            this.commandBarStripElement2.StretchHorizontally = false;
-            this.commandBarStripElement2.StretchVertically = true;
-            this.commandBarStripElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.commandBarStripElement2.UseCompatibleTextRendering = false;
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).TextWrap = ((bool)(resources.GetObject("resource.TextWrap6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).FlipText = ((bool)(resources.GetObject("resource.FlipText6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).Text = resources.GetString("resource.Text6");
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft6")));
-            ((Telerik.WinControls.UI.RadCommandBarGrip)(this.commandBarStripElement2.GetChildAt(0))).AngleTransform = ((float)(resources.GetObject("resource.AngleTransform6")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).TextWrap = ((bool)(resources.GetObject("resource.TextWrap7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("resource.TextOrientation7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("resource.FlipText7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Text = resources.GetString("resource.Text7");
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Padding7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("resource.Margin7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Hidden;
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("resource.RightToLeft7")));
-            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.commandBarStripElement2.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("resource.AngleTransform7")));
+            resources.ApplyResources(this.radButton4, "radButton4");
+            this.radButton4.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton4.Name = "radButton4";
             // 
-            // commandBarButton1
+            // radPanel1
             // 
-            this.commandBarButton1.AutoSize = false;
-            this.commandBarButton1.Bounds = new System.Drawing.Rectangle(0, 0, 24, 24);
-            resources.ApplyResources(this.commandBarButton1, "commandBarButton1");
-            this.commandBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("commandBarButton1.Image")));
-            this.commandBarButton1.Name = "commandBarButton1";
+            this.radPanel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            resources.ApplyResources(this.radPanel1, "radPanel1");
+            this.radPanel1.Name = "radPanel1";
+            // 
+            // radButton3
+            // 
+            resources.ApplyResources(this.radButton3, "radButton3");
+            this.radButton3.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton3.Name = "radButton3";
+            // 
+            // radButton2
+            // 
+            resources.ApplyResources(this.radButton2, "radButton2");
+            this.radButton2.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton2.Name = "radButton2";
+            // 
+            // radButton1
+            // 
+            resources.ApplyResources(this.radButton1, "radButton1");
+            this.radButton1.Image = global::TableOcrExtractor.Properties.Resources.add;
+            this.radButton1.Name = "radButton1";
             // 
             // DataGridSplitPanel
             // 
@@ -502,15 +432,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.GallerySplitPanel)).EndInit();
             this.GallerySplitPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GalleryListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GalleryCommandBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GalleryCommandsPanel)).EndInit();
+            this.GalleryCommandsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveImagesBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddImagesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageAndDataGridSplitPanel)).EndInit();
             this.ImageAndDataGridSplitPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageSplitContainer)).EndInit();
             this.ImageSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GalleryImageSplitPanel)).EndInit();
             this.GalleryImageSplitPanel.ResumeLayout(false);
-            this.GalleryImageSplitPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageCommandBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageCommandsPanel)).EndInit();
+            this.ImageCommandsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radButton7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSplitPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -546,16 +487,20 @@
         private Telerik.WinControls.UI.RadMenuItem ProjectMenuItem;
         private Telerik.WinControls.UI.RadLabelElement ProjectNameLabelElement;
         private System.Windows.Forms.OpenFileDialog ImagesImportFileDialog;
-        private Telerik.WinControls.UI.RadCommandBar ImageCommandBar;
-        private Telerik.WinControls.UI.CommandBarRowElement commandBarRowElement2;
-        private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement2;
-        private Telerik.WinControls.UI.CommandBarButton commandBarButton1;
-        private Telerik.WinControls.UI.RadCommandBar GalleryCommandBar;
-        private Telerik.WinControls.UI.CommandBarRowElement commandBarRowElement1;
-        private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement1;
-        private Telerik.WinControls.UI.CommandBarButton AddImagesBtn;
         private Telerik.WinControls.UI.RadListView GalleryListView;
-        private Telerik.WinControls.UI.CommandBarRowElement commandBarRowElement3;
+        private Controls.ImageViewer ImageViewer;
+        private Telerik.WinControls.UI.RadPanel ImageCommandsPanel;
+        private Telerik.WinControls.UI.RadPanel GalleryCommandsPanel;
+        private Telerik.WinControls.UI.RadButton AddImagesBtn;
+        private Telerik.WinControls.UI.RadButton RemoveImagesBtn;
+        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadButton radButton3;
+        private Telerik.WinControls.UI.RadButton radButton2;
+        private Telerik.WinControls.UI.RadPanel radPanel1;
+        private Telerik.WinControls.UI.RadButton radButton7;
+        private Telerik.WinControls.UI.RadButton radButton6;
+        private Telerik.WinControls.UI.RadButton radButton5;
+        private Telerik.WinControls.UI.RadButton radButton4;
     }
 }
 

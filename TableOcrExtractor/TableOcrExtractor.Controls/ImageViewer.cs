@@ -25,6 +25,11 @@ namespace TableOcrExtractor.Controls
         private const int MaxZoomValue = 1000;
 
         /// <summary>
+        /// The line click search area
+        /// </summary>
+        private const int LineClickSearchArea = 5;
+
+        /// <summary>
         /// The drawing is in progress
         /// </summary>
         private bool _isDrawingInProgress;
@@ -33,11 +38,6 @@ namespace TableOcrExtractor.Controls
         /// Current drawing mode
         /// </summary>
         private DrawingMode _currentDrawingMode = DrawingMode.None;
-
-        /// <summary>
-        /// The drawn rectangle area brush
-        /// </summary>
-        private readonly Brush _rectangleAreaBrush = new SolidBrush(Color.FromArgb(70, 72, 145, 220));
 
         /// <summary>
         /// The drawing start point
@@ -53,6 +53,40 @@ namespace TableOcrExtractor.Controls
         /// Rectangle area
         /// </summary>
         private Rectangle _rectangleArea;
+
+        /// <summary>
+        /// Selected Vertical line index
+        /// </summary>
+        private int? _selectedVerticalLineIndex;
+
+        /// <summary>
+        /// Selected horizontal line index
+        /// </summary>
+        private int? _selectedHorizontalLineIndex;
+
+        #region Brushes and pens
+
+        /// <summary>
+        /// Rectangle area brush while drawing
+        /// </summary>
+        private readonly Brush _drawingRectangleAreaBrush = new SolidBrush(Color.FromArgb(70, 72, 145, 220));
+
+        /// <summary>
+        /// The drawn rectangle area border pen
+        /// </summary>
+        private readonly Pen _fixedRectangleAreaBorderPen = new Pen(Color.FromArgb(72, 145, 220), 3);
+
+        /// <summary>
+        /// Line pen while drwaing
+        /// </summary>
+        private readonly Pen _drawingLinePen = new Pen(Color.FromArgb(50, 22, 158, 76), 3);
+
+        /// <summary>
+        /// The drwan line pen
+        /// </summary>
+        private readonly Pen _fixedLinePen = new Pen(Color.FromArgb(22, 158, 76), 3);
+
+        #endregion
 
         #endregion
 
@@ -78,7 +112,11 @@ namespace TableOcrExtractor.Controls
         public Image Image
         {
             get => PictureBox.Image;
-            set => PictureBox.Image = value;
+            set
+            {
+                DrawingObjects.Clear();
+                PictureBox.Image = value;
+            }
         }
 
         /// <summary>
@@ -146,6 +184,33 @@ namespace TableOcrExtractor.Controls
             }
         }
 
+        /// <summary>
+        /// Clears the drawn objects
+        /// </summary>
+        public void ClearObjects()
+        {
+            DrawingObjects.Clear();
+            PictureBox.Invalidate();
+        }
+
+        /// <summary>
+        /// Clears the drawn vertical lines
+        /// </summary>
+        public void ClearVerticalLines()
+        {
+            DrawingObjects.VerticalLinesCoordinates.Clear();
+            PictureBox.Invalidate();
+        }
+
+        /// <summary>
+        /// Clears the drawn horizontal lines
+        /// </summary>
+        public void ClearHorizontalLines()
+        {
+            DrawingObjects.HorizontalLinesCoordinates.Clear();
+            PictureBox.Invalidate();
+        }
+
         #endregion
 
         #region Private methods
@@ -170,7 +235,7 @@ namespace TableOcrExtractor.Controls
         /// </summary>
         /// <param name="rect">Rectangle</param>
         /// <returns></returns>
-        private Rectangle ConvertToViewportRectangle(Rectangle rect)
+        private Rectangle ConvertToViewportCoordinatesRectangle(Rectangle rect)
         {
             int xMin = rect.X;
             int xMax = rect.X + rect.Width;
@@ -187,6 +252,156 @@ namespace TableOcrExtractor.Controls
             };
         }
 
+        /// <summary>
+        /// Converts to image coordinates rectangle.
+        /// </summary>
+        /// <param name="rect">Rectangle</param>
+        /// <returns></returns>
+        private Rectangle ConvertToImageCoordinatesRectangle(Rectangle rect)
+        {
+            int xMin = rect.X;
+            int xMax = rect.X + rect.Width;
+            int yMin = rect.Y;
+            int yMax = rect.Y + rect.Height;
+
+            Point leftBottomCorner = PictureBox.ViewportToImage(new Point(xMin, yMin));
+            Point rightTopCorner = PictureBox.ViewportToImage(new Point(xMax, yMax));
+
+            return new Rectangle
+            {
+                Location = PictureBox.ViewportToImage(rect.Location),
+                Size = new Size(Math.Abs(leftBottomCorner.X - rightTopCorner.X), Math.Abs(leftBottomCorner.Y - rightTopCorner.Y))
+            };
+        }
+
+        /// <summary>
+        /// Converts line coordinates to viewport
+        /// </summary>
+        /// <param name="line">The line</param>
+        /// <returns></returns>
+        private Line ConvertToViewportLine(Line line)
+        {
+            return new Line
+            {
+                Start = PictureBox.ViewportToImage(line.Start),
+                End = PictureBox.ViewportToImage(line.End)
+            };
+        }
+
+        /// <summary>
+        /// Converts X coordinate to viewport coordinate
+        /// </summary>
+        /// <param name="x">X</param>
+        /// <returns></returns>
+        private int ConvertXCoordinateToViewportCoordinate(int x)
+        {
+            return PictureBox.ImageToViewport(new Point(x, 0)).X;
+        }
+
+        /// <summary>
+        /// Converts Y coordinate to viewport coordinate
+        /// </summary>
+        /// <param name="y">Y</param>
+        /// <returns></returns>
+        private int ConvertYCoordinateToViewportCoordinate(int y)
+        {
+            return PictureBox.ImageToViewport(new Point(0, y)).Y;
+        }
+
+        /// <summary>
+        /// Converts X coordinate to viewport coordinate
+        /// </summary>
+        /// <param name="x">X</param>
+        /// <returns></returns>
+        private int ConvertXCoordinateToImageCoordinate(int x)
+        {
+            return PictureBox.ViewportToImage(new Point(x, 0)).X;
+        }
+
+        /// <summary>
+        /// Converts Y coordinate to viewport coordinate
+        /// </summary>
+        /// <param name="y">Y</param>
+        /// <returns></returns>
+        private int ConvertYCoordinateToImageCoordinate(int y)
+        {
+            return PictureBox.ViewportToImage(new Point(0, y)).Y;
+        }
+
+        /// <summary>
+        /// Determines whether value in delta area.
+        /// </summary>
+        /// <param name="value">Value</param>
+        /// <param name="center">Center.</param>
+        /// <param name="delta">Delta</param>
+        /// <returns></returns>
+        private bool IsValueInDeltaArea(int value, int center, int delta)
+        {
+            return center - delta <= value && value <= center + delta;
+        }
+
+        /// <summary>
+        /// Determines whether point is in vertical line area
+        /// </summary>
+        /// <param name="p">Point</param>
+        /// <param name="lineIndex">Index of the line.</param>
+        /// <returns></returns>
+        private bool IsPointInVerticalLineArea(Point p, out int? lineIndex)
+        {
+            lineIndex = null;
+
+            if (DrawingObjects.RectangleArea != Rectangle.Empty && ConvertToViewportCoordinatesRectangle(DrawingObjects.RectangleArea).Contains(p))
+            {
+                for (int i = 0; i < DrawingObjects.VerticalLinesCoordinates.Count; i++)
+                {
+                    if (IsValueInDeltaArea(p.X, ConvertXCoordinateToViewportCoordinate(DrawingObjects.VerticalLinesCoordinates[i]), LineClickSearchArea))
+                    {
+                        lineIndex = i;
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Determines whether point is in horizontal line area
+        /// </summary>
+        /// <param name="p">Point</param>
+        /// <param name="lineIndex">Index of the line.</param>
+        /// <returns></returns>
+        private bool IsPointInHorizontalLineArea(Point p, out int? lineIndex)
+        {
+            lineIndex = null;
+
+            if (DrawingObjects.RectangleArea != Rectangle.Empty && ConvertToViewportCoordinatesRectangle(DrawingObjects.RectangleArea).Contains(p))
+            {
+                for (int i = 0; i < DrawingObjects.HorizontalLinesCoordinates.Count; i++)
+                {
+                    if (IsValueInDeltaArea(p.Y, ConvertYCoordinateToViewportCoordinate(DrawingObjects.HorizontalLinesCoordinates[i]), LineClickSearchArea))
+                    {
+                        lineIndex = i;
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Clears the drawing helping objects like temp points, line indexes etc
+        /// </summary>
+        private void ClearDrawingHelpingObjects()
+        {
+            _drawingStartPoint = Point.Empty;
+            _drawingEndPoint = Point.Empty;
+            _selectedVerticalLineIndex = null;
+            _selectedHorizontalLineIndex = null;
+            _isDrawingInProgress = false;
+        }
+
         #endregion
 
         #region Event handlers
@@ -198,12 +413,43 @@ namespace TableOcrExtractor.Controls
         /// <param name="e">The <see cref="MouseEventArgs"/> instance containing the event data.</param>
         private void PictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            if (CurrentDrawingMode != DrawingMode.None)
+            ClearDrawingHelpingObjects();
+            _drawingStartPoint = e.Location;            
+
+            switch (CurrentDrawingMode)
             {
-                _drawingStartPoint = e.Location;
-                _isDrawingInProgress = true;
-                Invalidate();
-            }            
+                case DrawingMode.Rectangle:                    
+                    _isDrawingInProgress = true;
+                    DrawingObjects.Clear();
+                    PictureBox.Invalidate();
+                    break;
+
+                case DrawingMode.VerticalLine:
+                    if (IsPointInVerticalLineArea(_drawingStartPoint, out _selectedVerticalLineIndex))
+                    {
+                        _isDrawingInProgress = true;
+                        PictureBox.Invalidate();
+                    }
+                    else if (DrawingObjects.VerticalLinesCoordinates.Count < DrawingObjects.MaxNumberOfVerticalLines)
+                    {
+                        _isDrawingInProgress = true;
+                        PictureBox.Invalidate();
+                    }
+                    break;
+
+                case DrawingMode.HorizontalLine:
+                    if (IsPointInHorizontalLineArea(_drawingStartPoint, out _selectedHorizontalLineIndex))
+                    {
+                        _isDrawingInProgress = true;
+                        PictureBox.Invalidate();
+                    }
+                    else
+                    {
+                        _isDrawingInProgress = true;
+                        PictureBox.Invalidate();
+                    }
+                    break;
+            }          
         }
 
         /// <summary>
@@ -213,7 +459,7 @@ namespace TableOcrExtractor.Controls
         /// <param name="e">The <see cref="MouseEventArgs"/> instance containing the event data.</param>
         private void PictureBox_MouseMove(object sender, MouseEventArgs e)
         {
-            if (Image == null || e.Button != MouseButtons.Left)
+            if (Image == null || !_isDrawingInProgress || e.Button != MouseButtons.Left)
                 return;
 
             switch (CurrentDrawingMode)
@@ -224,7 +470,14 @@ namespace TableOcrExtractor.Controls
                     PictureBox.Invalidate();
                     break;
 
-                default:
+                case DrawingMode.VerticalLine:
+                    _drawingEndPoint = e.Location;
+                    PictureBox.Invalidate();
+                    break;
+
+                case DrawingMode.HorizontalLine:
+                    _drawingEndPoint = e.Location;
+                    PictureBox.Invalidate();
                     break;
             }            
         }
@@ -238,14 +491,35 @@ namespace TableOcrExtractor.Controls
         {
             if (e.Button == MouseButtons.Left)
             {
-                switch (CurrentDrawingMode)
+                if (_isDrawingInProgress)
                 {
-                    case DrawingMode.Rectangle:
-                        _isDrawingInProgress = false;
-                        _rectangleArea = Rectangle.Empty;
-                        DrawingObjects.RectangleArea = CreateRectangleByTwoPoints(PictureBox.ViewportToImage(_drawingStartPoint), PictureBox.ViewportToImage(_drawingEndPoint));
-                        break;
-                }
+                    switch (CurrentDrawingMode)
+                    {
+                        case DrawingMode.Rectangle:
+                            _rectangleArea = Rectangle.Empty;
+                            DrawingObjects.RectangleArea = ConvertToImageCoordinatesRectangle(CreateRectangleByTwoPoints(_drawingStartPoint, _drawingEndPoint));
+                            break;
+
+                        case DrawingMode.VerticalLine:
+                            if (_selectedVerticalLineIndex.HasValue)
+                                DrawingObjects.VerticalLinesCoordinates[_selectedVerticalLineIndex.Value] = ConvertXCoordinateToImageCoordinate(_drawingEndPoint.X);
+                            else
+                                if (DrawingObjects.VerticalLinesCoordinates.Count < DrawingObjects.MaxNumberOfVerticalLines)
+                                    DrawingObjects.VerticalLinesCoordinates.Add(ConvertXCoordinateToImageCoordinate(_drawingEndPoint.X));
+                            _selectedVerticalLineIndex = null;
+                            break;
+
+                        case DrawingMode.HorizontalLine:
+                            if (_selectedHorizontalLineIndex.HasValue)
+                                DrawingObjects.HorizontalLinesCoordinates[_selectedHorizontalLineIndex.Value] = ConvertYCoordinateToImageCoordinate(_drawingEndPoint.Y);
+                            else                                
+                                DrawingObjects.HorizontalLinesCoordinates.Add(ConvertYCoordinateToImageCoordinate(_drawingEndPoint.Y));
+                            _selectedHorizontalLineIndex = null;
+                            break;
+                    }
+
+                    _isDrawingInProgress = false;
+                }                
             }            
         }
 
@@ -258,17 +532,84 @@ namespace TableOcrExtractor.Controls
         {
             if (Image != null)
             {
-                if (_isDrawingInProgress)
+                if (_isDrawingInProgress && CurrentDrawingMode == DrawingMode.Rectangle)
                 {
                     if (_rectangleArea != Rectangle.Empty && _rectangleArea.Width > 0 && _rectangleArea.Height > 0)
-                        e.Graphics.FillRectangle(_rectangleAreaBrush, _rectangleArea);
+                        e.Graphics.FillRectangle(_drawingRectangleAreaBrush, _rectangleArea);
                 }
                 else
                 {
                     if (DrawingObjects.RectangleArea != Rectangle.Empty && DrawingObjects.RectangleArea.Width > 0 && DrawingObjects.RectangleArea.Height > 0)
-                        e.Graphics.FillRectangle(_rectangleAreaBrush, ConvertToViewportRectangle(DrawingObjects.RectangleArea));
+                    {
+                        #region Rectangle drawing
+
+                        Rectangle rect = ConvertToViewportCoordinatesRectangle(DrawingObjects.RectangleArea);
+                        e.Graphics.DrawRectangle(_fixedRectangleAreaBorderPen, rect);
+
+                        #endregion
+
+                        #region Vertical lines drawing
+
+                        for (int i = 0; i < DrawingObjects.VerticalLinesCoordinates.Count; i++)
+                        {
+                            if (_selectedVerticalLineIndex.HasValue && _selectedVerticalLineIndex == i)
+                                continue;
+
+                            int x = ConvertXCoordinateToViewportCoordinate(DrawingObjects.VerticalLinesCoordinates[i]);
+                            e.Graphics.DrawLine(_fixedLinePen, x, rect.Bottom, x, rect.Top);
+                        }
+
+                        if (_isDrawingInProgress && CurrentDrawingMode == DrawingMode.VerticalLine)
+                            e.Graphics.DrawLine(_drawingLinePen, _drawingEndPoint.X, rect.Bottom, _drawingEndPoint.X, rect.Top);
+
+                        #endregion
+
+                        #region Horizontal lines drawing
+
+                        for (int i = 0; i < DrawingObjects.HorizontalLinesCoordinates.Count; i++)
+                        {
+                            if (_selectedHorizontalLineIndex.HasValue && _selectedHorizontalLineIndex == i)
+                                continue;
+
+                            int y = ConvertYCoordinateToViewportCoordinate(DrawingObjects.HorizontalLinesCoordinates[i]);
+                            e.Graphics.DrawLine(_fixedLinePen, rect.Left, y, rect.Right, y);
+                        }
+
+                        if (_isDrawingInProgress && CurrentDrawingMode == DrawingMode.HorizontalLine)
+                            e.Graphics.DrawLine(_drawingLinePen, rect.Left, _drawingEndPoint.Y, rect.Right, _drawingEndPoint.Y);
+
+                        #endregion
+                    }
                 }
             }
+        }
+
+        private void PictureBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && _isDrawingInProgress)
+            {
+                if (_selectedVerticalLineIndex.HasValue)
+                {
+                    DrawingObjects.VerticalLinesCoordinates.RemoveAt(_selectedVerticalLineIndex.Value);
+                    _selectedVerticalLineIndex = null;
+                    _isDrawingInProgress = false;
+                    PictureBox.Invalidate();
+                }
+
+                if (_selectedHorizontalLineIndex.HasValue)
+                {
+                    DrawingObjects.HorizontalLinesCoordinates.RemoveAt(_selectedHorizontalLineIndex.Value);
+                    _selectedHorizontalLineIndex = null;
+                    _isDrawingInProgress = false;
+                    PictureBox.Invalidate();
+                }
+            }
+
+            if (e.KeyCode == Keys.Escape && _isDrawingInProgress)
+            {
+                ClearDrawingHelpingObjects();
+                PictureBox.Invalidate();
+            }                
         }
 
         #endregion

@@ -63,7 +63,9 @@ namespace TableOcrExtractor
         /// <param name="projectLoaded">Project is loaded</param>
         private void InitilalizeProjectDependentControls(bool projectLoaded)
         {
-            ProjectMenuItem.Enabled = AddImagesBtn.Enabled = projectLoaded;
+            ProjectMenuItem.Enabled = 
+            AddImagesBtn.Enabled =
+            RemoveImagesBtn.Enabled = projectLoaded;
             ProjectNameLabelElement.Text = projectLoaded ? string.Format(Resources.ProjectName_Caption, _project.Name) : Resources.ProjectName_NoProjectLoaded;
             
         }
@@ -125,8 +127,9 @@ namespace TableOcrExtractor
                 GalleryImage image = _project.Gallery.Images.WhereEx(i => i.Uid == _selectedGalleryImageUid.Value).FirstOrDefault();
                 if (image != null)
                 {
-                   
-                }
+                    ImageViewer.Image = Image.FromFile(image.ImageFilePath);
+                    ImageViewer.FitImage();
+                }                        
             }
         }
 
@@ -261,6 +264,18 @@ namespace TableOcrExtractor
         }
 
         /// <summary>
+        /// Handles the Click event of the RemoveImagesBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void RemoveImagesBtn_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewDataItem item in GalleryListView.SelectedItems)
+                _project.Gallery.Images.Remove((GalleryImage)item.DataBoundItem);
+            FillGallery();
+        }
+
+        /// <summary>
         /// Handles the ItemDataBound event of the GalleryListView control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -295,6 +310,6 @@ namespace TableOcrExtractor
 
         #endregion
 
-        #endregion        
+        #endregion
     }
 }

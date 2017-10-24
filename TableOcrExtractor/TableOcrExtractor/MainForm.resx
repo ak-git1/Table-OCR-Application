@@ -667,7 +667,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>992, 20</value>
+    <value>1066, 20</value>
   </data>
   <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -688,13 +688,13 @@
     <value>Fill</value>
   </data>
   <data name="GalleryListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 0</value>
+    <value>40, 0</value>
   </data>
   <data name="GalleryListView.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="GalleryListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 519</value>
+    <value>151, 566</value>
   </data>
   <data name="GalleryListView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -711,236 +711,96 @@
   <data name="&gt;&gt;GalleryListView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="GalleryCommandBar.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <assembly alias="Telerik.WinControls" name="Telerik.WinControls, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  <data name="RemoveImagesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
   </data>
-  <data name="GalleryCommandBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="RemoveImagesBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
-  <data name="GalleryCommandBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="RemoveImagesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
   </data>
-  <data name="commandBarRowElement1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="RemoveImagesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
   </data>
-  <data name="commandBarRowElement1.AngleTransform" type="System.Single, mscorlib">
+  <data name="RemoveImagesBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RemoveImagesBtn.Text" xml:space="preserve">
+    <value>Remove images</value>
+  </data>
+  <data name="&gt;&gt;RemoveImagesBtn.Name" xml:space="preserve">
+    <value>RemoveImagesBtn</value>
+  </data>
+  <data name="&gt;&gt;RemoveImagesBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RemoveImagesBtn.Parent" xml:space="preserve">
+    <value>GalleryCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;RemoveImagesBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="commandBarRowElement1.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="AddImagesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
   </data>
-  <data name="commandBarRowElement1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="AddImagesBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
-  <data name="commandBarRowElement1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="AddImagesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 7</value>
   </data>
-  <data name="commandBarRowElement1.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="AddImagesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
   </data>
-  <data name="commandBarStripElement1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="commandBarStripElement1.AngleTransform" type="System.Single, mscorlib">
+  <data name="AddImagesBtn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="commandBarStripElement1.DisplayName" xml:space="preserve">
-    <value>commandBarStripElement1</value>
-  </data>
-  <data name="commandBarStripElement1.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.AngleTransform" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="AddImagesBtn.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="AddImagesBtn.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AddImagesBtn.DisplayName" xml:space="preserve">
-    <value>commandBarButton1</value>
-  </data>
-  <data name="AddImagesBtn.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="AddImagesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="AddImagesBtn.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="AddImagesBtn.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="AddImagesBtn.Text" xml:space="preserve">
     <value>Add images</value>
   </data>
-  <data name="AddImagesBtn.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="&gt;&gt;AddImagesBtn.Name" xml:space="preserve">
+    <value>AddImagesBtn</value>
   </data>
-  <data name="AddImagesBtn.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;AddImagesBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="commandBarStripElement1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;AddImagesBtn.Parent" xml:space="preserve">
+    <value>GalleryCommandsPanel</value>
   </data>
-  <data name="resource.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="&gt;&gt;AddImagesBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="resource.AngleTransform1" type="System.Single, mscorlib">
-    <value>90</value>
+  <data name="GalleryCommandsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="resource.FlipText1" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="GalleryCommandsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="resource.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="GalleryCommandsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 566</value>
   </data>
-  <data name="resource.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="GalleryCommandsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="resource.RightToLeft1" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;GalleryCommandsPanel.Name" xml:space="preserve">
+    <value>GalleryCommandsPanel</value>
   </data>
-  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;GalleryCommandsPanel.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="resource.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.TextWrap1" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="commandBarStripElement1.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement1.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="commandBarStripElement1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="commandBarStripElement1.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextWrap2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextOrientation2" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.FlipText2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Padding2" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Margin2" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment2" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.RightToLeft2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.AngleTransform2" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.TextWrap3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextOrientation3" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.FlipText3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Padding3" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Margin3" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.RightToLeft3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.AngleTransform3" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="commandBarRowElement1.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="commandBarRowElement1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="commandBarRowElement1.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="GalleryCommandBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 519</value>
-  </data>
-  <data name="GalleryCommandBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GalleryCommandBar.Text" xml:space="preserve">
-    <value>Add images</value>
-  </data>
-  <data name="&gt;&gt;GalleryCommandBar.Name" xml:space="preserve">
-    <value>GalleryCommandBar</value>
-  </data>
-  <data name="&gt;&gt;GalleryCommandBar.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCommandBar, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;GalleryCommandBar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GalleryCommandsPanel.Parent" xml:space="preserve">
     <value>GallerySplitPanel</value>
   </data>
-  <data name="&gt;&gt;GalleryCommandBar.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GalleryCommandsPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="GallerySplitPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="GallerySplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 519</value>
+    <value>191, 566</value>
   </data>
   <data name="GallerySplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -960,225 +820,319 @@
   <data name="&gt;&gt;GallerySplitPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ImageCommandBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
+  <data name="ImageViewer.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="ImageCommandBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>703, 0</value>
+  <data name="ImageViewer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="commandBarRowElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="commandBarRowElement2.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="commandBarRowElement2.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarRowElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="commandBarRowElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="commandBarRowElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="commandBarStripElement2.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="commandBarStripElement2.DisplayName" xml:space="preserve">
-    <value>commandBarStripElement2</value>
-  </data>
-  <data name="commandBarStripElement2.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Alignment4" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.AngleTransform4" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.FlipText4" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Margin4" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Padding4" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.RightToLeft4" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.TextOrientation4" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.TextWrap4" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarButton1.DisplayName" xml:space="preserve">
-    <value>commandBarButton1</value>
-  </data>
-  <data name="commandBarButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ImageViewer.DrawingObjects" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADaSURBVDhPrZE7CsMwEER9pBwjx8iRfASVKdXkU6qz
-        yy1dCtykVJlus2NiE7xrE3s98BAMzENCFTMfjll6MUsvZunFLGPKrCGOT+IQiR9Nz/emr26CtTdLSJYS
-        rolP5wukvFFKctipRZpaGsQiRaX2qgB45lLqEAfhiETtVQHCihSBeJRL1F4VAJ+xlPIWStkjTXIY+Qrz
-        a49UPsMKbglhzjuk+OF5xmdDSt0eqQzmEd90S+qyXzrdchAWTuSV/j4bUhGm1iHFucZmKQb/MN8CVRyB
-        WXoxSx9cfQCSrFXAhaG4yAAAAABJRU5ErkJggg==
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFUYWJsZU9jckV4dHJhY3Rvci5Db250cm9scywgVmVyc2lvbj0x
+        LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwMAwAAAFFTeXN0ZW0uRHJh
+        d2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1
+        ZjdmMTFkNTBhM2EMBAAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9uPTQuMC4w
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUBAAAAL1Rh
+        YmxlT2NyRXh0cmFjdG9yLkNvbnRyb2xzLk1vZGVsLkRyYXdpbmdPYmplY3RzBAAAAB48UmVjdGFuZ2xl
+        QXJlYT5rX19CYWNraW5nRmllbGQpPE1heE51bWJlck9mVmVydGljYWxMaW5lcz5rX19CYWNraW5nRmll
+        bGQpPFZlcnRpY2FsTGluZXNDb29yZGluYXRlcz5rX19CYWNraW5nRmllbGQrPEhvcml6b250YWxMaW5l
+        c0Nvb3JkaW5hdGVzPmtfX0JhY2tpbmdGaWVsZAQABAQYU3lzdGVtLkRyYXdpbmcuUmVjdGFuZ2xlAwAA
+        AAgvU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tTeXN0ZW0uSW50MzIEAAAAL1N5c3Rl
+        bS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLkludDMyBAAAAAIAAAAF+////xhTeXN0
+        ZW0uRHJhd2luZy5SZWN0YW5nbGUEAAAAAXgBeQV3aWR0aAZoZWlnaHQAAAAACAgICAMAAAAAAAAAAAAA
+        AAAAAAAAAAAAAQAAAAkGAAAACQcAAAAFBgAAAC9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0
+        YDFbW1N5c3RlbS5JbnQzMgMAAAAGX2l0ZW1zBV9zaXplCF92ZXJzaW9uBwAACAgIBAAAAAkIAAAAAAAA
+        AAAAAAABBwAAAAYAAAAJCAAAAAAAAAAAAAAADwgAAAAAAAAACAs=
 </value>
   </data>
-  <data name="commandBarButton1.Text" xml:space="preserve">
-    <value>commandBarButton1</value>
+  <data name="ImageViewer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="commandBarStripElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="ImageViewer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>831, 363</value>
   </data>
-  <data name="resource.Alignment5" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="ImageViewer.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="resource.AngleTransform5" type="System.Single, mscorlib">
-    <value>90</value>
+  <data name="&gt;&gt;ImageViewer.Name" xml:space="preserve">
+    <value>ImageViewer</value>
   </data>
-  <data name="resource.FlipText5" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;ImageViewer.Type" xml:space="preserve">
+    <value>TableOcrExtractor.Controls.ImageViewer, TableOcrExtractor.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="resource.Margin5" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Padding5" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.RightToLeft5" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text5" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.TextOrientation5" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.TextWrap5" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="commandBarStripElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="commandBarStripElement2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="commandBarStripElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="commandBarStripElement2.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextWrap6" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextOrientation6" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.FlipText6" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text6" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Padding6" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Margin6" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment6" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.RightToLeft6" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.AngleTransform6" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="resource.TextWrap7" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.TextOrientation7" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="resource.FlipText7" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Text7" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Padding7" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Margin7" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="resource.Alignment7" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="resource.RightToLeft7" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.AngleTransform7" type="System.Single, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="commandBarRowElement2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="commandBarRowElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="commandBarRowElement2.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ImageCommandBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 333</value>
-  </data>
-  <data name="ImageCommandBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ImageCommandBar.Text" xml:space="preserve">
-    <value>radCommandBar2</value>
-  </data>
-  <data name="&gt;&gt;ImageCommandBar.Name" xml:space="preserve">
-    <value>ImageCommandBar</value>
-  </data>
-  <data name="&gt;&gt;ImageCommandBar.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCommandBar, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;ImageCommandBar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ImageViewer.Parent" xml:space="preserve">
     <value>GalleryImageSplitPanel</value>
   </data>
-  <data name="&gt;&gt;ImageCommandBar.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ImageViewer.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="radButton7.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton7.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 238</value>
+  </data>
+  <data name="radButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="radButton7.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton7.Name" xml:space="preserve">
+    <value>radButton7</value>
+  </data>
+  <data name="&gt;&gt;radButton7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton7.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radButton6.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton6.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 201</value>
+  </data>
+  <data name="radButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radButton6.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton6.Name" xml:space="preserve">
+    <value>radButton6</value>
+  </data>
+  <data name="&gt;&gt;radButton6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton6.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radButton5.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton5.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 164</value>
+  </data>
+  <data name="radButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="radButton5.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton5.Name" xml:space="preserve">
+    <value>radButton5</value>
+  </data>
+  <data name="&gt;&gt;radButton5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton5.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radButton4.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton4.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 127</value>
+  </data>
+  <data name="radButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="radButton4.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton4.Name" xml:space="preserve">
+    <value>radButton4</value>
+  </data>
+  <data name="&gt;&gt;radButton4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton4.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 118</value>
+  </data>
+  <data name="radPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 3</value>
+  </data>
+  <data name="radPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.Name" xml:space="preserve">
+    <value>radPanel1</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radButton3.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton3.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 81</value>
+  </data>
+  <data name="radButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radButton3.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton3.Name" xml:space="preserve">
+    <value>radButton3</value>
+  </data>
+  <data name="&gt;&gt;radButton3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton3.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radButton2.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton2.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="radButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radButton2.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton2.Name" xml:space="preserve">
+    <value>radButton2</value>
+  </data>
+  <data name="&gt;&gt;radButton2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton2.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radButton1.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="radButton1.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="radButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="radButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radButton1.Text" xml:space="preserve">
+    <value>Add images</value>
+  </data>
+  <data name="&gt;&gt;radButton1.Name" xml:space="preserve">
+    <value>radButton1</value>
+  </data>
+  <data name="&gt;&gt;radButton1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radButton1.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radButton1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ImageCommandsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="ImageCommandsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>831, 0</value>
+  </data>
+  <data name="ImageCommandsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 363</value>
+  </data>
+  <data name="ImageCommandsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ImageCommandsPanel.Name" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;ImageCommandsPanel.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;ImageCommandsPanel.Parent" xml:space="preserve">
+    <value>GalleryImageSplitPanel</value>
+  </data>
+  <data name="&gt;&gt;ImageCommandsPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GalleryImageSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="GalleryImageSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>757, 333</value>
+    <value>871, 363</value>
   </data>
   <data name="GalleryImageSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="GalleryImageSplitPanel.Text" xml:space="preserve">
-    <value>splitPanel3</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;GalleryImageSplitPanel.Name" xml:space="preserve">
     <value>GalleryImageSplitPanel</value>
@@ -1193,16 +1147,16 @@
     <value>0</value>
   </data>
   <data name="DataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 337</value>
+    <value>0, 367</value>
   </data>
   <data name="DataGridSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>757, 182</value>
+    <value>871, 199</value>
   </data>
   <data name="DataGridSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="DataGridSplitPanel.Text" xml:space="preserve">
-    <value>splitPanel4</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;DataGridSplitPanel.Name" xml:space="preserve">
     <value>DataGridSplitPanel</value>
@@ -1226,13 +1180,13 @@
     <value>Horizontal</value>
   </data>
   <data name="ImageSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>757, 519</value>
+    <value>871, 566</value>
   </data>
   <data name="ImageSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="ImageSplitContainer.Text" xml:space="preserve">
-    <value>radSplitContainer1</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;ImageSplitContainer.Name" xml:space="preserve">
     <value>ImageSplitContainer</value>
@@ -1247,16 +1201,16 @@
     <value>0</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 0</value>
+    <value>195, 0</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>757, 519</value>
+    <value>871, 566</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Text" xml:space="preserve">
-    <value>splitPanel2</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;ImageAndDataGridSplitPanel.Name" xml:space="preserve">
     <value>ImageAndDataGridSplitPanel</value>
@@ -1277,13 +1231,13 @@
     <value>0, 20</value>
   </data>
   <data name="MainSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>992, 519</value>
+    <value>1066, 566</value>
   </data>
   <data name="MainSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="MainSplitContainer.Text" xml:space="preserve">
-    <value>radSplitContainer1</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;MainSplitContainer.Name" xml:space="preserve">
     <value>MainSplitContainer</value>
@@ -1325,7 +1279,7 @@
     <value>False</value>
   </data>
   <data name="ProjectNameLabelElement.Text" xml:space="preserve">
-    <value />
+    <value>Project</value>
   </data>
   <data name="ProjectNameLabelElement.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1334,10 +1288,10 @@
     <value>Horizontal</value>
   </data>
   <data name="StatusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 539</value>
+    <value>0, 586</value>
   </data>
   <data name="StatusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>992, 26</value>
+    <value>1066, 26</value>
   </data>
   <data name="StatusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1367,7 +1321,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>992, 565</value>
+    <value>1066, 612</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3238,48 +3192,6 @@
   </data>
   <data name="&gt;&gt;RussianLanguageMenuItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement1.Name" xml:space="preserve">
-    <value>commandBarRowElement1</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarRowElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;commandBarStripElement1.Name" xml:space="preserve">
-    <value>commandBarStripElement1</value>
-  </data>
-  <data name="&gt;&gt;commandBarStripElement1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarStripElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;AddImagesBtn.Name" xml:space="preserve">
-    <value>AddImagesBtn</value>
-  </data>
-  <data name="&gt;&gt;AddImagesBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement3.Name" xml:space="preserve">
-    <value>commandBarRowElement3</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarRowElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement2.Name" xml:space="preserve">
-    <value>commandBarRowElement2</value>
-  </data>
-  <data name="&gt;&gt;commandBarRowElement2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarRowElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;commandBarStripElement2.Name" xml:space="preserve">
-    <value>commandBarStripElement2</value>
-  </data>
-  <data name="&gt;&gt;commandBarStripElement2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarStripElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;commandBarButton1.Name" xml:space="preserve">
-    <value>commandBarButton1</value>
-  </data>
-  <data name="&gt;&gt;commandBarButton1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.CommandBarButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ProjectNameLabelElement.Name" xml:space="preserve">
     <value>ProjectNameLabelElement</value>

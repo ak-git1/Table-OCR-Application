@@ -203,12 +203,18 @@
     <value> </value>
   </data>
   <data name="AddImagesBtn.DisplayName" xml:space="preserve">
-    <value>Импорт изображений</value>
+    <value>Добавить изображений</value>
   </data>
   <data name="AddImagesBtn.Text" xml:space="preserve">
-    <value>Импорт изображений</value>
+    <value>Добавить изображений</value>
   </data>
   <data name="commandBarRowElement1.Text" xml:space="preserve">
     <value> </value>
+  </data>
+  <data name="GalleryImageSplitPanel.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="RemoveImagesBtn.Text" xml:space="preserve">
+    <value>Удалить изображения</value>
   </data>
 </root>

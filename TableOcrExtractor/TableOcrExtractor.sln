@@ -25,6 +25,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{84D7AA8F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOcrExtractor.Controls.TestsApp", "Tests\TableOcrExtractor.Controls.TestsApp\TableOcrExtractor.Controls.TestsApp.csproj", "{06B1D2BD-BDA4-459A-A5A8-0E8F967F7F46}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{330E1B0F-6A97-4A40-809D-AEB372B6FF73}"
+	ProjectSection(SolutionItems) = preProject
+		ExternalLibraries\Telerik\Telerik.WinControls.dll = ExternalLibraries\Telerik\Telerik.WinControls.dll
+		ExternalLibraries\Telerik\Telerik.WinControls.RadDock.dll = ExternalLibraries\Telerik\Telerik.WinControls.RadDock.dll
+		ExternalLibraries\Telerik\Telerik.WinControls.RichTextEditor.dll = ExternalLibraries\Telerik\Telerik.WinControls.RichTextEditor.dll
+		ExternalLibraries\Telerik\Telerik.WinControls.Themes.Windows7.dll = ExternalLibraries\Telerik\Telerik.WinControls.Themes.Windows7.dll
+		ExternalLibraries\Telerik\Telerik.WinControls.UI.dll = ExternalLibraries\Telerik\Telerik.WinControls.UI.dll
+		ExternalLibraries\Telerik\TelerikCommon.dll = ExternalLibraries\Telerik\TelerikCommon.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevExpress", "DevExpress", "{01112CD7-DFF6-4B42-8867-E4149897C509}"
+	ProjectSection(SolutionItems) = preProject
+		ExternalLibraries\DevExpress\DevExpress.Data.v16.1.dll = ExternalLibraries\DevExpress\DevExpress.Data.v16.1.dll
+		ExternalLibraries\DevExpress\DevExpress.Pdf.v16.1.Core.dll = ExternalLibraries\DevExpress\DevExpress.Pdf.v16.1.Core.dll
+		ExternalLibraries\DevExpress\DevExpress.Printing.v16.1.Core.dll = ExternalLibraries\DevExpress\DevExpress.Printing.v16.1.Core.dll
+		ExternalLibraries\DevExpress\DevExpress.Sparkline.v16.1.Core.dll = ExternalLibraries\DevExpress\DevExpress.Sparkline.v16.1.Core.dll
+		ExternalLibraries\DevExpress\DevExpress.Utils.v16.1.dll = ExternalLibraries\DevExpress\DevExpress.Utils.v16.1.dll
+		ExternalLibraries\DevExpress\DevExpress.XtraEditors.v16.1.dll = ExternalLibraries\DevExpress\DevExpress.XtraEditors.v16.1.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +74,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7C0B33E4-7B41-4BDB-A532-E876E7BEFC85} = {06BB8B52-999B-4048-83C9-6C1D8294E8E7}
 		{06B1D2BD-BDA4-459A-A5A8-0E8F967F7F46} = {84D7AA8F-BD89-4201-9764-E28F61F333A1}
+		{330E1B0F-6A97-4A40-809D-AEB372B6FF73} = {06BB8B52-999B-4048-83C9-6C1D8294E8E7}
+		{01112CD7-DFF6-4B42-8867-E4149897C509} = {06BB8B52-999B-4048-83C9-6C1D8294E8E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35EF4B95-7A0F-4BA4-8DFF-635E71F9FEA2}

@@ -21,6 +21,7 @@ namespace TableOcrExtractor.Controls.TestsApp
         private void LoadBtn_Click(object sender, EventArgs e)
         {
             ImageViewer.Image = Image.FromFile(@"d:\Current\samples\IMG_000001.jpg");
+            ImageViewer.DrawingObjects.MaxNumberOfVerticalLines = 3;
         }
 
         private void ZoomNormalBtn_Click(object sender, EventArgs e)
@@ -46,6 +47,16 @@ namespace TableOcrExtractor.Controls.TestsApp
         private void button2_Click(object sender, EventArgs e)
         {
             ImageViewer.CurrentDrawingMode = DrawingMode.Rectangle;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ImageViewer.CurrentDrawingMode = DrawingMode.VerticalLine;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ImageViewer.CurrentDrawingMode = DrawingMode.HorizontalLine;
         }
     }
 }

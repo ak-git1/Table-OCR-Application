@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
+using TableOcrExtractor.Controls.Model;
 
 namespace TableOcrExtractor.Logic.Models
 {
@@ -58,6 +59,12 @@ namespace TableOcrExtractor.Logic.Models
         /// </summary>
         [XmlIgnore]
         public string ImageFilePath => Path.Combine(ImageFolderPath, ImageFileName);
+
+        /// <summary>
+        /// Drawing objects for 
+        /// </summary>
+        [XmlIgnore]
+        public DrawingObjects DrawingObjects { get; set; }
 
         #endregion
 
