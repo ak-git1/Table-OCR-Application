@@ -109,6 +109,18 @@ namespace TableOcrExtractor.Logic.Models
             // TODO
         }
 
+        /// <summary>
+        /// Updates the data columns.
+        /// </summary>
+        /// <param name="dataColumns">Data columns.</param>
+        public void UpdateDataColumns(List<string> dataColumns)
+        {
+            DataColumns = dataColumns;
+            int maxNumberOfVerticalLines = DataColumns.Count - 1;
+            foreach (GalleryImage image in Gallery.Images)
+                image.DrawingObjects.MaxNumberOfVerticalLines = maxNumberOfVerticalLines;
+        }
+
         #endregion
 
         #region Private methods
@@ -130,6 +142,9 @@ namespace TableOcrExtractor.Logic.Models
         private void Validate()
         {
             // TODO
+            // DataColumns
+            // vertical lines
+            // images
         }
 
         #endregion

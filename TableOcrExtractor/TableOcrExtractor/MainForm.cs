@@ -298,7 +298,7 @@ namespace TableOcrExtractor
             };
             if (projectDataColumnsForm.ShowDialog() == DialogResult.OK)
             {
-                _project.DataColumns = projectDataColumnsForm.DataColumns;
+                _project.UpdateDataColumns(projectDataColumnsForm.DataColumns);
                 InitializeDataGrid();
             }
         }
