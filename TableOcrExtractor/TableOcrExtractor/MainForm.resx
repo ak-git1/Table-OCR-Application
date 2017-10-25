@@ -489,6 +489,12 @@
   <data name="ProjectMenuItem.ImageKey" xml:space="preserve">
     <value />
   </data>
+  <data name="ProjectDataColumnsMenuItem.Text" xml:space="preserve">
+    <value>Data columns</value>
+  </data>
+  <data name="ProjectSettingsMenuItem.Text" xml:space="preserve">
+    <value>Project settings</value>
+  </data>
   <data name="ProjectMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
@@ -722,7 +728,7 @@
     <value>4, 44</value>
   </data>
   <data name="RemoveImagesBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+    <value>33, 33</value>
   </data>
   <data name="RemoveImagesBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -752,7 +758,7 @@
     <value>4, 7</value>
   </data>
   <data name="AddImagesBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+    <value>33, 33</value>
   </data>
   <data name="AddImagesBtn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -806,7 +812,7 @@
     <value>0</value>
   </data>
   <data name="GallerySplitPanel.Text" xml:space="preserve">
-    <value>splitPanel1</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;GallerySplitPanel.Name" xml:space="preserve">
     <value>GallerySplitPanel</value>
@@ -867,124 +873,124 @@
   <data name="&gt;&gt;ImageViewer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="radButton7.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="DrawingModeHorizontalLinesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton7.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="DrawingModeHorizontalLinesBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DrawingModeHorizontalLinesBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 238</value>
   </data>
-  <data name="radButton7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="DrawingModeHorizontalLinesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton7.TabIndex" type="System.Int32, mscorlib">
+  <data name="DrawingModeHorizontalLinesBtn.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="radButton7.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="DrawingModeHorizontalLinesBtn.Text" xml:space="preserve">
+    <value>Draw horizontal lines</value>
   </data>
-  <data name="&gt;&gt;radButton7.Name" xml:space="preserve">
-    <value>radButton7</value>
+  <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.Name" xml:space="preserve">
+    <value>DrawingModeHorizontalLinesBtn</value>
   </data>
-  <data name="&gt;&gt;radButton7.Type" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="radButton6.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="DrawingModeVerticalLinesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton6.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="DrawingModeVerticalLinesBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DrawingModeVerticalLinesBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 201</value>
   </data>
-  <data name="radButton6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="DrawingModeVerticalLinesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton6.TabIndex" type="System.Int32, mscorlib">
+  <data name="DrawingModeVerticalLinesBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="radButton6.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="DrawingModeVerticalLinesBtn.Text" xml:space="preserve">
+    <value>Draw vertical lines</value>
   </data>
-  <data name="&gt;&gt;radButton6.Name" xml:space="preserve">
-    <value>radButton6</value>
+  <data name="&gt;&gt;DrawingModeVerticalLinesBtn.Name" xml:space="preserve">
+    <value>DrawingModeVerticalLinesBtn</value>
   </data>
-  <data name="&gt;&gt;radButton6.Type" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeVerticalLinesBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeVerticalLinesBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeVerticalLinesBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="radButton5.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="DrawingModeRectangleBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton5.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="DrawingModeRectangleBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DrawingModeRectangleBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 164</value>
   </data>
-  <data name="radButton5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="DrawingModeRectangleBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton5.TabIndex" type="System.Int32, mscorlib">
+  <data name="DrawingModeRectangleBtn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="radButton5.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="DrawingModeRectangleBtn.Text" xml:space="preserve">
+    <value>Draw rectangle</value>
   </data>
-  <data name="&gt;&gt;radButton5.Name" xml:space="preserve">
-    <value>radButton5</value>
+  <data name="&gt;&gt;DrawingModeRectangleBtn.Name" xml:space="preserve">
+    <value>DrawingModeRectangleBtn</value>
   </data>
-  <data name="&gt;&gt;radButton5.Type" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeRectangleBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeRectangleBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeRectangleBtn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="radButton4.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="DrawingModeNoneBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton4.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="DrawingModeNoneBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DrawingModeNoneBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 127</value>
   </data>
-  <data name="radButton4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="DrawingModeNoneBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton4.TabIndex" type="System.Int32, mscorlib">
+  <data name="DrawingModeNoneBtn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="radButton4.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="DrawingModeNoneBtn.Text" xml:space="preserve">
+    <value>Cancel drawing mode</value>
   </data>
-  <data name="&gt;&gt;radButton4.Name" xml:space="preserve">
-    <value>radButton4</value>
+  <data name="&gt;&gt;DrawingModeNoneBtn.Name" xml:space="preserve">
+    <value>DrawingModeNoneBtn</value>
   </data>
-  <data name="&gt;&gt;radButton4.Type" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeNoneBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeNoneBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DrawingModeNoneBtn.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="radPanel1.Location" type="System.Drawing.Point, System.Drawing">
@@ -1008,94 +1014,94 @@
   <data name="&gt;&gt;radPanel1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="radButton3.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="ZoomFitBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton3.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="ZoomFitBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ZoomFitBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 81</value>
   </data>
-  <data name="radButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="ZoomFitBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton3.TabIndex" type="System.Int32, mscorlib">
+  <data name="ZoomFitBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="radButton3.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="ZoomFitBtn.Text" xml:space="preserve">
+    <value>Zoom fit</value>
   </data>
-  <data name="&gt;&gt;radButton3.Name" xml:space="preserve">
-    <value>radButton3</value>
+  <data name="&gt;&gt;ZoomFitBtn.Name" xml:space="preserve">
+    <value>ZoomFitBtn</value>
   </data>
-  <data name="&gt;&gt;radButton3.Type" xml:space="preserve">
+  <data name="&gt;&gt;ZoomFitBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ZoomFitBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ZoomFitBtn.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="radButton2.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="ZoomOutBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton2.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="ZoomOutBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ZoomOutBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
   </data>
-  <data name="radButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="ZoomOutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton2.TabIndex" type="System.Int32, mscorlib">
+  <data name="ZoomOutBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="radButton2.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="ZoomOutBtn.Text" xml:space="preserve">
+    <value>Zoom out</value>
   </data>
-  <data name="&gt;&gt;radButton2.Name" xml:space="preserve">
-    <value>radButton2</value>
+  <data name="&gt;&gt;ZoomOutBtn.Name" xml:space="preserve">
+    <value>ZoomOutBtn</value>
   </data>
-  <data name="&gt;&gt;radButton2.Type" xml:space="preserve">
+  <data name="&gt;&gt;ZoomOutBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ZoomOutBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ZoomOutBtn.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="radButton1.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+  <data name="ZoomInBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
-  <data name="radButton1.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="ZoomInBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="radButton1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ZoomInBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 7</value>
   </data>
-  <data name="radButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 31</value>
+  <data name="ZoomInBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
   </data>
-  <data name="radButton1.TabIndex" type="System.Int32, mscorlib">
+  <data name="ZoomInBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="radButton1.Text" xml:space="preserve">
-    <value>Add images</value>
+  <data name="ZoomInBtn.Text" xml:space="preserve">
+    <value>Zoom in</value>
   </data>
-  <data name="&gt;&gt;radButton1.Name" xml:space="preserve">
-    <value>radButton1</value>
+  <data name="&gt;&gt;ZoomInBtn.Name" xml:space="preserve">
+    <value>ZoomInBtn</value>
   </data>
-  <data name="&gt;&gt;radButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;ZoomInBtn.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radButton1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ZoomInBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
   </data>
-  <data name="&gt;&gt;radButton1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ZoomInBtn.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="ImageCommandsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1144,6 +1150,33 @@
     <value>ImageSplitContainer</value>
   </data>
   <data name="&gt;&gt;GalleryImageSplitPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DataGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="DataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="DataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>871, 199</value>
+  </data>
+  <data name="DataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DataGrid.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;DataGrid.Name" xml:space="preserve">
+    <value>DataGrid</value>
+  </data>
+  <data name="&gt;&gt;DataGrid.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;DataGrid.Parent" xml:space="preserve">
+    <value>DataGridSplitPanel</value>
+  </data>
+  <data name="&gt;&gt;DataGrid.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="DataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
@@ -3167,6 +3200,18 @@
     <value>ProjectMenuItem</value>
   </data>
   <data name="&gt;&gt;ProjectMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;ProjectDataColumnsMenuItem.Name" xml:space="preserve">
+    <value>ProjectDataColumnsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ProjectDataColumnsMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;ProjectSettingsMenuItem.Name" xml:space="preserve">
+    <value>ProjectSettingsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ProjectSettingsMenuItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SettingsMenuItem.Name" xml:space="preserve">

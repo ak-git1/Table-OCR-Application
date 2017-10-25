@@ -71,6 +71,20 @@ namespace TableOcrExtractor.Controls.Model
             HorizontalLinesCoordinates = new List<int>();
         }
 
+        /// <summary>
+        /// Clones this instance.
+        /// </summary>
+        public DrawingObjects Clone()
+        {
+            return new DrawingObjects
+            {
+                RectangleArea = RectangleArea,
+                MaxNumberOfVerticalLines = MaxNumberOfVerticalLines,
+                VerticalLinesCoordinates = new List<int>(VerticalLinesCoordinates),
+                HorizontalLinesCoordinates = new List<int>(HorizontalLinesCoordinates)
+            };
+        }
+
         #endregion
     }
 }

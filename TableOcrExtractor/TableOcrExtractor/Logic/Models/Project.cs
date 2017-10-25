@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using TableOcrExtractor.Logic.Helpers;
@@ -51,6 +52,12 @@ namespace TableOcrExtractor.Logic.Models
         [XmlElement]
         public Gallery Gallery { get; set; }
 
+        /// <summary>
+        /// Data columns
+        /// </summary>
+        [XmlElement]
+        public List<string> DataColumns { get; set; }
+
         #endregion
 
         #region Public methods
@@ -68,6 +75,7 @@ namespace TableOcrExtractor.Logic.Models
                 ProjectDataFolderPath = Path.Combine(Path.GetDirectoryName(projectPath), $@"{DataFolderPrefix}")
             };
             project.Gallery = new Gallery(project.ProjectDataFolderPath);
+            project.DataColumns = new List<string>();
             project.Save();
             return project;
         }

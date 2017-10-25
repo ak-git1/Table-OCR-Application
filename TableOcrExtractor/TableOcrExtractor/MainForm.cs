@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Elar.Framework.Core.Extensions;
+using TableOcrExtractor.Controls.Enums;
 using TableOcrExtractor.Forms;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
@@ -24,12 +25,12 @@ namespace TableOcrExtractor
         /// <summary>
         /// Current project
         /// </summary>
-        private Project _project = null;
+        private Project _project;
 
         /// <summary>
         /// Selected gallery image Uid
         /// </summary>
-        private Guid? _selectedGalleryImageUid = null;
+        private Guid? _selectedGalleryImageUid;
 
         #endregion
 
@@ -52,7 +53,7 @@ namespace TableOcrExtractor
         /// </summary>
         private void InitializeControls()
         {
-            SetLanguage((Language)TableOcrExtractor.Properties.Settings.Default.CurrentCultureInfo);
+            SetLanguage((Language)Properties.Settings.Default.CurrentCultureInfo);
             OpenProjectFileDialog.Filter = Project.ProjectFileExtensionsFilter;
             InitilalizeProjectDependentControls(false);
         }
@@ -66,8 +67,26 @@ namespace TableOcrExtractor
             ProjectMenuItem.Enabled = 
             AddImagesBtn.Enabled =
             RemoveImagesBtn.Enabled = projectLoaded;
+
+            InitializeImageControls(projectLoaded);
+
             ProjectNameLabelElement.Text = projectLoaded ? string.Format(Resources.ProjectName_Caption, _project.Name) : Resources.ProjectName_NoProjectLoaded;
             
+        }
+
+        /// <summary>
+        /// Initializes the image controls.
+        /// </summary>
+        /// <param name="enabled">Controls enabled</param>
+        private void InitializeImageControls(bool enabled)
+        {
+            ZoomInBtn.Enabled =
+            ZoomOutBtn.Enabled =
+            ZoomFitBtn.Enabled =
+            DrawingModeNoneBtn.Enabled =
+            DrawingModeRectangleBtn.Enabled =
+            DrawingModeVerticalLinesBtn.Enabled =
+            DrawingModeHorizontalLinesBtn.Enabled = enabled;
         }
 
         /// <summary>
@@ -104,6 +123,7 @@ namespace TableOcrExtractor
             _project = Project.Load(projectFileName);
             InitilalizeProjectDependentControls(true);
             FillGallery();
+            InitializeDataGrid();
         }
 
         /// <summary>
@@ -112,8 +132,19 @@ namespace TableOcrExtractor
         private void FillGallery()
         {
             BindingList<GalleryImage> dataSource = new BindingList<GalleryImage>();
-            foreach (GalleryImage galleryImage in _project.Gallery.Images)
-                dataSource.Add(galleryImage);
+
+            if (_project.Gallery.Images.Count > 0)
+            {
+                foreach (GalleryImage galleryImage in _project.Gallery.Images)
+                    dataSource.Add(galleryImage);
+            }
+            else
+            {
+                InitializeImageControls(false);
+                _selectedGalleryImageUid = null;
+                ImageViewer.Image = null;
+            }
+
             GalleryListView.DataSource = dataSource;
         }
 
@@ -127,10 +158,23 @@ namespace TableOcrExtractor
                 GalleryImage image = _project.Gallery.Images.WhereEx(i => i.Uid == _selectedGalleryImageUid.Value).FirstOrDefault();
                 if (image != null)
                 {
+                    InitializeImageControls(true);
                     ImageViewer.Image = Image.FromFile(image.ImageFilePath);
                     ImageViewer.FitImage();
+                    ImageViewer.DrawingObjects = image.DrawingObjects.Clone();
                 }                        
             }
+        }
+
+        /// <summary>
+        /// Initializes the OCR data grid
+        /// </summary>
+        private void InitializeDataGrid()
+        {
+            DataGrid.DataSource = null;
+            DataGrid.Columns.Clear();
+            foreach (string columnName in _project.DataColumns)
+                DataGrid.Columns.Add(columnName, columnName);
         }
 
         #endregion
@@ -245,6 +289,30 @@ namespace TableOcrExtractor
             Close();
         }
 
+        private void ProjectDataColumnsMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectDataColumnsForm projectDataColumnsForm = new ProjectDataColumnsForm
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                DataColumns = _project.DataColumns
+            };
+            if (projectDataColumnsForm.ShowDialog() == DialogResult.OK)
+            {
+                _project.DataColumns = projectDataColumnsForm.DataColumns;
+                InitializeDataGrid();
+            }
+        }
+
+        private void ProjectSettingsMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO
+        }
+
+        private void AboutMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutForm().Show();
+        }
+
         #endregion
 
         #region Gallery actions
@@ -307,6 +375,91 @@ namespace TableOcrExtractor
         #endregion
 
         #region Image area actions
+
+        /// <summary>
+        /// Handles the Click event of the ZoomInBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void ZoomInBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.ZoomIn();
+        }
+
+        /// <summary>
+        /// Handles the Click event of the ZoomOutBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void ZoomOutBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.ZoomOut();
+        }
+
+        /// <summary>
+        /// Handles the Click event of the ZoomFitBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void ZoomFitBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.FitImage();
+        }
+
+        /// <summary>
+        /// Handles the Click event of the DrawingModeNoneBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DrawingModeNoneBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.CurrentDrawingMode = DrawingMode.None;
+        }
+
+        /// <summary>
+        /// Handles the Click event of the DrawingModeRectangleBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DrawingModeRectangleBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.CurrentDrawingMode = DrawingMode.Rectangle;
+        }
+
+        /// <summary>
+        /// Handles the Click event of the DrawingModeVerticalLinesBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DrawingModeVerticalLinesBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.CurrentDrawingMode = DrawingMode.VerticalLine;
+        }
+
+        /// <summary>
+        /// Handles the Click event of the DrawingModeHorizontalLinesBtn control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DrawingModeHorizontalLinesBtn_Click(object sender, EventArgs e)
+        {
+            ImageViewer.CurrentDrawingMode = DrawingMode.HorizontalLine;
+        }
+
+        /// <summary>
+        /// Handles the Paint event of the ImageViewer control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="PaintEventArgs"/> instance containing the event data.</param>
+        private void ImageViewer_Redrawn(object sender, EventArgs e)
+        {
+            if (_selectedGalleryImageUid.HasValue)
+            {
+                GalleryImage image = _project.Gallery.Images.WhereEx(x => x.Uid == _selectedGalleryImageUid.Value).FirstOrDefault();
+                if (image != null)
+                    image.DrawingObjects = ImageViewer.DrawingObjects.Clone();
+            }
+        }
 
         #endregion
 

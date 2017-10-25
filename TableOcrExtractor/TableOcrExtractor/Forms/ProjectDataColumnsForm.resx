@@ -118,133 +118,167 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 178</value>
+  </data>
+  <data name="CancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Name" xml:space="preserve">
+    <value>CancelBtn</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SaveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 178</value>
+  </data>
+  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 24</value>
+  </data>
+  <data name="SaveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;SaveBtn.Name" xml:space="preserve">
+    <value>SaveBtn</value>
+  </data>
+  <data name="&gt;&gt;SaveBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;SaveBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SaveBtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DataColumnsEnterLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="DataColumnsEnterLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 18</value>
+  </data>
+  <data name="DataColumnsEnterLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="DataColumnsEnterLbl.Text" xml:space="preserve">
+    <value>Enter the data columns names:</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsEnterLbl.Name" xml:space="preserve">
+    <value>DataColumnsEnterLbl</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsEnterLbl.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsEnterLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsEnterLbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DataColumnsListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 37</value>
+  </data>
+  <data name="DataColumnsListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 121</value>
+  </data>
+  <data name="DataColumnsListView.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="DataColumnsListView.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;DataColumnsListView.Name" xml:space="preserve">
+    <value>DataColumnsListView</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsListView.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadListView, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsListView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DataColumnsListView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AddBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 37</value>
+  </data>
+  <data name="AddBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 24</value>
+  </data>
+  <data name="AddBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="AddBtn.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;AddBtn.Name" xml:space="preserve">
+    <value>AddBtn</value>
+  </data>
+  <data name="&gt;&gt;AddBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;AddBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AddBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RemoveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 67</value>
+  </data>
+  <data name="RemoveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 24</value>
+  </data>
+  <data name="RemoveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="RemoveBtn.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;RemoveBtn.Name" xml:space="preserve">
+    <value>RemoveBtn</value>
+  </data>
+  <data name="&gt;&gt;RemoveBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RemoveBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RemoveBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>780, 451</value>
+    <value>451, 214</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Экстрактор табличный данных</value>
+    <value>ProjectDataColumnsForm</value>
   </data>
-  <data name="FileMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProjectDataColumnsForm</value>
   </data>
-  <data name="ExitMenuItem.Text" xml:space="preserve">
-    <value>Выход</value>
-  </data>
-  <data name="AboutMenuItem.Text" xml:space="preserve">
-    <value>О программе</value>
-  </data>
-  <data name="NewProjectMenuItem.Text" xml:space="preserve">
-    <value>Новый проект</value>
-  </data>
-  <data name="OpenProjectMenuItem.Text" xml:space="preserve">
-    <value>Открыть проект</value>
-  </data>
-  <data name="SeparatorItem1.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="EnglishLanguageMenuItem.Text" xml:space="preserve">
-    <value>Английский</value>
-  </data>
-  <data name="RussianLanguageMenuItem.Text" xml:space="preserve">
-    <value>Русский</value>
-  </data>
-  <data name="LanguageMenuItem.Text" xml:space="preserve">
-    <value>Язык</value>
-  </data>
-  <data name="SettingsMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
-  </data>
-  <data name="MainSplitContainer.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="GallerySplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="DataGridSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageSplitContainer.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageAndDataGridSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="SaveMenuItem.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="SaveAsMenuItem.Text" xml:space="preserve">
-    <value>Сохранить как...</value>
-  </data>
-  <data name="SeparatorItem2.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ProjectMenuItem.Text" xml:space="preserve">
-    <value>Проект</value>
-  </data>
-  <data name="ProjectNameLabelElement.Text" xml:space="preserve">
-    <value>Проект</value>
-  </data>
-  <data name="commandBarStripElement1.DisplayName" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="ImageCommandBar.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="commandBarStripElement2.DisplayName" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="GalleryCommandBar.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="commandBarStripElement1.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="AddImagesBtn.DisplayName" xml:space="preserve">
-    <value>Добавить изображений</value>
-  </data>
-  <data name="AddImagesBtn.Text" xml:space="preserve">
-    <value>Добавить изображений</value>
-  </data>
-  <data name="commandBarRowElement1.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="GalleryImageSplitPanel.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="RemoveImagesBtn.Text" xml:space="preserve">
-    <value>Удалить изображения</value>
-  </data>
-  <data name="ZoomFitBtn.Text" xml:space="preserve">
-    <value>Вписать изображение</value>
-  </data>
-  <data name="ZoomOutBtn.Text" xml:space="preserve">
-    <value>Уменьшить изображение</value>
-  </data>
-  <data name="ZoomInBtn.Text" xml:space="preserve">
-    <value>Уменьшить изображение</value>
-  </data>
-  <data name="DrawingModeVerticalLinesBtn.Text" xml:space="preserve">
-    <value>Рисовать вертикальные линии</value>
-  </data>
-  <data name="DrawingModeRectangleBtn.Text" xml:space="preserve">
-    <value>Рисовать область распознавания</value>
-  </data>
-  <data name="DrawingModeNoneBtn.Text" xml:space="preserve">
-    <value>Выйти из режима рисования</value>
-  </data>
-  <data name="DrawingModeHorizontalLinesBtn.Text" xml:space="preserve">
-    <value>Рисовать горизонтальные линии</value>
-  </data>
-  <data name="ProjectDataColumnsMenuItem.Text" xml:space="preserve">
-    <value>Столбцы данных</value>
-  </data>
-  <data name="ProjectSettingsMenuItem.Text" xml:space="preserve">
-    <value>Настройки проекта</value>
-  </data>
-  <data name="DataGrid.Text" xml:space="preserve">
-    <value> </value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>TableOcrExtractor.Forms.LocalizedForm, TableOcrExtractor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

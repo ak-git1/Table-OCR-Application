@@ -61,7 +61,7 @@ namespace TableOcrExtractor.Logic.Models
         public string ImageFilePath => Path.Combine(ImageFolderPath, ImageFileName);
 
         /// <summary>
-        /// Drawing objects for 
+        /// Drawing objects on the image for OCR 
         /// </summary>
         [XmlIgnore]
         public DrawingObjects DrawingObjects { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace TableOcrExtractor
+﻿using System;
+
+namespace TableOcrExtractor
 {
     partial class MainForm
     {
@@ -29,6 +31,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.windows7Theme = new Telerik.WinControls.Themes.Windows7Theme();
             this.FileMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.NewProjectMenuItem = new Telerik.WinControls.UI.RadMenuItem();
@@ -41,6 +44,8 @@
             this.AboutMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.MainMenu = new Telerik.WinControls.UI.RadMenu();
             this.ProjectMenuItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.ProjectDataColumnsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.ProjectSettingsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.SettingsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.LanguageMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.EnglishLanguageMenuItem = new Telerik.WinControls.UI.RadMenuItem();
@@ -56,15 +61,16 @@
             this.GalleryImageSplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.ImageViewer = new TableOcrExtractor.Controls.ImageViewer();
             this.ImageCommandsPanel = new Telerik.WinControls.UI.RadPanel();
-            this.radButton7 = new Telerik.WinControls.UI.RadButton();
-            this.radButton6 = new Telerik.WinControls.UI.RadButton();
-            this.radButton5 = new Telerik.WinControls.UI.RadButton();
-            this.radButton4 = new Telerik.WinControls.UI.RadButton();
+            this.DrawingModeHorizontalLinesBtn = new Telerik.WinControls.UI.RadButton();
+            this.DrawingModeVerticalLinesBtn = new Telerik.WinControls.UI.RadButton();
+            this.DrawingModeRectangleBtn = new Telerik.WinControls.UI.RadButton();
+            this.DrawingModeNoneBtn = new Telerik.WinControls.UI.RadButton();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
-            this.radButton3 = new Telerik.WinControls.UI.RadButton();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.ZoomFitBtn = new Telerik.WinControls.UI.RadButton();
+            this.ZoomOutBtn = new Telerik.WinControls.UI.RadButton();
+            this.ZoomInBtn = new Telerik.WinControls.UI.RadButton();
             this.DataGridSplitPanel = new Telerik.WinControls.UI.SplitPanel();
+            this.DataGrid = new Telerik.WinControls.UI.RadGridView();
             this.StatusStrip = new Telerik.WinControls.UI.RadStatusStrip();
             this.ProjectNameLabelElement = new Telerik.WinControls.UI.RadLabelElement();
             this.OpenProjectFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -87,15 +93,18 @@
             this.GalleryImageSplitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageCommandsPanel)).BeginInit();
             this.ImageCommandsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeHorizontalLinesBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeVerticalLinesBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeRectangleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeNoneBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomFitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomOutBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomInBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSplitPanel)).BeginInit();
+            this.DataGridSplitPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +166,7 @@
             // 
             resources.ApplyResources(this.AboutMenuItem, "AboutMenuItem");
             this.AboutMenuItem.Name = "AboutMenuItem";
+            this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -177,7 +187,22 @@
             // ProjectMenuItem
             // 
             resources.ApplyResources(this.ProjectMenuItem, "ProjectMenuItem");
+            this.ProjectMenuItem.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.ProjectDataColumnsMenuItem,
+            this.ProjectSettingsMenuItem});
             this.ProjectMenuItem.Name = "ProjectMenuItem";
+            // 
+            // ProjectDataColumnsMenuItem
+            // 
+            this.ProjectDataColumnsMenuItem.Name = "ProjectDataColumnsMenuItem";
+            resources.ApplyResources(this.ProjectDataColumnsMenuItem, "ProjectDataColumnsMenuItem");
+            this.ProjectDataColumnsMenuItem.Click += new System.EventHandler(this.ProjectDataColumnsMenuItem_Click);
+            // 
+            // ProjectSettingsMenuItem
+            // 
+            this.ProjectSettingsMenuItem.Name = "ProjectSettingsMenuItem";
+            resources.ApplyResources(this.ProjectSettingsMenuItem, "ProjectSettingsMenuItem");
+            this.ProjectSettingsMenuItem.Click += new System.EventHandler(this.ProjectSettingsMenuItem_Click);
             // 
             // SettingsMenuItem
             // 
@@ -319,44 +344,49 @@
             this.ImageViewer.Image = null;
             this.ImageViewer.Name = "ImageViewer";
             this.ImageViewer.ZoomStep = 2.5D;
+            this.ImageViewer.Redrawn += new System.EventHandler(this.ImageViewer_Redrawn);
             // 
             // ImageCommandsPanel
             // 
             this.ImageCommandsPanel.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ImageCommandsPanel.Controls.Add(this.radButton7);
-            this.ImageCommandsPanel.Controls.Add(this.radButton6);
-            this.ImageCommandsPanel.Controls.Add(this.radButton5);
-            this.ImageCommandsPanel.Controls.Add(this.radButton4);
+            this.ImageCommandsPanel.Controls.Add(this.DrawingModeHorizontalLinesBtn);
+            this.ImageCommandsPanel.Controls.Add(this.DrawingModeVerticalLinesBtn);
+            this.ImageCommandsPanel.Controls.Add(this.DrawingModeRectangleBtn);
+            this.ImageCommandsPanel.Controls.Add(this.DrawingModeNoneBtn);
             this.ImageCommandsPanel.Controls.Add(this.radPanel1);
-            this.ImageCommandsPanel.Controls.Add(this.radButton3);
-            this.ImageCommandsPanel.Controls.Add(this.radButton2);
-            this.ImageCommandsPanel.Controls.Add(this.radButton1);
+            this.ImageCommandsPanel.Controls.Add(this.ZoomFitBtn);
+            this.ImageCommandsPanel.Controls.Add(this.ZoomOutBtn);
+            this.ImageCommandsPanel.Controls.Add(this.ZoomInBtn);
             resources.ApplyResources(this.ImageCommandsPanel, "ImageCommandsPanel");
             this.ImageCommandsPanel.Name = "ImageCommandsPanel";
             // 
-            // radButton7
+            // DrawingModeHorizontalLinesBtn
             // 
-            resources.ApplyResources(this.radButton7, "radButton7");
-            this.radButton7.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton7.Name = "radButton7";
+            resources.ApplyResources(this.DrawingModeHorizontalLinesBtn, "DrawingModeHorizontalLinesBtn");
+            this.DrawingModeHorizontalLinesBtn.Image = global::TableOcrExtractor.Properties.Resources.draw_horizontal_line;
+            this.DrawingModeHorizontalLinesBtn.Name = "DrawingModeHorizontalLinesBtn";
+            this.DrawingModeHorizontalLinesBtn.Click += new System.EventHandler(this.DrawingModeHorizontalLinesBtn_Click);
             // 
-            // radButton6
+            // DrawingModeVerticalLinesBtn
             // 
-            resources.ApplyResources(this.radButton6, "radButton6");
-            this.radButton6.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton6.Name = "radButton6";
+            resources.ApplyResources(this.DrawingModeVerticalLinesBtn, "DrawingModeVerticalLinesBtn");
+            this.DrawingModeVerticalLinesBtn.Image = global::TableOcrExtractor.Properties.Resources.draw_vertical_line;
+            this.DrawingModeVerticalLinesBtn.Name = "DrawingModeVerticalLinesBtn";
+            this.DrawingModeVerticalLinesBtn.Click += new System.EventHandler(this.DrawingModeVerticalLinesBtn_Click);
             // 
-            // radButton5
+            // DrawingModeRectangleBtn
             // 
-            resources.ApplyResources(this.radButton5, "radButton5");
-            this.radButton5.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton5.Name = "radButton5";
+            resources.ApplyResources(this.DrawingModeRectangleBtn, "DrawingModeRectangleBtn");
+            this.DrawingModeRectangleBtn.Image = global::TableOcrExtractor.Properties.Resources.draw_rectangle;
+            this.DrawingModeRectangleBtn.Name = "DrawingModeRectangleBtn";
+            this.DrawingModeRectangleBtn.Click += new System.EventHandler(this.DrawingModeRectangleBtn_Click);
             // 
-            // radButton4
+            // DrawingModeNoneBtn
             // 
-            resources.ApplyResources(this.radButton4, "radButton4");
-            this.radButton4.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton4.Name = "radButton4";
+            resources.ApplyResources(this.DrawingModeNoneBtn, "DrawingModeNoneBtn");
+            this.DrawingModeNoneBtn.Image = global::TableOcrExtractor.Properties.Resources.cancel;
+            this.DrawingModeNoneBtn.Name = "DrawingModeNoneBtn";
+            this.DrawingModeNoneBtn.Click += new System.EventHandler(this.DrawingModeNoneBtn_Click);
             // 
             // radPanel1
             // 
@@ -364,26 +394,30 @@
             resources.ApplyResources(this.radPanel1, "radPanel1");
             this.radPanel1.Name = "radPanel1";
             // 
-            // radButton3
+            // ZoomFitBtn
             // 
-            resources.ApplyResources(this.radButton3, "radButton3");
-            this.radButton3.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton3.Name = "radButton3";
+            resources.ApplyResources(this.ZoomFitBtn, "ZoomFitBtn");
+            this.ZoomFitBtn.Image = global::TableOcrExtractor.Properties.Resources.zoom_best_fit;
+            this.ZoomFitBtn.Name = "ZoomFitBtn";
+            this.ZoomFitBtn.Click += new System.EventHandler(this.ZoomFitBtn_Click);
             // 
-            // radButton2
+            // ZoomOutBtn
             // 
-            resources.ApplyResources(this.radButton2, "radButton2");
-            this.radButton2.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton2.Name = "radButton2";
+            resources.ApplyResources(this.ZoomOutBtn, "ZoomOutBtn");
+            this.ZoomOutBtn.Image = global::TableOcrExtractor.Properties.Resources.zoom_out;
+            this.ZoomOutBtn.Name = "ZoomOutBtn";
+            this.ZoomOutBtn.Click += new System.EventHandler(this.ZoomOutBtn_Click);
             // 
-            // radButton1
+            // ZoomInBtn
             // 
-            resources.ApplyResources(this.radButton1, "radButton1");
-            this.radButton1.Image = global::TableOcrExtractor.Properties.Resources.add;
-            this.radButton1.Name = "radButton1";
+            resources.ApplyResources(this.ZoomInBtn, "ZoomInBtn");
+            this.ZoomInBtn.Image = global::TableOcrExtractor.Properties.Resources.zoom_in;
+            this.ZoomInBtn.Name = "ZoomInBtn";
+            this.ZoomInBtn.Click += new System.EventHandler(this.ZoomInBtn_Click);
             // 
             // DataGridSplitPanel
             // 
+            this.DataGridSplitPanel.Controls.Add(this.DataGrid);
             resources.ApplyResources(this.DataGridSplitPanel, "DataGridSplitPanel");
             this.DataGridSplitPanel.Name = "DataGridSplitPanel";
             // 
@@ -393,6 +427,27 @@
             this.DataGridSplitPanel.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.1467533F);
             this.DataGridSplitPanel.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -57);
             this.DataGridSplitPanel.TabStop = false;
+            // 
+            // DataGrid
+            // 
+            this.DataGrid.AutoSizeRows = true;
+            resources.ApplyResources(this.DataGrid, "DataGrid");
+            this.DataGrid.EnableGestures = false;
+            // 
+            // 
+            // 
+            this.DataGrid.MasterTemplate.AllowAddNewRow = false;
+            this.DataGrid.MasterTemplate.AllowCellContextMenu = false;
+            this.DataGrid.MasterTemplate.AllowColumnReorder = false;
+            this.DataGrid.MasterTemplate.AllowDeleteRow = false;
+            this.DataGrid.MasterTemplate.AllowDragToGroup = false;
+            this.DataGrid.MasterTemplate.AllowRowHeaderContextMenu = false;
+            this.DataGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DataGrid.MasterTemplate.EnableFiltering = true;
+            this.DataGrid.MasterTemplate.EnableGrouping = false;
+            this.DataGrid.MasterTemplate.EnableSorting = false;
+            this.DataGrid.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.DataGrid.Name = "DataGrid";
             // 
             // StatusStrip
             // 
@@ -444,15 +499,18 @@
             this.GalleryImageSplitPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageCommandsPanel)).EndInit();
             this.ImageCommandsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radButton7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeHorizontalLinesBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeVerticalLinesBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeRectangleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingModeNoneBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomFitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomOutBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomInBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSplitPanel)).EndInit();
+            this.DataGridSplitPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -493,14 +551,17 @@
         private Telerik.WinControls.UI.RadPanel GalleryCommandsPanel;
         private Telerik.WinControls.UI.RadButton AddImagesBtn;
         private Telerik.WinControls.UI.RadButton RemoveImagesBtn;
-        private Telerik.WinControls.UI.RadButton radButton1;
-        private Telerik.WinControls.UI.RadButton radButton3;
-        private Telerik.WinControls.UI.RadButton radButton2;
+        private Telerik.WinControls.UI.RadButton ZoomInBtn;
+        private Telerik.WinControls.UI.RadButton ZoomFitBtn;
+        private Telerik.WinControls.UI.RadButton ZoomOutBtn;
         private Telerik.WinControls.UI.RadPanel radPanel1;
-        private Telerik.WinControls.UI.RadButton radButton7;
-        private Telerik.WinControls.UI.RadButton radButton6;
-        private Telerik.WinControls.UI.RadButton radButton5;
-        private Telerik.WinControls.UI.RadButton radButton4;
+        private Telerik.WinControls.UI.RadButton DrawingModeHorizontalLinesBtn;
+        private Telerik.WinControls.UI.RadButton DrawingModeVerticalLinesBtn;
+        private Telerik.WinControls.UI.RadButton DrawingModeRectangleBtn;
+        private Telerik.WinControls.UI.RadButton DrawingModeNoneBtn;
+        private Telerik.WinControls.UI.RadMenuItem ProjectDataColumnsMenuItem;
+        private Telerik.WinControls.UI.RadMenuItem ProjectSettingsMenuItem;
+        private Telerik.WinControls.UI.RadGridView DataGrid;
     }
 }
 

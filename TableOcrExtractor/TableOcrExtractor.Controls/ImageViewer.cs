@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using TableOcrExtractor.Controls.Enums;
@@ -115,6 +116,7 @@ namespace TableOcrExtractor.Controls
             set
             {
                 DrawingObjects.Clear();
+                _currentDrawingMode = DrawingMode.None;
                 PictureBox.Image = value;
             }
         }
@@ -133,6 +135,17 @@ namespace TableOcrExtractor.Controls
         /// Drawing objects
         /// </summary>
         public DrawingObjects DrawingObjects { get; set; }
+
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// Occurs when ImageViewer redrawn
+        /// </summary>
+        [Category("Action")]
+        [Description("Occurs when ImageViewer redrawn")]
+        public event EventHandler Redrawn;
 
         #endregion
 
@@ -407,6 +420,13 @@ namespace TableOcrExtractor.Controls
         #region Event handlers
 
         /// <summary>
+        /// Handles redrawing
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        public delegate void RedrawnEventHandler(object sender, EventArgs e);
+
+        /// <summary>
         /// Handles the MouseDown event of the PictureBox control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -581,6 +601,8 @@ namespace TableOcrExtractor.Controls
                         #endregion
                     }
                 }
+
+                Redrawn?.Invoke(this, e);
             }
         }
 
@@ -613,5 +635,5 @@ namespace TableOcrExtractor.Controls
         }
 
         #endregion
-    }
+    }    
 }

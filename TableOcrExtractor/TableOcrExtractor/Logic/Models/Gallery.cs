@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using TableOcrExtractor.Controls.Model;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
 using TableOcrExtractor.Imaging.Converters;
@@ -127,7 +128,8 @@ namespace TableOcrExtractor.Logic.Models
                         DisplayedName = orderNumber.ToString(ImageNameMask),
                         ImageFolderPath = GalleryFolderPath,
                         ImageFileName = imageFileName,
-                        ThumbnailFileName = thumbnailFileName
+                        ThumbnailFileName = thumbnailFileName,
+                        DrawingObjects = new DrawingObjects()
                     };
 
                     Images.Add(galleryImage);
