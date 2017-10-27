@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Xml.Serialization;
 using TableOcrExtractor.Controls.Model;
@@ -101,14 +100,18 @@ namespace TableOcrExtractor.Logic.Models
 
                 Rectangle[,] areas = GetRecognitionAreas();
                 for (int i = 0; i < areas.GetLength(0); i++)
-                for (int j = 0; j < areas.GetLength(1); j++)
                 {
-                    Rectangle area = areas[i, j];
-                    using (Bitmap croppedBitmap = BitmapHelper.Crop(bitmap, area))
+                    DataRow row = RecognizedData.NewRow();
+                    for (int j = 0; j < areas.GetLength(1); j++)
                     {
-                        
+                        Rectangle area = areas[i, j];
+                        using (Bitmap croppedBitmap = BitmapHelper.Crop(bitmap, area))
+                        {
+                            row[j] = "";
+                        }
                     }
                 }
+                
             }  
         }
 
@@ -126,32 +129,32 @@ namespace TableOcrExtractor.Logic.Models
             int rowsNumber = DrawingObjects.HorizontalLinesCoordinates.Count + 1;
             Rectangle[,] areas = new Rectangle[columnsNumber, rowsNumber];
 
-            for (int i = 0; i < columnsNumber; i++)
+            for (int i = 0; i < rowsNumber; i++)
             {
-                int x = i == 0 ? DrawingObjects.RectangleArea.X : DrawingObjects.VerticalLinesCoordinates[i - 1];
-                int w = 0;
-                if (columnsNumber == 1)
-                    w = DrawingObjects.RectangleArea.Width;
-                else if (i == columnsNumber - 1)
-                    w = DrawingObjects.RectangleArea.Right - x;
-                    else
-                        w = DrawingObjects.VerticalLinesCoordinates[i] - x; 
+                int y = i == 0 ? DrawingObjects.RectangleArea.Y : DrawingObjects.HorizontalLinesCoordinates[i - 1];
+                int h = 0;
+                if (rowsNumber == 1)
+                    h = DrawingObjects.RectangleArea.Width;
+                else if (i == rowsNumber - 1)
+                    h = DrawingObjects.RectangleArea.Bottom - y;
+                else
+                    h = DrawingObjects.HorizontalLinesCoordinates[i] - y;
 
-                for (int j = 0; j < rowsNumber; j++)
+                for (int j = 0; j < columnsNumber; j++)
                 {
-                    int y = j == 0 ? DrawingObjects.RectangleArea.Y : DrawingObjects.HorizontalLinesCoordinates[j - 1];
-                    int h = 0;
-                    if (rowsNumber == 1)
-                        h = DrawingObjects.RectangleArea.Width;
-                    else if (j == rowsNumber - 1)
-                        h = DrawingObjects.RectangleArea.Bottom - y;
+                    int x = j == 0 ? DrawingObjects.RectangleArea.X : DrawingObjects.VerticalLinesCoordinates[j - 1];
+                    int w = 0;
+                    if (columnsNumber == 1)
+                        w = DrawingObjects.RectangleArea.Width;
+                    else if (j == columnsNumber - 1)
+                        w = DrawingObjects.RectangleArea.Right - x;
                     else
-                        h = DrawingObjects.HorizontalLinesCoordinates[j] - y;
+                        w = DrawingObjects.VerticalLinesCoordinates[j] - x;
 
-                    areas[i, j]  = new Rectangle(x, y, w, h);
+                    areas[j, i] = new Rectangle(x, y, w, h);
                 }
-            }            
-
+            }
+        
             return areas;
         }
 
