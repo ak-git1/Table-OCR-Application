@@ -163,4 +163,28 @@
   <data name="zoom_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\images\zoom_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ValidateOcr_Messages_NoImages" xml:space="preserve">
+    <value>No images loaded.</value>
+  </data>
+  <data name="ValidateOcr_Messages_RectangleNotSet" xml:space="preserve">
+    <value>Recognition rectangle area no set for image {0}</value>
+  </data>
+  <data name="ValidateOcr_Messages_WrongNumberOfVerticalLines" xml:space="preserve">
+    <value>Wrong number of vertical lines for image {0}</value>
+  </data>
+  <data name="ValidateOcr_Messages_NoDataColumns" xml:space="preserve">
+    <value>Data columns need to be defined.</value>
+  </data>
+  <data name="Error_Caption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="OcrCompletedMessage_Caption" xml:space="preserve">
+    <value>Recognition</value>
+  </data>
+  <data name="OcrCompletedMessage_Text" xml:space="preserve">
+    <value>Recognition successfully competed.</value>
+  </data>
+  <data name="CheckRecognitionResultExportAllowed_ErrorMessage" xml:space="preserve">
+    <value>Image {0} is not recognized.</value>
+  </data>
 </root>

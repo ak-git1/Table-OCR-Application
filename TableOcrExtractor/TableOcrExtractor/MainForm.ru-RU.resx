@@ -247,4 +247,19 @@
   <data name="DataGrid.Text" xml:space="preserve">
     <value> </value>
   </data>
+  <data name="SeparatorItem3.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="StartOcrMenuItem.Text" xml:space="preserve">
+    <value>Начать распознавание</value>
+  </data>
+  <data name="ExportDataMenuItem.Text" xml:space="preserve">
+    <value>Экспортировать данные</value>
+  </data>
+  <data name="ExportDataFileDialog.Filter" xml:space="preserve">
+    <value>*.json|*.json</value>
+  </data>
+  <data name="ProjectNameLabelElement.ImageKey" xml:space="preserve">
+    <value> </value>
+  </data>
 </root>

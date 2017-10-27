@@ -42,10 +42,12 @@ namespace TableOcrExtractor
             this.SeparatorItem2 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             this.ExitMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.AboutMenuItem = new Telerik.WinControls.UI.RadMenuItem();
-            this.MainMenu = new Telerik.WinControls.UI.RadMenu();
             this.ProjectMenuItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.StartOcrMenuItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.SeparatorItem3 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             this.ProjectDataColumnsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.ProjectSettingsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.ExportDataMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.SettingsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.LanguageMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.EnglishLanguageMenuItem = new Telerik.WinControls.UI.RadMenuItem();
@@ -75,7 +77,8 @@ namespace TableOcrExtractor
             this.ProjectNameLabelElement = new Telerik.WinControls.UI.RadLabelElement();
             this.OpenProjectFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ImagesImportFileDialog = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).BeginInit();
+            this.MainMenu = new Telerik.WinControls.UI.RadMenu();
+            this.ExportDataFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitContainer)).BeginInit();
             this.MainSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GallerySplitPanel)).BeginInit();
@@ -106,6 +109,7 @@ namespace TableOcrExtractor
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,29 +172,27 @@ namespace TableOcrExtractor
             this.AboutMenuItem.Name = "AboutMenuItem";
             this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
-            // MainMenu
-            // 
-            this.MainMenu.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.FileMenuItem,
-            this.ProjectMenuItem,
-            this.SettingsMenuItem,
-            this.AboutMenuItem});
-            resources.ApplyResources(this.MainMenu, "MainMenu");
-            this.MainMenu.Name = "MainMenu";
-            // 
-            // 
-            // 
-            this.MainMenu.RootElement.AutoSize = false;
-            this.MainMenu.RootElement.FitToSizeMode = Telerik.WinControls.RadFitToSizeMode.FitToParentBounds;
-            ((Telerik.WinControls.UI.RadMenuElement)(this.MainMenu.GetChildAt(0))).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            // 
             // ProjectMenuItem
             // 
             resources.ApplyResources(this.ProjectMenuItem, "ProjectMenuItem");
             this.ProjectMenuItem.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.StartOcrMenuItem,
+            this.ExportDataMenuItem,
+            this.SeparatorItem3,
             this.ProjectDataColumnsMenuItem,
             this.ProjectSettingsMenuItem});
             this.ProjectMenuItem.Name = "ProjectMenuItem";
+            // 
+            // StartOcrMenuItem
+            // 
+            this.StartOcrMenuItem.Name = "StartOcrMenuItem";
+            resources.ApplyResources(this.StartOcrMenuItem, "StartOcrMenuItem");
+            this.StartOcrMenuItem.Click += new System.EventHandler(this.StartOcrMenuItem_Click);
+            // 
+            // SeparatorItem3
+            // 
+            this.SeparatorItem3.Name = "SeparatorItem3";
+            resources.ApplyResources(this.SeparatorItem3, "SeparatorItem3");
             // 
             // ProjectDataColumnsMenuItem
             // 
@@ -203,6 +205,12 @@ namespace TableOcrExtractor
             this.ProjectSettingsMenuItem.Name = "ProjectSettingsMenuItem";
             resources.ApplyResources(this.ProjectSettingsMenuItem, "ProjectSettingsMenuItem");
             this.ProjectSettingsMenuItem.Click += new System.EventHandler(this.ProjectSettingsMenuItem_Click);
+            // 
+            // ExportDataMenuItem
+            // 
+            this.ExportDataMenuItem.Name = "ExportDataMenuItem";
+            resources.ApplyResources(this.ExportDataMenuItem, "ExportDataMenuItem");
+            this.ExportDataMenuItem.Click += new System.EventHandler(this.ExportDataMenuItem_Click);
             // 
             // SettingsMenuItem
             // 
@@ -467,6 +475,26 @@ namespace TableOcrExtractor
             // 
             this.ImagesImportFileDialog.Multiselect = true;
             // 
+            // MainMenu
+            // 
+            this.MainMenu.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.FileMenuItem,
+            this.ProjectMenuItem,
+            this.SettingsMenuItem,
+            this.AboutMenuItem});
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            this.MainMenu.Name = "MainMenu";
+            // 
+            // 
+            // 
+            this.MainMenu.RootElement.AutoSize = false;
+            this.MainMenu.RootElement.FitToSizeMode = Telerik.WinControls.RadFitToSizeMode.FitToParentBounds;
+            ((Telerik.WinControls.UI.RadMenuElement)(this.MainMenu.GetChildAt(0))).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            // 
+            // ExportDataFileDialog
+            // 
+            resources.ApplyResources(this.ExportDataFileDialog, "ExportDataFileDialog");
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -481,7 +509,6 @@ namespace TableOcrExtractor
             this.RootElement.ApplyShapeToControl = true;
             this.ThemeName = "Windows7";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitContainer)).EndInit();
             this.MainSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GallerySplitPanel)).EndInit();
@@ -512,6 +539,7 @@ namespace TableOcrExtractor
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusStrip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -526,7 +554,6 @@ namespace TableOcrExtractor
         private Telerik.WinControls.UI.RadMenuItem ExitMenuItem;
         private Telerik.WinControls.UI.RadMenuItem AboutMenuItem;
         private Telerik.WinControls.UI.RadMenuItem OpenProjectMenuItem;
-        private Telerik.WinControls.UI.RadMenu MainMenu;
         private Telerik.WinControls.UI.RadMenuItem SettingsMenuItem;
         private Telerik.WinControls.UI.RadMenuItem LanguageMenuItem;
         private Telerik.WinControls.UI.RadMenuItem EnglishLanguageMenuItem;
@@ -562,6 +589,11 @@ namespace TableOcrExtractor
         private Telerik.WinControls.UI.RadMenuItem ProjectDataColumnsMenuItem;
         private Telerik.WinControls.UI.RadMenuItem ProjectSettingsMenuItem;
         private Telerik.WinControls.UI.RadGridView DataGrid;
+        private Telerik.WinControls.UI.RadMenuSeparatorItem SeparatorItem3;
+        private Telerik.WinControls.UI.RadMenuItem StartOcrMenuItem;
+        private Telerik.WinControls.UI.RadMenuItem ExportDataMenuItem;
+        private Telerik.WinControls.UI.RadMenu MainMenu;
+        private System.Windows.Forms.SaveFileDialog ExportDataFileDialog;
     }
 }
 

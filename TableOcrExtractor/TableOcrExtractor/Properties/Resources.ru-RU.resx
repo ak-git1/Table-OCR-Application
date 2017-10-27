@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -134,5 +134,29 @@
   </data>
   <data name="ProjectName_NoProjectLoaded" xml:space="preserve">
     <value>Проект на загружен</value>
+  </data>
+  <data name="ValidateOcr_Messages_NoImages" xml:space="preserve">
+    <value>Не загружено ни одно изображение.</value>
+  </data>
+  <data name="ValidateOcr_Messages_NoDataColumns" xml:space="preserve">
+    <value>Необходимо указать столбцы для распознавания.</value>
+  </data>
+  <data name="ValidateOcr_Messages_RectangleNotSet" xml:space="preserve">
+    <value>Для изображения {0} не задана область распознавания</value>
+  </data>
+  <data name="ValidateOcr_Messages_WrongNumberOfVerticalLines" xml:space="preserve">
+    <value>Для изображения {0} выставлено некорректное количество вертикальных линий</value>
+  </data>
+  <data name="Error_Caption" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="OcrCompletedMessage_Text" xml:space="preserve">
+    <value>Распознавание успешно завершено.</value>
+  </data>
+  <data name="OcrCompletedMessage_Caption" xml:space="preserve">
+    <value>Распознавание</value>
+  </data>
+  <data name="CheckRecognitionResultExportAllowed_ErrorMessage" xml:space="preserve">
+    <value>Изображение {0} не распознано.</value>
   </data>
 </root>

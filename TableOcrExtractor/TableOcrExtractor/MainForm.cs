@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Elar.Framework.Core.Extensions;
@@ -162,6 +164,9 @@ namespace TableOcrExtractor
                     ImageViewer.Image = Image.FromFile(image.ImageFilePath);
                     ImageViewer.FitImage();
                     ImageViewer.DrawingObjects = image.DrawingObjects.Clone();
+
+                    if (image.RecognitionCompleted && image.DrawingObjects.MaxNumberOfVerticalLines == image.RecognizedData.Columns.Count - 1)
+                        DataGrid.DataSource = image.RecognizedData;
                 }                        
             }
         }
@@ -299,7 +304,59 @@ namespace TableOcrExtractor
             if (projectDataColumnsForm.ShowDialog() == DialogResult.OK)
             {
                 _project.UpdateDataColumns(projectDataColumnsForm.DataColumns);
+                if (ImageViewer.Image != null)
+                    ImageViewer.DrawingObjects.MaxNumberOfVerticalLines = projectDataColumnsForm.DataColumns.Count - 1;
                 InitializeDataGrid();
+            }
+        }
+
+        /// <summary>
+        /// Handles the Click event of the StartOcrMenuItem control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void StartOcrMenuItem_Click(object sender, EventArgs e)
+        {
+            ActionResult result = _project.ValidateOcr();
+            if (result.Result == ActionResultType.Error)
+            {
+                FormsHelper.ShowError(result.Message);
+            }
+            else
+            {
+                result = _project.PerformOcr();
+                if (result.Result == ActionResultType.Ok)
+                    FormsHelper.ShowMessage(Resources.OcrCompletedMessage_Text, Resources.OcrCompletedMessage_Caption);
+            }
+        }
+
+        /// <summary>
+        /// Handles the Click event of the ExportDataMenuItem control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs" /> instance containing the event data.</param>
+        private void ExportDataMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ActionResult result = _project.CheckRecognitionResultExportAllowed();
+                if (result.Result == ActionResultType.Error)
+                {
+                    FormsHelper.ShowError(result.Message);
+                }
+                else
+                {
+                    ExportDataFileDialog.FileName = $"{_project.Name}.json";
+                    if (ExportDataFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        _project.ExportJson(ExportDataFileDialog.FileName);
+                        Process.Start(Path.GetDirectoryName(ExportDataFileDialog.FileName));
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                LogHelper.Logger.Error(exception, "Unable to export project recognized data");
             }
         }
 
@@ -326,7 +383,7 @@ namespace TableOcrExtractor
         {
             if (ImagesImportFileDialog.ShowDialog() == DialogResult.OK)
             {
-                _project.Gallery.AddFiles(ImagesImportFileDialog.FileNames);
+                _project.Gallery.AddFiles(ImagesImportFileDialog.FileNames, _project.DataColumns.Count - 1);
                 FillGallery();
             }
         }

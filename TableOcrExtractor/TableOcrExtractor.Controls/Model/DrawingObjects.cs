@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Xml.Serialization;
+using TableOcrExtractor.Controls.Enums;
 
 namespace TableOcrExtractor.Controls.Model
 {
@@ -56,9 +57,15 @@ namespace TableOcrExtractor.Controls.Model
         /// Validates the object
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public DrawingObjectsValidationResult Validate()
         {
-            return RectangleArea != Rectangle.Empty && VerticalLinesCoordinates.Count == MaxNumberOfVerticalLines;
+            if (RectangleArea == Rectangle.Empty)
+                return DrawingObjectsValidationResult.RectangleNotSet;
+
+            if (VerticalLinesCoordinates.Count != MaxNumberOfVerticalLines)
+                return DrawingObjectsValidationResult.WrongNumberOfVerticalLines;
+
+            return DrawingObjectsValidationResult.Ok;
         }
 
         /// <summary>

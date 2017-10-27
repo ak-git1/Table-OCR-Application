@@ -489,6 +489,18 @@
   <data name="ProjectMenuItem.ImageKey" xml:space="preserve">
     <value />
   </data>
+  <data name="StartOcrMenuItem.Text" xml:space="preserve">
+    <value>Start recognition</value>
+  </data>
+  <data name="ExportDataMenuItem.Text" xml:space="preserve">
+    <value>Export data</value>
+  </data>
+  <data name="SeparatorItem3.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="SeparatorItem3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="ProjectDataColumnsMenuItem.Text" xml:space="preserve">
     <value>Data columns</value>
   </data>
@@ -668,27 +680,6 @@
   </data>
   <data name="SettingsMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 20</value>
-  </data>
-  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="GalleryListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1300,7 +1291,7 @@
     <value>-1</value>
   </data>
   <data name="ProjectNameLabelElement.ImageKey" xml:space="preserve">
-    <value />
+    <value> </value>
   </data>
   <data name="ProjectNameLabelElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1347,6 +1338,33 @@
   <metadata name="ImagesImportFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>333, 17</value>
   </metadata>
+  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1066, 20</value>
+  </data>
+  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="ExportDataFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>515, 17</value>
+  </metadata>
+  <data name="ExportDataFileDialog.Filter" xml:space="preserve">
+    <value>*.json|*.json</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3202,6 +3220,18 @@
   <data name="&gt;&gt;ProjectMenuItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;StartOcrMenuItem.Name" xml:space="preserve">
+    <value>StartOcrMenuItem</value>
+  </data>
+  <data name="&gt;&gt;StartOcrMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;SeparatorItem3.Name" xml:space="preserve">
+    <value>SeparatorItem3</value>
+  </data>
+  <data name="&gt;&gt;SeparatorItem3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;ProjectDataColumnsMenuItem.Name" xml:space="preserve">
     <value>ProjectDataColumnsMenuItem</value>
   </data>
@@ -3212,6 +3242,12 @@
     <value>ProjectSettingsMenuItem</value>
   </data>
   <data name="&gt;&gt;ProjectSettingsMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;ExportDataMenuItem.Name" xml:space="preserve">
+    <value>ExportDataMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ExportDataMenuItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SettingsMenuItem.Name" xml:space="preserve">
@@ -3255,6 +3291,12 @@
   </data>
   <data name="&gt;&gt;ImagesImportFileDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExportDataFileDialog.Name" xml:space="preserve">
+    <value>ExportDataFileDialog</value>
+  </data>
+  <data name="&gt;&gt;ExportDataFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml.Serialization;
+using TableOcrExtractor.Controls.Enums;
+using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
 
 namespace TableOcrExtractor.Logic.Models
@@ -121,6 +124,79 @@ namespace TableOcrExtractor.Logic.Models
                 image.DrawingObjects.MaxNumberOfVerticalLines = maxNumberOfVerticalLines;
         }
 
+        /// <summary>
+        /// Validates OCR possibility
+        /// </summary>
+        public ActionResult ValidateOcr()
+        {
+            if (DataColumns.Count == 0)
+                return new ActionResult(ActionResultType.Error, Properties.Resources.ValidateOcr_Messages_NoDataColumns);
+
+            if (Gallery.Images.Count == 0)
+                return new ActionResult(ActionResultType.Error, Properties.Resources.ValidateOcr_Messages_NoImages);
+
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (GalleryImage image in Gallery.Images)
+            {
+                DrawingObjectsValidationResult drawingObjectsValidationResult = image.DrawingObjects.Validate();
+                switch (drawingObjectsValidationResult)
+                {
+                    case DrawingObjectsValidationResult.RectangleNotSet:
+                        stringBuilder.AppendLine(string.Format(Properties.Resources.ValidateOcr_Messages_RectangleNotSet, image.OrderNumber));
+                        break;
+
+                    case DrawingObjectsValidationResult.WrongNumberOfVerticalLines:
+                        stringBuilder.AppendLine(string.Format(Properties.Resources.ValidateOcr_Messages_WrongNumberOfVerticalLines, image.OrderNumber));
+                        break;
+                }
+            }
+            if (stringBuilder.Length > 0)
+                return new ActionResult(ActionResultType.Error, stringBuilder.ToString());
+
+            return new ActionResult();
+        }
+
+        /// <summary>
+        /// Performs OCR on project images.
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PerformOcr()
+        {
+            try
+            {
+                foreach (GalleryImage image in Gallery.Images)
+                    image.PerformOcr(DataColumns);
+
+                return new ActionResult();
+            }
+            catch (Exception e)
+            {
+                LogHelper.Logger.Error(e, $"Unable to perform OCR in the project '{Name}'");
+                return new ActionResult(ActionResultType.Error, e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Exports recognized data to json format
+        /// </summary>
+        /// <param name="path">Export file path.</param>
+        public void ExportJson(string path)
+        {
+            
+        }
+
+        /// <summary>
+        /// Check if recognition export allowed
+        /// </summary>
+        public ActionResult CheckRecognitionResultExportAllowed()
+        {
+            foreach (GalleryImage image in Gallery.Images)
+                if (!image.RecognitionCompleted)
+                    return new ActionResult(ActionResultType.Error, string.Format(Properties.Resources.CheckRecognitionResultExportAllowed_ErrorMessage, image.OrderNumber));
+
+            return new ActionResult();
+        }
+
         #endregion
 
         #region Private methods
@@ -135,18 +211,7 @@ namespace TableOcrExtractor.Logic.Models
             ProjectDataFolderPath = Path.Combine(Path.GetDirectoryName(projectPath), Path.GetDirectoryName(ProjectDataFolderPath + @"\"));
             Gallery.UpdateGalleryPathes(ProjectDataFolderPath);
         }
-
-        /// <summary>
-        /// Validates saving possibility
-        /// </summary>
-        private void Validate()
-        {
-            // TODO
-            // DataColumns
-            // vertical lines
-            // images
-        }
-
+      
         #endregion
     }
 }

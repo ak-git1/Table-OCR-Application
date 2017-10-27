@@ -11,6 +11,16 @@ namespace TableOcrExtractor.Logic.Helpers
         #region Public methods
 
         /// <summary>
+        /// Shows the message.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <param name="caption">The caption.</param>
+        public static void ShowMessage(string text, string caption)
+        {
+            MessageBox.Show(text, caption, MessageBoxButtons.OK);
+        }
+
+        /// <summary>
         /// Shows the warning.
         /// </summary>
         /// <param name="text">The text.</param>
@@ -25,7 +35,15 @@ namespace TableOcrExtractor.Logic.Helpers
         /// </summary>
         public static void ShowUnexpectedError()
         {
-            MessageBox.Show(Resources.UnexpectedError_Text, Resources.UnexpectedError_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(Resources.UnexpectedError_Text, Resources.UnexpectedError_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /// <summary>
+        /// Shows error.
+        /// </summary>
+        public static void ShowError(string text)
+        {
+            MessageBox.Show(text, Resources.Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         #endregion

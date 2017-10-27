@@ -70,12 +70,14 @@ namespace TableOcrExtractor.Logic.Models
         /// Adds files to gallery
         /// </summary>
         /// <param name="files">The files</param>
-        public List<ActionResult> AddFiles(string[] files)
+        /// <param name="maxNumberOfVerticalLines">The maximum number of vertical lines.</param>
+        /// <returns></returns>
+        public List<ActionResult> AddFiles(string[] files, int maxNumberOfVerticalLines = 1)
         {
             List<ActionResult> results = new List<ActionResult>();
 
             foreach (string file in files)
-                results.Add(AddFile(file));
+                results.Add(AddFile(file, maxNumberOfVerticalLines));
 
             return results;
         }
@@ -99,7 +101,9 @@ namespace TableOcrExtractor.Logic.Models
         /// Adds file to gallery
         /// </summary>
         /// <param name="filePath">File path</param>
-        private ActionResult AddFile(string filePath)
+        /// <param name="maxNumberOfVerticalLines">The maximum number of vertical lines.</param>
+        /// <returns></returns>
+        private ActionResult AddFile(string filePath, int maxNumberOfVerticalLines = 1)
         {
             if (Images == null)
                 Images = new List<GalleryImage>();
@@ -129,7 +133,11 @@ namespace TableOcrExtractor.Logic.Models
                         ImageFolderPath = GalleryFolderPath,
                         ImageFileName = imageFileName,
                         ThumbnailFileName = thumbnailFileName,
-                        DrawingObjects = new DrawingObjects()
+                        RecognitionCompleted = false,
+                        DrawingObjects = new DrawingObjects
+                        {
+                            MaxNumberOfVerticalLines = maxNumberOfVerticalLines
+                        }
                     };
 
                     Images.Add(galleryImage);

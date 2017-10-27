@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elar.Framework.Core, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elar.Framework.Core.1.1.2.0\lib\Elar.Framework.Core.dll</HintPath>
+    </Reference>
     <Reference Include="GdPicture.NET.14, Version=14.0.0.9, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GdPicture.NET.14.0.0.9\lib\GdPicture.NET.14.dll</HintPath>
     </Reference>
@@ -50,9 +53,11 @@
     <Compile Include="Engines\SinglePageImageEngine.cs" />
     <Compile Include="Enums\FileFormat.cs" />
     <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Extensions\BitmapExtensions.cs" />
     <Compile Include="Helpers\FilesHelper.cs" />
     <Compile Include="Engines\PdfEngine.cs" />
     <Compile Include="Engines\TiffEngine.cs" />
+    <Compile Include="Helpers\BitmapHelper.cs" />
     <Compile Include="Interfaces\IFileTypeEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

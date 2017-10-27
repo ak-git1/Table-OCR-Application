@@ -81,6 +81,15 @@ namespace TableOcrExtractor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Image {0} is not recognized..
+        /// </summary>
+        internal static string CheckRecognitionResultExportAllowed_ErrorMessage {
+            get {
+                return ResourceManager.GetString("CheckRecognitionResultExportAllowed_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap draw_horizontal_line {
@@ -107,6 +116,33 @@ namespace TableOcrExtractor.Properties {
             get {
                 object obj = ResourceManager.GetObject("draw_vertical_line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Error_Caption {
+            get {
+                return ResourceManager.GetString("Error_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recognition.
+        /// </summary>
+        internal static string OcrCompletedMessage_Caption {
+            get {
+                return ResourceManager.GetString("OcrCompletedMessage_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recognition successfully competed..
+        /// </summary>
+        internal static string OcrCompletedMessage_Text {
+            get {
+                return ResourceManager.GetString("OcrCompletedMessage_Text", resourceCulture);
             }
         }
         
@@ -171,6 +207,42 @@ namespace TableOcrExtractor.Properties {
         internal static string UnexpectedError_Text {
             get {
                 return ResourceManager.GetString("UnexpectedError_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data columns need to be defined..
+        /// </summary>
+        internal static string ValidateOcr_Messages_NoDataColumns {
+            get {
+                return ResourceManager.GetString("ValidateOcr_Messages_NoDataColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No images loaded..
+        /// </summary>
+        internal static string ValidateOcr_Messages_NoImages {
+            get {
+                return ResourceManager.GetString("ValidateOcr_Messages_NoImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recognition rectangle area no set for image {0}.
+        /// </summary>
+        internal static string ValidateOcr_Messages_RectangleNotSet {
+            get {
+                return ResourceManager.GetString("ValidateOcr_Messages_RectangleNotSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong number of vertical lines for image {0}.
+        /// </summary>
+        internal static string ValidateOcr_Messages_WrongNumberOfVerticalLines {
+            get {
+                return ResourceManager.GetString("ValidateOcr_Messages_WrongNumberOfVerticalLines", resourceCulture);
             }
         }
         

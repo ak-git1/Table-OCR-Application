@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\DrawingMode.cs" />
+    <Compile Include="Enums\DrawingObjectsValidationResult.cs" />
     <Compile Include="ImageViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
