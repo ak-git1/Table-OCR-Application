@@ -113,7 +113,6 @@ namespace TableOcrExtractor.Logic.Models
                         Rectangle area = areas[i, j];
                         using (Bitmap croppedBitmap = BitmapHelper.Crop(bitmap, area))
                         {
-                            croppedBitmap.Save($@"d:\Current\TableOcr\temp\{i}_{j}.jpg", ImageFormat.Jpeg);
                             row[i] = tesserartEngine.Process(croppedBitmap);
                         }
                     }
