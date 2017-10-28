@@ -44,10 +44,10 @@ namespace TableOcrExtractor
             this.AboutMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.ProjectMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.StartOcrMenuItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.ExportDataMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.SeparatorItem3 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             this.ProjectDataColumnsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.ProjectSettingsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
-            this.ExportDataMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.SettingsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.LanguageMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.EnglishLanguageMenuItem = new Telerik.WinControls.UI.RadMenuItem();
@@ -63,6 +63,9 @@ namespace TableOcrExtractor
             this.GalleryImageSplitPanel = new Telerik.WinControls.UI.SplitPanel();
             this.ImageViewer = new TableOcrExtractor.Controls.ImageViewer();
             this.ImageCommandsPanel = new Telerik.WinControls.UI.RadPanel();
+            this.PasteDrawingObjectsBtn = new Telerik.WinControls.UI.RadButton();
+            this.CopyDrawingObjectsBtn = new Telerik.WinControls.UI.RadButton();
+            this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.DrawingModeHorizontalLinesBtn = new Telerik.WinControls.UI.RadButton();
             this.DrawingModeVerticalLinesBtn = new Telerik.WinControls.UI.RadButton();
             this.DrawingModeRectangleBtn = new Telerik.WinControls.UI.RadButton();
@@ -96,6 +99,9 @@ namespace TableOcrExtractor
             this.GalleryImageSplitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageCommandsPanel)).BeginInit();
             this.ImageCommandsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PasteDrawingObjectsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CopyDrawingObjectsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingModeHorizontalLinesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingModeVerticalLinesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingModeRectangleBtn)).BeginInit();
@@ -153,6 +159,7 @@ namespace TableOcrExtractor
             // 
             resources.ApplyResources(this.SaveAsMenuItem, "SaveAsMenuItem");
             this.SaveAsMenuItem.Name = "SaveAsMenuItem";
+            this.SaveAsMenuItem.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             this.SaveAsMenuItem.Click += new System.EventHandler(this.SaveAsMenuItem_Click);
             // 
             // SeparatorItem2
@@ -189,6 +196,12 @@ namespace TableOcrExtractor
             resources.ApplyResources(this.StartOcrMenuItem, "StartOcrMenuItem");
             this.StartOcrMenuItem.Click += new System.EventHandler(this.StartOcrMenuItem_Click);
             // 
+            // ExportDataMenuItem
+            // 
+            this.ExportDataMenuItem.Name = "ExportDataMenuItem";
+            resources.ApplyResources(this.ExportDataMenuItem, "ExportDataMenuItem");
+            this.ExportDataMenuItem.Click += new System.EventHandler(this.ExportDataMenuItem_Click);
+            // 
             // SeparatorItem3
             // 
             this.SeparatorItem3.Name = "SeparatorItem3";
@@ -204,13 +217,8 @@ namespace TableOcrExtractor
             // 
             this.ProjectSettingsMenuItem.Name = "ProjectSettingsMenuItem";
             resources.ApplyResources(this.ProjectSettingsMenuItem, "ProjectSettingsMenuItem");
+            this.ProjectSettingsMenuItem.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             this.ProjectSettingsMenuItem.Click += new System.EventHandler(this.ProjectSettingsMenuItem_Click);
-            // 
-            // ExportDataMenuItem
-            // 
-            this.ExportDataMenuItem.Name = "ExportDataMenuItem";
-            resources.ApplyResources(this.ExportDataMenuItem, "ExportDataMenuItem");
-            this.ExportDataMenuItem.Click += new System.EventHandler(this.ExportDataMenuItem_Click);
             // 
             // SettingsMenuItem
             // 
@@ -218,6 +226,7 @@ namespace TableOcrExtractor
             this.SettingsMenuItem.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.LanguageMenuItem});
             this.SettingsMenuItem.Name = "SettingsMenuItem";
+            this.SettingsMenuItem.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
             // LanguageMenuItem
             // 
@@ -357,6 +366,9 @@ namespace TableOcrExtractor
             // ImageCommandsPanel
             // 
             this.ImageCommandsPanel.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.ImageCommandsPanel.Controls.Add(this.PasteDrawingObjectsBtn);
+            this.ImageCommandsPanel.Controls.Add(this.CopyDrawingObjectsBtn);
+            this.ImageCommandsPanel.Controls.Add(this.radPanel2);
             this.ImageCommandsPanel.Controls.Add(this.DrawingModeHorizontalLinesBtn);
             this.ImageCommandsPanel.Controls.Add(this.DrawingModeVerticalLinesBtn);
             this.ImageCommandsPanel.Controls.Add(this.DrawingModeRectangleBtn);
@@ -367,6 +379,26 @@ namespace TableOcrExtractor
             this.ImageCommandsPanel.Controls.Add(this.ZoomInBtn);
             resources.ApplyResources(this.ImageCommandsPanel, "ImageCommandsPanel");
             this.ImageCommandsPanel.Name = "ImageCommandsPanel";
+            // 
+            // PasteDrawingObjectsBtn
+            // 
+            resources.ApplyResources(this.PasteDrawingObjectsBtn, "PasteDrawingObjectsBtn");
+            this.PasteDrawingObjectsBtn.Image = global::TableOcrExtractor.Properties.Resources.paste;
+            this.PasteDrawingObjectsBtn.Name = "PasteDrawingObjectsBtn";
+            this.PasteDrawingObjectsBtn.Click += new System.EventHandler(this.PasteDrawingObjectsBtn_Click);
+            // 
+            // CopyDrawingObjectsBtn
+            // 
+            resources.ApplyResources(this.CopyDrawingObjectsBtn, "CopyDrawingObjectsBtn");
+            this.CopyDrawingObjectsBtn.Image = global::TableOcrExtractor.Properties.Resources.copy;
+            this.CopyDrawingObjectsBtn.Name = "CopyDrawingObjectsBtn";
+            this.CopyDrawingObjectsBtn.Click += new System.EventHandler(this.CopyDrawingObjectsBtn_Click);
+            // 
+            // radPanel2
+            // 
+            this.radPanel2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            resources.ApplyResources(this.radPanel2, "radPanel2");
+            this.radPanel2.Name = "radPanel2";
             // 
             // DrawingModeHorizontalLinesBtn
             // 
@@ -508,6 +540,7 @@ namespace TableOcrExtractor
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.ThemeName = "Windows7";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitContainer)).EndInit();
             this.MainSplitContainer.ResumeLayout(false);
@@ -526,6 +559,9 @@ namespace TableOcrExtractor
             this.GalleryImageSplitPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageCommandsPanel)).EndInit();
             this.ImageCommandsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PasteDrawingObjectsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CopyDrawingObjectsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingModeHorizontalLinesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingModeVerticalLinesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingModeRectangleBtn)).EndInit();
@@ -594,6 +630,9 @@ namespace TableOcrExtractor
         private Telerik.WinControls.UI.RadMenuItem ExportDataMenuItem;
         private Telerik.WinControls.UI.RadMenu MainMenu;
         private System.Windows.Forms.SaveFileDialog ExportDataFileDialog;
+        private Telerik.WinControls.UI.RadButton PasteDrawingObjectsBtn;
+        private Telerik.WinControls.UI.RadButton CopyDrawingObjectsBtn;
+        private Telerik.WinControls.UI.RadPanel radPanel2;
     }
 }
 

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Xml.Serialization;
 using TableOcrExtractor.Controls.Model;
-using TableOcrExtractor.Imaging.Helpers;
+using TableOcrExtractor.OCR;
+using TableOcrExtractor.OCR.Enums;
+using BitmapHelper = TableOcrExtractor.Imaging.Helpers.BitmapHelper;
 
 namespace TableOcrExtractor.Logic.Models
 {
@@ -92,27 +95,33 @@ namespace TableOcrExtractor.Logic.Models
         /// <param name="dataColumns">Data columns.</param>
         public void PerformOcr(List<string> dataColumns)
         {
+            RecognitionCompleted = false;
+            TesseractEngine tesserartEngine = new TesseractEngine(RecognitionLanguage.Russian, RecognitionLanguage.English);
+
             using (Bitmap bitmap = new Bitmap(Image.FromFile(ImageFilePath)))
             {
-                RecognizedData = new DataTable();
+                RecognizedData = new DataTable("RecognizedData");
                 foreach (string dataColumn in dataColumns)
                     RecognizedData.Columns.Add(dataColumn);
 
                 Rectangle[,] areas = GetRecognitionAreas();
-                for (int i = 0; i < areas.GetLength(0); i++)
+                for (int j = 0; j < areas.GetLength(1); j++)
                 {
                     DataRow row = RecognizedData.NewRow();
-                    for (int j = 0; j < areas.GetLength(1); j++)
+                    for (int i = 0; i < areas.GetLength(0); i++)
                     {
                         Rectangle area = areas[i, j];
                         using (Bitmap croppedBitmap = BitmapHelper.Crop(bitmap, area))
                         {
-                            row[j] = "";
+                            croppedBitmap.Save($@"d:\Current\TableOcr\temp\{i}_{j}.jpg", ImageFormat.Jpeg);
+                            row[i] = tesserartEngine.Process(croppedBitmap);
                         }
                     }
-                }
-                
-            }  
+                    RecognizedData.Rows.Add(row);
+                }                
+            }
+
+            RecognitionCompleted = true;
         }
 
         #endregion

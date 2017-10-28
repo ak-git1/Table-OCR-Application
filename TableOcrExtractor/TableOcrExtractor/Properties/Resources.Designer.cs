@@ -92,6 +92,16 @@ namespace TableOcrExtractor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap copy {
+            get {
+                object obj = ResourceManager.GetObject("copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap draw_horizontal_line {
             get {
                 object obj = ResourceManager.GetObject("draw_horizontal_line", resourceCulture);
@@ -129,6 +139,24 @@ namespace TableOcrExtractor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Closing application.
+        /// </summary>
+        internal static string MainFormClosing_Caption {
+            get {
+                return ResourceManager.GetString("MainFormClosing_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to save project data before closing application?.
+        /// </summary>
+        internal static string MainFormClosing_Message {
+            get {
+                return ResourceManager.GetString("MainFormClosing_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Recognition.
         /// </summary>
         internal static string OcrCompletedMessage_Caption {
@@ -143,6 +171,16 @@ namespace TableOcrExtractor.Properties {
         internal static string OcrCompletedMessage_Text {
             get {
                 return ResourceManager.GetString("OcrCompletedMessage_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paste {
+            get {
+                object obj = ResourceManager.GetObject("paste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Elar.Framework.Core.Extensions;
 using TableOcrExtractor.Controls.Enums;
+using TableOcrExtractor.Controls.Model;
 using TableOcrExtractor.Forms;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
@@ -33,6 +34,11 @@ namespace TableOcrExtractor
         /// Selected gallery image Uid
         /// </summary>
         private Guid? _selectedGalleryImageUid;
+
+        /// <summary>
+        /// The copy of drawing objects
+        /// </summary>
+        private DrawingObjects _copyOfDrawingObjects;
 
         #endregion
 
@@ -88,7 +94,9 @@ namespace TableOcrExtractor
             DrawingModeNoneBtn.Enabled =
             DrawingModeRectangleBtn.Enabled =
             DrawingModeVerticalLinesBtn.Enabled =
-            DrawingModeHorizontalLinesBtn.Enabled = enabled;
+            DrawingModeHorizontalLinesBtn.Enabled =
+            CopyDrawingObjectsBtn.Enabled =
+            PasteDrawingObjectsBtn.Enabled = enabled;
         }
 
         /// <summary>
@@ -125,7 +133,6 @@ namespace TableOcrExtractor
             _project = Project.Load(projectFileName);
             InitilalizeProjectDependentControls(true);
             FillGallery();
-            InitializeDataGrid();
         }
 
         /// <summary>
@@ -133,6 +140,8 @@ namespace TableOcrExtractor
         /// </summary>
         private void FillGallery()
         {
+            _copyOfDrawingObjects = null;
+
             BindingList<GalleryImage> dataSource = new BindingList<GalleryImage>();
 
             if (_project.Gallery.Images.Count > 0)
@@ -166,7 +175,14 @@ namespace TableOcrExtractor
                     ImageViewer.DrawingObjects = image.DrawingObjects.Clone();
 
                     if (image.RecognitionCompleted && image.DrawingObjects.MaxNumberOfVerticalLines == image.RecognizedData.Columns.Count - 1)
+                    {
+                        DataGrid.Columns.Clear();
                         DataGrid.DataSource = image.RecognizedData;
+                    }
+                    else
+                    {
+                        InitializeDataGrid();
+                    }
                 }                        
             }
         }
@@ -194,6 +210,24 @@ namespace TableOcrExtractor
         private void MainForm_Load(object sender, EventArgs e)
         {
             InitializeControls();            
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_project != null)
+            {
+                DialogResult result = MessageBox.Show(Resources.MainFormClosing_Message, Resources.MainFormClosing_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
+                switch (result)
+                {
+                    case DialogResult.Cancel:
+                        e.Cancel = true;
+                        break;
+
+                    case DialogResult.Yes:
+                        _project.Save();
+                        break;
+                }
+            }
         }
 
         #region Menu actions
@@ -306,7 +340,8 @@ namespace TableOcrExtractor
                 _project.UpdateDataColumns(projectDataColumnsForm.DataColumns);
                 if (ImageViewer.Image != null)
                     ImageViewer.DrawingObjects.MaxNumberOfVerticalLines = projectDataColumnsForm.DataColumns.Count - 1;
-                InitializeDataGrid();
+
+                FillGalleryImage();
             }
         }
 
@@ -326,7 +361,12 @@ namespace TableOcrExtractor
             {
                 result = _project.PerformOcr();
                 if (result.Result == ActionResultType.Ok)
+                {
                     FormsHelper.ShowMessage(Resources.OcrCompletedMessage_Text, Resources.OcrCompletedMessage_Caption);
+                    FillGalleryImage();
+                }
+                else
+                    FormsHelper.ShowUnexpectedError();
             }
         }
 
@@ -424,8 +464,11 @@ namespace TableOcrExtractor
             if (eventArgs?.Item != null)
             {
                 GalleryImage image = (GalleryImage)eventArgs.Item.DataBoundItem;
-                _selectedGalleryImageUid = image.Uid;
-                FillGalleryImage();
+                if (_selectedGalleryImageUid != image.Uid)
+                {
+                    _selectedGalleryImageUid = image.Uid;
+                    FillGalleryImage();
+                }
             }
         }
 
@@ -518,8 +561,28 @@ namespace TableOcrExtractor
             }
         }
 
-        #endregion
+        private void CopyDrawingObjectsBtn_Click(object sender, EventArgs e)
+        {
+            if (_selectedGalleryImageUid.HasValue)
+               _copyOfDrawingObjects = ImageViewer.DrawingObjects.Clone();
+        }
+
+        private void PasteDrawingObjectsBtn_Click(object sender, EventArgs e)
+        {
+            if (_selectedGalleryImageUid.HasValue && _copyOfDrawingObjects != null)
+            {
+                GalleryImage image = _project.Gallery.Images.WhereEx(x => x.Uid == _selectedGalleryImageUid.Value).FirstOrDefault();
+                if (image != null)
+                {
+                    image.DrawingObjects = _copyOfDrawingObjects.Clone();
+                    FillGalleryImage();
+                }                    
+            }
+                
+        }
 
         #endregion
+
+        #endregion        
     }
 }

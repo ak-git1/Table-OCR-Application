@@ -159,4 +159,10 @@
   <data name="CheckRecognitionResultExportAllowed_ErrorMessage" xml:space="preserve">
     <value>Изображение {0} не распознано.</value>
   </data>
+  <data name="MainFormClosing_Caption" xml:space="preserve">
+    <value>Выход из приложения</value>
+  </data>
+  <data name="MainFormClosing_Message" xml:space="preserve">
+    <value>Вы хотите сохранить данные проекта перед выходом?</value>
+  </data>
 </root>

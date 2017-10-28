@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Xml.Serialization;
 using TableOcrExtractor.Controls.Enums;
 
@@ -90,6 +91,22 @@ namespace TableOcrExtractor.Controls.Model
                 VerticalLinesCoordinates = new List<int>(VerticalLinesCoordinates),
                 HorizontalLinesCoordinates = new List<int>(HorizontalLinesCoordinates)
             };
+        }
+
+        /// <summary>
+        /// Clean lines data by removing doubles and lines outside the rectangle area
+        /// </summary>
+        /// <returns></returns>
+        public void RemoveWrongLines()
+        {
+            if (RectangleArea != Rectangle.Empty)
+            {
+                if (VerticalLinesCoordinates.Count > 0)
+                    VerticalLinesCoordinates = VerticalLinesCoordinates.Distinct().Where(x => x <= RectangleArea.Right && x >= RectangleArea.Left).ToList();
+
+                if (HorizontalLinesCoordinates.Count > 0)
+                    HorizontalLinesCoordinates = HorizontalLinesCoordinates.Distinct().Where(y => y >= RectangleArea.Top && y <= RectangleArea.Bottom).ToList();
+            }            
         }
 
         #endregion

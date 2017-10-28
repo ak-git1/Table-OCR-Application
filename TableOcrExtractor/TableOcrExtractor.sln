@@ -45,6 +45,46 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevExpress", "DevExpress", 
 		ExternalLibraries\DevExpress\DevExpress.XtraEditors.v16.1.dll = ExternalLibraries\DevExpress\DevExpress.XtraEditors.v16.1.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOcrExtractor.OCR", "TableOcrExtractor.OCR\TableOcrExtractor.OCR.csproj", "{50B20A14-86DD-49AC-AD02-098C0F1C75EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationStartupPack", "ApplicationStartupPack", "{91D880E4-772E-4EF3-A81A-DDC3D8FF2141}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tesseract languages", "Tesseract languages", "{F227832E-8F1A-4D3F-9DB8-9EF34B37068E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tessdata", "tessdata", "{0904AE32-1431-46E1-9D11-ABA95144C134}"
+	ProjectSection(SolutionItems) = preProject
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.bigrams = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.bigrams
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.fold = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.fold
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.lm = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.lm
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.nn = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.nn
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.params = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.params
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.size = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.size
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.word-freq = ApplicationStartupPack\Tesseract languages\tessdata\eng.cube.word-freq
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.tesseract_cube.nn = ApplicationStartupPack\Tesseract languages\tessdata\eng.tesseract_cube.nn
+		ApplicationStartupPack\Tesseract languages\tessdata\eng.traineddata = ApplicationStartupPack\Tesseract languages\tessdata\eng.traineddata
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.fold = ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.fold
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.lm = ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.lm
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.nn = ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.nn
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.params = ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.params
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.size = ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.size
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.word-freq = ApplicationStartupPack\Tesseract languages\tessdata\rus.cube.word-freq
+		ApplicationStartupPack\Tesseract languages\tessdata\rus.traineddata = ApplicationStartupPack\Tesseract languages\tessdata\rus.traineddata
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tesseract", "Tesseract", "{21B8CEB4-D245-47AB-A57C-FAB9C5D5752E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{93276106-1535-49F6-BD35-C072A46961BD}"
+	ProjectSection(SolutionItems) = preProject
+		ApplicationStartupPack\Tesseract\x86\liblept172.dll = ApplicationStartupPack\Tesseract\x86\liblept172.dll
+		ApplicationStartupPack\Tesseract\x86\libtesseract304.dll = ApplicationStartupPack\Tesseract\x86\libtesseract304.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{34355DD0-809A-469B-A811-1E5AB4AC9049}"
+	ProjectSection(SolutionItems) = preProject
+		ApplicationStartupPack\Tesseract\x64\liblept172.dll = ApplicationStartupPack\Tesseract\x64\liblept172.dll
+		ApplicationStartupPack\Tesseract\x64\libtesseract304.dll = ApplicationStartupPack\Tesseract\x64\libtesseract304.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +107,10 @@ Global
 		{06B1D2BD-BDA4-459A-A5A8-0E8F967F7F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06B1D2BD-BDA4-459A-A5A8-0E8F967F7F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06B1D2BD-BDA4-459A-A5A8-0E8F967F7F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B20A14-86DD-49AC-AD02-098C0F1C75EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B20A14-86DD-49AC-AD02-098C0F1C75EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B20A14-86DD-49AC-AD02-098C0F1C75EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B20A14-86DD-49AC-AD02-098C0F1C75EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +120,11 @@ Global
 		{06B1D2BD-BDA4-459A-A5A8-0E8F967F7F46} = {84D7AA8F-BD89-4201-9764-E28F61F333A1}
 		{330E1B0F-6A97-4A40-809D-AEB372B6FF73} = {06BB8B52-999B-4048-83C9-6C1D8294E8E7}
 		{01112CD7-DFF6-4B42-8867-E4149897C509} = {06BB8B52-999B-4048-83C9-6C1D8294E8E7}
+		{F227832E-8F1A-4D3F-9DB8-9EF34B37068E} = {91D880E4-772E-4EF3-A81A-DDC3D8FF2141}
+		{0904AE32-1431-46E1-9D11-ABA95144C134} = {F227832E-8F1A-4D3F-9DB8-9EF34B37068E}
+		{21B8CEB4-D245-47AB-A57C-FAB9C5D5752E} = {91D880E4-772E-4EF3-A81A-DDC3D8FF2141}
+		{93276106-1535-49F6-BD35-C072A46961BD} = {21B8CEB4-D245-47AB-A57C-FAB9C5D5752E}
+		{34355DD0-809A-469B-A811-1E5AB4AC9049} = {21B8CEB4-D245-47AB-A57C-FAB9C5D5752E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35EF4B95-7A0F-4BA4-8DFF-635E71F9FEA2}

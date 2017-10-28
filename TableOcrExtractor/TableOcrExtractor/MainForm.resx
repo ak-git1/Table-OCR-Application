@@ -691,7 +691,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="GalleryListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 566</value>
+    <value>183, 755</value>
   </data>
   <data name="GalleryListView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -776,7 +776,7 @@
     <value>0, 0</value>
   </data>
   <data name="GalleryCommandsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 566</value>
+    <value>40, 755</value>
   </data>
   <data name="GalleryCommandsPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -797,7 +797,7 @@
     <value>0, 0</value>
   </data>
   <data name="GallerySplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 566</value>
+    <value>223, 755</value>
   </data>
   <data name="GallerySplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -847,7 +847,7 @@
     <value>0, 0</value>
   </data>
   <data name="ImageViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>831, 363</value>
+    <value>977, 486</value>
   </data>
   <data name="ImageViewer.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -863,6 +863,87 @@
   </data>
   <data name="&gt;&gt;ImageViewer.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="PasteDrawingObjectsBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="PasteDrawingObjectsBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="PasteDrawingObjectsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 325</value>
+  </data>
+  <data name="PasteDrawingObjectsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="PasteDrawingObjectsBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="PasteDrawingObjectsBtn.Text" xml:space="preserve">
+    <value>Draw horizontal lines</value>
+  </data>
+  <data name="&gt;&gt;PasteDrawingObjectsBtn.Name" xml:space="preserve">
+    <value>PasteDrawingObjectsBtn</value>
+  </data>
+  <data name="&gt;&gt;PasteDrawingObjectsBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;PasteDrawingObjectsBtn.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;PasteDrawingObjectsBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CopyDrawingObjectsBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="CopyDrawingObjectsBtn.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="CopyDrawingObjectsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 286</value>
+  </data>
+  <data name="CopyDrawingObjectsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="CopyDrawingObjectsBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="CopyDrawingObjectsBtn.Text" xml:space="preserve">
+    <value>Draw horizontal lines</value>
+  </data>
+  <data name="&gt;&gt;CopyDrawingObjectsBtn.Name" xml:space="preserve">
+    <value>CopyDrawingObjectsBtn</value>
+  </data>
+  <data name="&gt;&gt;CopyDrawingObjectsBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;CopyDrawingObjectsBtn.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;CopyDrawingObjectsBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 277</value>
+  </data>
+  <data name="radPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 3</value>
+  </data>
+  <data name="radPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.Name" xml:space="preserve">
+    <value>radPanel2</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.Parent" xml:space="preserve">
+    <value>ImageCommandsPanel</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="DrawingModeHorizontalLinesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -892,7 +973,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="DrawingModeVerticalLinesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -922,7 +1003,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;DrawingModeVerticalLinesBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="DrawingModeRectangleBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -952,7 +1033,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;DrawingModeRectangleBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="DrawingModeNoneBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -982,7 +1063,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;DrawingModeNoneBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="radPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 118</value>
@@ -1003,7 +1084,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;radPanel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="ZoomFitBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -1033,7 +1114,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;ZoomFitBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="ZoomOutBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -1063,7 +1144,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;ZoomOutBtn.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="ZoomInBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -1093,16 +1174,16 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;ZoomInBtn.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="ImageCommandsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="ImageCommandsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>831, 0</value>
+    <value>977, 0</value>
   </data>
   <data name="ImageCommandsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 363</value>
+    <value>40, 486</value>
   </data>
   <data name="ImageCommandsPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1123,7 +1204,7 @@
     <value>0, 0</value>
   </data>
   <data name="GalleryImageSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>871, 363</value>
+    <value>1017, 486</value>
   </data>
   <data name="GalleryImageSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1150,7 +1231,7 @@
     <value>0, 0</value>
   </data>
   <data name="DataGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>871, 199</value>
+    <value>1017, 265</value>
   </data>
   <data name="DataGrid.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1171,10 +1252,10 @@
     <value>0</value>
   </data>
   <data name="DataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 367</value>
+    <value>0, 490</value>
   </data>
   <data name="DataGridSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>871, 199</value>
+    <value>1017, 265</value>
   </data>
   <data name="DataGridSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1204,7 +1285,7 @@
     <value>Horizontal</value>
   </data>
   <data name="ImageSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>871, 566</value>
+    <value>1017, 755</value>
   </data>
   <data name="ImageSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1225,10 +1306,10 @@
     <value>0</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 0</value>
+    <value>227, 0</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>871, 566</value>
+    <value>1017, 755</value>
   </data>
   <data name="ImageAndDataGridSplitPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1255,7 +1336,7 @@
     <value>0, 20</value>
   </data>
   <data name="MainSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 566</value>
+    <value>1244, 755</value>
   </data>
   <data name="MainSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1312,10 +1393,10 @@
     <value>Horizontal</value>
   </data>
   <data name="StatusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 586</value>
+    <value>0, 775</value>
   </data>
   <data name="StatusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 26</value>
+    <value>1244, 26</value>
   </data>
   <data name="StatusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1342,7 +1423,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 20</value>
+    <value>1244, 20</value>
   </data>
   <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1372,7 +1453,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 612</value>
+    <value>1244, 801</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3226,6 +3307,12 @@
   <data name="&gt;&gt;StartOcrMenuItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;ExportDataMenuItem.Name" xml:space="preserve">
+    <value>ExportDataMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ExportDataMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;SeparatorItem3.Name" xml:space="preserve">
     <value>SeparatorItem3</value>
   </data>
@@ -3242,12 +3329,6 @@
     <value>ProjectSettingsMenuItem</value>
   </data>
   <data name="&gt;&gt;ProjectSettingsMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;ExportDataMenuItem.Name" xml:space="preserve">
-    <value>ExportDataMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ExportDataMenuItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SettingsMenuItem.Name" xml:space="preserve">

@@ -538,6 +538,8 @@ namespace TableOcrExtractor.Controls
                             break;
                     }
 
+                    DrawingObjects.RemoveWrongLines();
+
                     _isDrawingInProgress = false;
                 }                
             }            

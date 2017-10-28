@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using TableOcrExtractor.Controls.Enums;
 using TableOcrExtractor.Logic.Enums;
 using TableOcrExtractor.Logic.Helpers;
+using Newtonsoft.Json;
 
 namespace TableOcrExtractor.Logic.Models
 {
@@ -182,7 +185,13 @@ namespace TableOcrExtractor.Logic.Models
         /// <param name="path">Export file path.</param>
         public void ExportJson(string path)
         {
-            
+            DataTable dataTable = Gallery.Images.First().RecognizedData.Clone();
+            if (Gallery.Images.Count > 1)
+                for (int i = 1; i < Gallery.Images.Count; i++)
+                    dataTable.Merge(Gallery.Images[i].RecognizedData);
+
+            string json = JsonConvert.SerializeObject(dataTable);
+            File.WriteAllText(path, json);
         }
 
         /// <summary>

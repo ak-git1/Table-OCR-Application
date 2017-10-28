@@ -187,4 +187,16 @@
   <data name="CheckRecognitionResultExportAllowed_ErrorMessage" xml:space="preserve">
     <value>Image {0} is not recognized.</value>
   </data>
+  <data name="MainFormClosing_Caption" xml:space="preserve">
+    <value>Closing application</value>
+  </data>
+  <data name="MainFormClosing_Message" xml:space="preserve">
+    <value>Do you want to save project data before closing application?</value>
+  </data>
+  <data name="copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\images\copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\images\paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

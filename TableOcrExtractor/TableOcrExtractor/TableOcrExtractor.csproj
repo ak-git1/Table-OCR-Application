@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,6 +40,9 @@
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Elar.Framework.Core, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Elar.Framework.Core.1.1.2.0\lib\Elar.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
@@ -180,6 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Application.ico" />
+    <Content Include="Resources\Images\copy.png" />
+    <Content Include="Resources\Images\paste.png" />
     <EmbeddedResource Include="Resources\Images\cancel.png" />
     <EmbeddedResource Include="Resources\Images\draw_horizontal_line.png" />
     <EmbeddedResource Include="Resources\Images\draw_rectangle.png" />
@@ -199,9 +205,15 @@
       <Project>{7e611474-2b35-467a-9be6-6c8ce9659f81}</Project>
       <Name>TableOcrExtractor.Imaging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TableOcrExtractor.OCR\TableOcrExtractor.OCR.csproj">
+      <Project>{50b20a14-86dd-49ac-ad02-098c0f1c75ea}</Project>
+      <Name>TableOcrExtractor.OCR</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /sy "$(SolutionDir)ExternalLibraries\GdPicture.NET" "$(ProjectDir)$(OutDir)"</PostBuildEvent>
+    <PostBuildEvent>xcopy /sy "$(SolutionDir)ExternalLibraries\GdPicture.NET" "$(ProjectDir)$(OutDir)"
+xcopy /sy "$(SolutionDir)ApplicationStartupPack\Tesseract languages" "$(ProjectDir)$(OutDir)"
+xcopy /sy "$(SolutionDir)ApplicationStartupPack\Tesseract" "$(ProjectDir)$(OutDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
