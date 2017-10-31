@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 using TableOcrExtractor.Controls.Model;
 using TableOcrExtractor.OCR;
@@ -133,31 +133,33 @@ namespace TableOcrExtractor.Logic.Models
         /// <returns></returns>
         private Rectangle[,] GetRecognitionAreas()
         {
-            int columnsNumber = DrawingObjects.VerticalLinesCoordinates.Count + 1;
-            int rowsNumber = DrawingObjects.HorizontalLinesCoordinates.Count + 1;
+            List<int> verticalLinesCoordinates = DrawingObjects.VerticalLinesCoordinates.OrderBy(x => x).ToList();
+            List<int> horizontalLinesCoordinates = DrawingObjects.HorizontalLinesCoordinates.OrderBy(x => x).ToList();
+            int columnsNumber = verticalLinesCoordinates.Count + 1;
+            int rowsNumber = horizontalLinesCoordinates.Count + 1;
             Rectangle[,] areas = new Rectangle[columnsNumber, rowsNumber];
 
             for (int i = 0; i < rowsNumber; i++)
             {
-                int y = i == 0 ? DrawingObjects.RectangleArea.Y : DrawingObjects.HorizontalLinesCoordinates[i - 1];
+                int y = i == 0 ? DrawingObjects.RectangleArea.Y : horizontalLinesCoordinates[i - 1];
                 int h = 0;
                 if (rowsNumber == 1)
                     h = DrawingObjects.RectangleArea.Width;
                 else if (i == rowsNumber - 1)
                     h = DrawingObjects.RectangleArea.Bottom - y;
                 else
-                    h = DrawingObjects.HorizontalLinesCoordinates[i] - y;
+                    h = horizontalLinesCoordinates[i] - y;
 
                 for (int j = 0; j < columnsNumber; j++)
                 {
-                    int x = j == 0 ? DrawingObjects.RectangleArea.X : DrawingObjects.VerticalLinesCoordinates[j - 1];
+                    int x = j == 0 ? DrawingObjects.RectangleArea.X : verticalLinesCoordinates[j - 1];
                     int w = 0;
                     if (columnsNumber == 1)
                         w = DrawingObjects.RectangleArea.Width;
                     else if (j == columnsNumber - 1)
                         w = DrawingObjects.RectangleArea.Right - x;
                     else
-                        w = DrawingObjects.VerticalLinesCoordinates[j] - x;
+                        w = verticalLinesCoordinates[j] - x;
 
                     areas[j, i] = new Rectangle(x, y, w, h);
                 }

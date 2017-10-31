@@ -185,10 +185,10 @@ namespace TableOcrExtractor.Logic.Models
         /// <param name="path">Export file path.</param>
         public void ExportJson(string path)
         {
-            DataTable dataTable = Gallery.Images.First().RecognizedData.Clone();
+            DataTable dataTable = Gallery.Images.First().RecognizedData.Copy();
             if (Gallery.Images.Count > 1)
                 for (int i = 1; i < Gallery.Images.Count; i++)
-                    dataTable.Merge(Gallery.Images[i].RecognizedData);
+                    dataTable.Merge(Gallery.Images[i].RecognizedData.Copy());
 
             string json = JsonConvert.SerializeObject(dataTable);
             File.WriteAllText(path, json);
@@ -217,7 +217,7 @@ namespace TableOcrExtractor.Logic.Models
         private void UpdateProjectPathes(string projectPath)
         {
             ProjectPath = projectPath;
-            ProjectDataFolderPath = Path.Combine(Path.GetDirectoryName(projectPath), Path.GetDirectoryName(ProjectDataFolderPath + @"\"));
+            ProjectDataFolderPath = Path.Combine(Path.GetDirectoryName(projectPath), Path.GetFileName(Path.GetDirectoryName(ProjectDataFolderPath + @"\")));
             Gallery.UpdateGalleryPathes(ProjectDataFolderPath);
         }
       

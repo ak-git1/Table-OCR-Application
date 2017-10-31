@@ -1,4 +1,5 @@
 ﻿using System;
+using Telerik.WinControls.UI;
 
 namespace TableOcrExtractor
 {
@@ -289,6 +290,7 @@ namespace TableOcrExtractor
             this.GalleryListView.Name = "GalleryListView";
             this.GalleryListView.ShowColumnHeaders = false;
             this.GalleryListView.ValueMember = "Uid";
+            this.GalleryListView.AllowRemove = false;
             this.GalleryListView.SelectedItemChanged += new System.EventHandler(this.GalleryListView_SelectedItemChanged);
             this.GalleryListView.ItemDataBound += new Telerik.WinControls.UI.ListViewItemEventHandler(this.GalleryListView_ItemDataBound);
             // 
@@ -486,8 +488,10 @@ namespace TableOcrExtractor
             this.DataGrid.MasterTemplate.EnableFiltering = true;
             this.DataGrid.MasterTemplate.EnableGrouping = false;
             this.DataGrid.MasterTemplate.EnableSorting = false;
+            this.DataGrid.MasterTemplate.MultiSelect = false;
             this.DataGrid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.DataGrid.Name = "DataGrid";
+            this.DataGrid.SelectionChanged += DataGridOnSelectionChanged;
             // 
             // StatusStrip
             // 

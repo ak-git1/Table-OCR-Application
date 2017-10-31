@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using TableOcrExtractor.Controls.Enums;
 using TableOcrExtractor.Controls.Model;
@@ -65,6 +67,11 @@ namespace TableOcrExtractor.Controls
         /// </summary>
         private int? _selectedHorizontalLineIndex;
 
+        /// <summary>
+        /// Index of the highlighted row
+        /// </summary>
+        private int? _highlightedRowIndex;
+
         #region Brushes and pens
 
         /// <summary>
@@ -83,9 +90,14 @@ namespace TableOcrExtractor.Controls
         private readonly Pen _drawingLinePen = new Pen(Color.FromArgb(50, 22, 158, 76), 3);
 
         /// <summary>
-        /// The drwan line pen
+        /// The drawn line pen
         /// </summary>
         private readonly Pen _fixedLinePen = new Pen(Color.FromArgb(22, 158, 76), 3);
+
+        /// <summary>
+        /// Row highlightning
+        /// </summary>
+        private readonly Brush _highlightedRowBrush = new SolidBrush(Color.FromArgb(70, 255, 142, 100));
 
         #endregion
 
@@ -115,6 +127,7 @@ namespace TableOcrExtractor.Controls
             get => PictureBox.Image;
             set
             {
+                HighlightedRowIndex = null;
                 DrawingObjects.Clear();
                 _currentDrawingMode = DrawingMode.None;
                 PictureBox.Image = value;
@@ -135,6 +148,19 @@ namespace TableOcrExtractor.Controls
         /// Drawing objects
         /// </summary>
         public DrawingObjects DrawingObjects { get; set; }
+
+        /// <summary>
+        /// Index of the highlighted row
+        /// </summary>
+        public int? HighlightedRowIndex
+        {
+            get => _highlightedRowIndex;
+            set
+            {
+                _highlightedRowIndex = value;
+                PictureBox.Invalidate();
+            }
+        }
 
         #endregion
 
@@ -561,7 +587,8 @@ namespace TableOcrExtractor.Controls
                 }
                 else
                 {
-                    if (DrawingObjects.RectangleArea != Rectangle.Empty && DrawingObjects.RectangleArea.Width > 0 && DrawingObjects.RectangleArea.Height > 0)
+                    if (DrawingObjects.RectangleArea != Rectangle.Empty && DrawingObjects.RectangleArea.Width > 0 &&
+                        DrawingObjects.RectangleArea.Height > 0)
                     {
                         #region Rectangle drawing
 
@@ -582,7 +609,8 @@ namespace TableOcrExtractor.Controls
                         }
 
                         if (_isDrawingInProgress && CurrentDrawingMode == DrawingMode.VerticalLine)
-                            e.Graphics.DrawLine(_drawingLinePen, _drawingEndPoint.X, rect.Bottom, _drawingEndPoint.X, rect.Top);
+                            e.Graphics.DrawLine(_drawingLinePen, _drawingEndPoint.X, rect.Bottom, _drawingEndPoint.X,
+                                rect.Top);
 
                         #endregion
 
@@ -593,12 +621,47 @@ namespace TableOcrExtractor.Controls
                             if (_selectedHorizontalLineIndex.HasValue && _selectedHorizontalLineIndex == i)
                                 continue;
 
-                            int y = ConvertYCoordinateToViewportCoordinate(DrawingObjects.HorizontalLinesCoordinates[i]);
+                            int y = ConvertYCoordinateToViewportCoordinate(DrawingObjects
+                                .HorizontalLinesCoordinates[i]);
                             e.Graphics.DrawLine(_fixedLinePen, rect.Left, y, rect.Right, y);
                         }
 
                         if (_isDrawingInProgress && CurrentDrawingMode == DrawingMode.HorizontalLine)
-                            e.Graphics.DrawLine(_drawingLinePen, rect.Left, _drawingEndPoint.Y, rect.Right, _drawingEndPoint.Y);
+                            e.Graphics.DrawLine(_drawingLinePen, rect.Left, _drawingEndPoint.Y, rect.Right,
+                                _drawingEndPoint.Y);
+
+                        #endregion
+
+                        #region Highlighted row drawing
+
+                        if (HighlightedRowIndex.HasValue)
+                        {
+                            List<int> horizontalLinesCoordinates = DrawingObjects.HorizontalLinesCoordinates.OrderBy(o => o).ToList();
+                            int rowIndex = HighlightedRowIndex.Value;
+                            int y = DrawingObjects.RectangleArea.Y;
+                            int h = DrawingObjects.RectangleArea.Height;
+
+                            if (horizontalLinesCoordinates.Count > 0)
+                            {
+                                if (rowIndex == 0)
+                                {
+                                    h = horizontalLinesCoordinates[0] - y;
+                                }
+                                else if (rowIndex >= horizontalLinesCoordinates.Count)
+                                {
+                                    y = horizontalLinesCoordinates.Max();
+                                    h = DrawingObjects.RectangleArea.Bottom - horizontalLinesCoordinates.Max();
+                                }
+                                else
+                                {
+                                    y = horizontalLinesCoordinates[rowIndex - 1];
+                                    h = horizontalLinesCoordinates[rowIndex] - horizontalLinesCoordinates[rowIndex - 1];
+                                }
+                            }
+
+                            Rectangle highlightedRectangle = new Rectangle(DrawingObjects.RectangleArea.X, y, DrawingObjects.RectangleArea.Width, h);
+                            e.Graphics.FillRectangle(_highlightedRowBrush, ConvertToViewportCoordinatesRectangle(highlightedRectangle));
+                        }
 
                         #endregion
                     }

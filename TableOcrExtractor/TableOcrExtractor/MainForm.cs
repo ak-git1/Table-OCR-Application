@@ -4,8 +4,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using Elar.Framework.Core.Extensions;
+using Elar.Framework.Core.Helpers;
 using TableOcrExtractor.Controls.Enums;
 using TableOcrExtractor.Controls.Model;
 using TableOcrExtractor.Forms;
@@ -209,7 +211,10 @@ namespace TableOcrExtractor
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            InitializeControls();            
+            InitializeControls();
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            Text = $"{Text} Version: {fvi.FileVersion}";
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -583,6 +588,20 @@ namespace TableOcrExtractor
 
         #endregion
 
-        #endregion        
+        #region Datagrid action
+
+        /// <summary>
+        /// Datas the grid on selection changed.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="eventArgs">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DataGridOnSelectionChanged(object sender, EventArgs eventArgs)
+        {
+            ImageViewer.HighlightedRowIndex = DataGrid.SelectedRows.Count > 0 ? (int?) DataGrid.SelectedRows[0].Index : null;
+        }
+
+        #endregion
+
+        #endregion
     }
 }

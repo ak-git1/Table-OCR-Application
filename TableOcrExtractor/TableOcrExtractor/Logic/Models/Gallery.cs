@@ -141,6 +141,7 @@ namespace TableOcrExtractor.Logic.Models
                     };
 
                     Images.Add(galleryImage);
+                    orderNumber++;
                 }
 
                 return new ActionResult();
