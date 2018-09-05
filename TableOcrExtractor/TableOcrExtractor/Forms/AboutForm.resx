@@ -653,14 +653,11 @@
   <data name="labelProductName.Text" xml:space="preserve">
     <value>Product Name: </value>
   </data>
-  <data name="labelProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;labelProductName.Name" xml:space="preserve">
     <value>labelProductName</value>
   </data>
   <data name="&gt;&gt;labelProductName.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;labelProductName.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -689,14 +686,11 @@
   <data name="labelVersion.Text" xml:space="preserve">
     <value>Version</value>
   </data>
-  <data name="labelVersion.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;labelVersion.Name" xml:space="preserve">
     <value>labelVersion</value>
   </data>
   <data name="&gt;&gt;labelVersion.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;labelVersion.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -725,14 +719,11 @@
   <data name="labelCopyright.Text" xml:space="preserve">
     <value>Copyright</value>
   </data>
-  <data name="labelCopyright.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;labelCopyright.Name" xml:space="preserve">
     <value>labelCopyright</value>
   </data>
   <data name="&gt;&gt;labelCopyright.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;labelCopyright.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -765,7 +756,7 @@
     <value>textBoxDescription</value>
   </data>
   <data name="&gt;&gt;textBoxDescription.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;textBoxDescription.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -792,7 +783,7 @@
     <value>okButton</value>
   </data>
   <data name="&gt;&gt;okButton.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -855,12 +846,12 @@
     <value>windows7Theme</value>
   </data>
   <data name="&gt;&gt;windows7Theme.Type" xml:space="preserve">
-    <value>Telerik.WinControls.Themes.Windows7Theme, Telerik.WinControls.Themes.Windows7, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.Themes.Windows7Theme, Telerik.WinControls.Themes.Windows7, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AboutForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TableOcrExtractor.Forms.LocalizedForm, TableOcrExtractor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TableOcrExtractor.Forms.LocalizedForm, TableOcrExtractor, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -28,6 +28,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{330E1B0F-6A97-4A40-809D-AEB372B6FF73}"
 	ProjectSection(SolutionItems) = preProject
 		ExternalLibraries\Telerik\Telerik.WinControls.dll = ExternalLibraries\Telerik\Telerik.WinControls.dll
+		ExternalLibraries\Telerik\Telerik.WinControls.GridView.dll = ExternalLibraries\Telerik\Telerik.WinControls.GridView.dll
 		ExternalLibraries\Telerik\Telerik.WinControls.RadDock.dll = ExternalLibraries\Telerik\Telerik.WinControls.RadDock.dll
 		ExternalLibraries\Telerik\Telerik.WinControls.RichTextEditor.dll = ExternalLibraries\Telerik\Telerik.WinControls.RichTextEditor.dll
 		ExternalLibraries\Telerik\Telerik.WinControls.Themes.Windows7.dll = ExternalLibraries\Telerik\Telerik.WinControls.Themes.Windows7.dll

@@ -700,7 +700,7 @@
     <value>GalleryListView</value>
   </data>
   <data name="&gt;&gt;GalleryListView.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadListView, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadListView, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;GalleryListView.Parent" xml:space="preserve">
     <value>GallerySplitPanel</value>
@@ -708,7 +708,7 @@
   <data name="&gt;&gt;GalleryListView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="Telerik.WinControls" name="Telerik.WinControls, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  <assembly alias="Telerik.WinControls" name="Telerik.WinControls, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   <data name="RemoveImagesBtn.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
@@ -731,7 +731,7 @@
     <value>RemoveImagesBtn</value>
   </data>
   <data name="&gt;&gt;RemoveImagesBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RemoveImagesBtn.Parent" xml:space="preserve">
     <value>GalleryCommandsPanel</value>
@@ -761,7 +761,7 @@
     <value>AddImagesBtn</value>
   </data>
   <data name="&gt;&gt;AddImagesBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;AddImagesBtn.Parent" xml:space="preserve">
     <value>GalleryCommandsPanel</value>
@@ -785,7 +785,7 @@
     <value>GalleryCommandsPanel</value>
   </data>
   <data name="&gt;&gt;GalleryCommandsPanel.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;GalleryCommandsPanel.Parent" xml:space="preserve">
     <value>GallerySplitPanel</value>
@@ -809,7 +809,7 @@
     <value>GallerySplitPanel</value>
   </data>
   <data name="&gt;&gt;GallerySplitPanel.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;GallerySplitPanel.Parent" xml:space="preserve">
     <value>MainSplitContainer</value>
@@ -886,7 +886,7 @@
     <value>PasteDrawingObjectsBtn</value>
   </data>
   <data name="&gt;&gt;PasteDrawingObjectsBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PasteDrawingObjectsBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -916,7 +916,7 @@
     <value>CopyDrawingObjectsBtn</value>
   </data>
   <data name="&gt;&gt;CopyDrawingObjectsBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;CopyDrawingObjectsBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -937,7 +937,7 @@
     <value>radPanel2</value>
   </data>
   <data name="&gt;&gt;radPanel2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;radPanel2.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -967,7 +967,7 @@
     <value>DrawingModeHorizontalLinesBtn</value>
   </data>
   <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;DrawingModeHorizontalLinesBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -997,7 +997,7 @@
     <value>DrawingModeVerticalLinesBtn</value>
   </data>
   <data name="&gt;&gt;DrawingModeVerticalLinesBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;DrawingModeVerticalLinesBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1027,7 +1027,7 @@
     <value>DrawingModeRectangleBtn</value>
   </data>
   <data name="&gt;&gt;DrawingModeRectangleBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;DrawingModeRectangleBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1057,7 +1057,7 @@
     <value>DrawingModeNoneBtn</value>
   </data>
   <data name="&gt;&gt;DrawingModeNoneBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;DrawingModeNoneBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1078,7 +1078,7 @@
     <value>radPanel1</value>
   </data>
   <data name="&gt;&gt;radPanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;radPanel1.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1108,7 +1108,7 @@
     <value>ZoomFitBtn</value>
   </data>
   <data name="&gt;&gt;ZoomFitBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ZoomFitBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1138,7 +1138,7 @@
     <value>ZoomOutBtn</value>
   </data>
   <data name="&gt;&gt;ZoomOutBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ZoomOutBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1168,7 +1168,7 @@
     <value>ZoomInBtn</value>
   </data>
   <data name="&gt;&gt;ZoomInBtn.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ZoomInBtn.Parent" xml:space="preserve">
     <value>ImageCommandsPanel</value>
@@ -1192,7 +1192,7 @@
     <value>ImageCommandsPanel</value>
   </data>
   <data name="&gt;&gt;ImageCommandsPanel.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ImageCommandsPanel.Parent" xml:space="preserve">
     <value>GalleryImageSplitPanel</value>
@@ -1216,7 +1216,7 @@
     <value>GalleryImageSplitPanel</value>
   </data>
   <data name="&gt;&gt;GalleryImageSplitPanel.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;GalleryImageSplitPanel.Parent" xml:space="preserve">
     <value>ImageSplitContainer</value>
@@ -1236,14 +1236,11 @@
   <data name="DataGrid.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="DataGrid.Text" xml:space="preserve">
-    <value> </value>
-  </data>
   <data name="&gt;&gt;DataGrid.Name" xml:space="preserve">
     <value>DataGrid</value>
   </data>
   <data name="&gt;&gt;DataGrid.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;DataGrid.Parent" xml:space="preserve">
     <value>DataGridSplitPanel</value>
@@ -1267,7 +1264,7 @@
     <value>DataGridSplitPanel</value>
   </data>
   <data name="&gt;&gt;DataGridSplitPanel.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;DataGridSplitPanel.Parent" xml:space="preserve">
     <value>ImageSplitContainer</value>
@@ -1290,14 +1287,11 @@
   <data name="ImageSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="ImageSplitContainer.Text" xml:space="preserve">
-    <value> </value>
-  </data>
   <data name="&gt;&gt;ImageSplitContainer.Name" xml:space="preserve">
     <value>ImageSplitContainer</value>
   </data>
   <data name="&gt;&gt;ImageSplitContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ImageSplitContainer.Parent" xml:space="preserve">
     <value>ImageAndDataGridSplitPanel</value>
@@ -1321,7 +1315,7 @@
     <value>ImageAndDataGridSplitPanel</value>
   </data>
   <data name="&gt;&gt;ImageAndDataGridSplitPanel.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ImageAndDataGridSplitPanel.Parent" xml:space="preserve">
     <value>MainSplitContainer</value>
@@ -1341,14 +1335,11 @@
   <data name="MainSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="MainSplitContainer.Text" xml:space="preserve">
-    <value> </value>
-  </data>
   <data name="&gt;&gt;MainSplitContainer.Name" xml:space="preserve">
     <value>MainSplitContainer</value>
   </data>
   <data name="&gt;&gt;MainSplitContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;MainSplitContainer.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1405,7 +1396,7 @@
     <value>StatusStrip</value>
   </data>
   <data name="&gt;&gt;StatusStrip.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;StatusStrip.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1432,7 +1423,7 @@
     <value>MainMenu</value>
   </data>
   <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
     <value>$this</value>
@@ -3239,127 +3230,127 @@
     <value>windows7Theme</value>
   </data>
   <data name="&gt;&gt;windows7Theme.Type" xml:space="preserve">
-    <value>Telerik.WinControls.Themes.Windows7Theme, Telerik.WinControls.Themes.Windows7, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.Themes.Windows7Theme, Telerik.WinControls.Themes.Windows7, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;FileMenuItem.Name" xml:space="preserve">
     <value>FileMenuItem</value>
   </data>
   <data name="&gt;&gt;FileMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;NewProjectMenuItem.Name" xml:space="preserve">
     <value>NewProjectMenuItem</value>
   </data>
   <data name="&gt;&gt;NewProjectMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;OpenProjectMenuItem.Name" xml:space="preserve">
     <value>OpenProjectMenuItem</value>
   </data>
   <data name="&gt;&gt;OpenProjectMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SeparatorItem1.Name" xml:space="preserve">
     <value>SeparatorItem1</value>
   </data>
   <data name="&gt;&gt;SeparatorItem1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SaveMenuItem.Name" xml:space="preserve">
     <value>SaveMenuItem</value>
   </data>
   <data name="&gt;&gt;SaveMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SaveAsMenuItem.Name" xml:space="preserve">
     <value>SaveAsMenuItem</value>
   </data>
   <data name="&gt;&gt;SaveAsMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SeparatorItem2.Name" xml:space="preserve">
     <value>SeparatorItem2</value>
   </data>
   <data name="&gt;&gt;SeparatorItem2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ExitMenuItem.Name" xml:space="preserve">
     <value>ExitMenuItem</value>
   </data>
   <data name="&gt;&gt;ExitMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;AboutMenuItem.Name" xml:space="preserve">
     <value>AboutMenuItem</value>
   </data>
   <data name="&gt;&gt;AboutMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ProjectMenuItem.Name" xml:space="preserve">
     <value>ProjectMenuItem</value>
   </data>
   <data name="&gt;&gt;ProjectMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;StartOcrMenuItem.Name" xml:space="preserve">
     <value>StartOcrMenuItem</value>
   </data>
   <data name="&gt;&gt;StartOcrMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ExportDataMenuItem.Name" xml:space="preserve">
     <value>ExportDataMenuItem</value>
   </data>
   <data name="&gt;&gt;ExportDataMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SeparatorItem3.Name" xml:space="preserve">
     <value>SeparatorItem3</value>
   </data>
   <data name="&gt;&gt;SeparatorItem3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ProjectDataColumnsMenuItem.Name" xml:space="preserve">
     <value>ProjectDataColumnsMenuItem</value>
   </data>
   <data name="&gt;&gt;ProjectDataColumnsMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ProjectSettingsMenuItem.Name" xml:space="preserve">
     <value>ProjectSettingsMenuItem</value>
   </data>
   <data name="&gt;&gt;ProjectSettingsMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SettingsMenuItem.Name" xml:space="preserve">
     <value>SettingsMenuItem</value>
   </data>
   <data name="&gt;&gt;SettingsMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;LanguageMenuItem.Name" xml:space="preserve">
     <value>LanguageMenuItem</value>
   </data>
   <data name="&gt;&gt;LanguageMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;EnglishLanguageMenuItem.Name" xml:space="preserve">
     <value>EnglishLanguageMenuItem</value>
   </data>
   <data name="&gt;&gt;EnglishLanguageMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RussianLanguageMenuItem.Name" xml:space="preserve">
     <value>RussianLanguageMenuItem</value>
   </data>
   <data name="&gt;&gt;RussianLanguageMenuItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ProjectNameLabelElement.Name" xml:space="preserve">
     <value>ProjectNameLabelElement</value>
   </data>
   <data name="&gt;&gt;ProjectNameLabelElement.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;OpenProjectFileDialog.Name" xml:space="preserve">
     <value>OpenProjectFileDialog</value>
@@ -3383,6 +3374,6 @@
     <value>MainForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TableOcrExtractor.Forms.LocalizedForm, TableOcrExtractor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TableOcrExtractor.Forms.LocalizedForm, TableOcrExtractor, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
